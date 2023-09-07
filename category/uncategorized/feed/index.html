@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Uncategorized &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/category/uncategorized/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Wed, 18 Jan 2023 17:33:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>Uncategorized &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The Audit of Git is Complete!</title>
+		<link>https://ostif.org/the-audit-of-git-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Tue, 17 Jan 2023 18:10:53 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[chainguard]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[github]]></category>
+		<category><![CDATA[gitlab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[x41]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2782</guid>
+
+					<description><![CDATA[Results of Git Security Audit Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for git. Git is the world&#8217;s most widely used version control system, and it underpins not only open source, but the vast majority of public and private software development today. To [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h2>Results of Git Security Audit</h2>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for <a href="https://git-scm.com/">git</a>. Git is the world&#8217;s most widely used version control system, and it underpins not only open source, but the vast majority of public and private software development today. To say that git is infrastructure is an understatement, it reaches nearly every corner of software development and touches nearly every product that has software in one way or another.</span></p>
+<p><span style="font-weight: 400;">For this reason, git is one of OSTIFs top priorities to help with security resources and has built a large coalition of companies to work on multiple facets of the git project. The security audit conducted by Markus Vervier and Eric Sesterhenn from <a href="https://x41-dsec.de/">X41</a> and Joern Schneeweisz from <a href="https://about.gitlab.com/">GitLab</a> is only a part of the total efforts coordinated by OSTIF. <a href="https://github.com/">Github&#8217;s</a> <a href="https://codeql.github.com/">CodeQL team</a> (thank you Turbo!) is helping the git developers build a custom ruleset for CodeQL to help give the developers more meaningful results and cull false positives so that the tool is more usable than the previous static analysis tools (that the core git team had stopped using due to multiple difficulties). Additionally, Adolfo Veytia and John Speed Meyers from <a href="https://www.chainguard.dev/">Chainguard</a> along with Dennis Appelt from GitLab are working on how the Windows version of git is distributed to make recommendations and changes to improve the supply chain security of git. We will be releasing the results of those efforts as each of these projects is completed. This coalition of efforts is unified through our shared interests in git and the critical role that it plays in the open source world.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from the <a href="https://blog.google/technology/safety-security/shared-success-in-building-a-safer-open-source-community/">Google Open Source Security Team (GOSST)</a> and the help of the <a href="https://openssf.org/">OpenSSF</a> to help make this critical project more secure.</span></p>
+<p><span style="font-weight: 400;">For this portion of the research a total of 35 issues were discovered, including 2 critical severity findings and a high severity finding. Additionally, because of this research, a number of potentially catastrophic security bugs were discovered and resolved internally by the git security team. (A special thank you to Patrick Steinhardt for all of their work on the formatting issues related to CVE-2022-41903).<br />
+</span></p>
+<p><span style="font-weight: 400;">The serious bug fixes are in the latest release of Git (released today).</span></p>
+<p><span style="font-weight: 400;"> The most notable issues were:</span></p>
+<p><span style="font-weight: 400;"><strong>CRITICAL</strong> &#8211; CVE-2022-41903 &#8211; <a href="https://github.com/git/git/security/advisories/GHSA-475x-2q3q-hvwq">Out-of-Bounds Memory Write in Log Formatting</a> (this had multiple collateral issues that were fixed by the git security team that were critical in nature)</span></p>
+<p><span style="font-weight: 400;"><strong>CRITICAL</strong> &#8211; CVE-2022-23251 &#8211; Truncated Allocation Leading to Out of Bounds Write Via Large Number of Attributes</span></p>
+<p><span style="font-weight: 400;"><strong>HIGH</strong> &#8211; Out-of-Bounds Read Via Padding Placeholders</span></p>
+<p><span style="font-weight: 400;">The git team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the initial meetings and security review. We&#8217;d like to thank everyone at git who helped us with this audit, with security tooling questions, and with understanding the git build process.</span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links:</span></p>
+<p><span style="font-weight: 400;">Git Security Assessment Full Report &#8211; <a href="https://ostif.org/wp-content/uploads/2023/01/X41-OSTIF-Gitlab-Git-Security-Audit-20230117-public.pdf">https://ostif.org/wp-content/uploads/2023/01/X41-OSTIF-Gitlab-Git-Security-Audit-20230117-public.pdf</a><br />
+More information from X41&#8217;s blog post here: <a href="https://www.x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/">https://www.x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/</a><br />
+</span><span style="font-weight: 400;">Information on the latest git patch: <a href="https://www.openwall.com/lists/oss-security/2023/01/17/4">https://www.openwall.com/lists/oss-security/2023/01/17/4</a><br />
+OSTIF is planning many security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from <a href="https://x41-dsec.de/">X41</a> and <a href="https://about.gitlab.com/">GitLab</a> that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the OSTIF website. <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">We also have all of our published work on our Github</a>. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem.</span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Python-TUF is Complete. Multiple Issues Found and Fixed</title>
+		<link>https://ostif.org/our-audit-of-python-tuf-is-complete-multiple-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 26 Oct 2022 13:49:15 +0000</pubDate>
+				<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[Python TUF]]></category>
+		<category><![CDATA[x41 D-Sec]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2739</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is thrilled to report the results of another security audit. Python-TUF is a reference implementation written in Python for The Update Framework (TUF); a framework for secure content delivery and updates. The primary result of the work is one medium and four low-severity issues. Details on the findings and how [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is thrilled to report the results of another security audit. Python-TUF </span><span style="font-weight: 400;">is</span> <span style="font-weight: 400;">a reference implementation written in Python for </span><a href="https://theupdateframework.io/"><span style="font-weight: 400;">The Update Framework (TUF)</span></a><span style="font-weight: 400;">; a framework for secure content delivery and updates.</span></p>
+<p><span style="font-weight: 400;">The primary result of the work is one medium and four low-severity issues. Details on the findings and how they were resolved can be found both in the Python-TUF and X41 blog posts linked below. Full details on the audit methodology and issues fixed can be found in the report below. </span></p>
+<p><span style="font-weight: 400;">Thank you to the Python-TUF team for their engagement and contributions to make this a successful audit review. Also, a big thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to manage it. </span></p>
+<p><span style="font-weight: 400;">Special thanks to the team at X41 D-Sec for their thorough audit of the Python-TUF code.</span></p>
+<p><span style="font-weight: 400;">Everyone around the world depends on OSS. OSTIF is planning more security audits in 2023 to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;"><strong>References:</strong> </span></p>
+<p>Full report: <a href="https://ostif.org/wp-content/uploads/2022/10/x41-python-tuf-audit-2022-09-09.pdf">https://ostif.org/wp-content/uploads/2022/10/x41-python-tuf-audit-2022-09-09.pdf</a></p>
+<p>X41 D-Sec blog: <a href="https://x41-dsec.de/security/research/job/news/2022/10/26/tuf/"><span style="font-weight: 400;">https://x41-dsec.de/security/research/job/news/2022/10/26/tuf/</span></a></p>
+<p>Python TUF blog with excellent feedback and information: <a href="https://theupdateframework.github.io/python-tuf/2022/10/21/python-tuf-security-assessment.html"><span style="font-weight: 400;">https://theupdateframework.github.io/python-tuf/2022/10/21/python-tuf-security-assessment.html</span></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Cloud Native Computing Foundation and OSTIF Impact Report</title>
+		<link>https://ostif.org/the-cloud-native-computing-foundation-and-ostif-impact-report/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 08 Aug 2022 15:29:26 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[impact report]]></category>
+		<category><![CDATA[transparency]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2714</guid>
+
+					<description><![CDATA[The Cloud Native Computing Foundation and OSTIF Impact Report OSTIF has been working with the Cloud Native Computing Foundation (CNCF) on a number of security projects over the last year. This has been a large collaborative effort to help CNCF projects improve their security posture by conducting code audits, building security tools, directing supply chain [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><strong>The Cloud Native Computing Foundation and OSTIF Impact Report</strong></h1>
+<p><span style="font-weight: 400;">OSTIF has been working with the Cloud Native Computing Foundation (CNCF) on a number of security projects over the last year. This has been a large collaborative effort to help CNCF projects improve their security posture by conducting code audits, building security tools, directing supply chain reviews, building fixes, and assisting projects with unique challenges.</span></p>
+<p><span style="font-weight: 400;">This report showcases the impact of our works on seven different projects (Argo, Backstage, Containerd, CRI-O, Envoy, Flux, KubeEdge). We also have eight projects with the CNCF in progress or scheduled for the remainder of 2022 that are not included in the scope of this report. Additionally, the project with Envoy is ongoing and is expected to continue to garner significant additional security progress.</span></p>
+<h2><strong>Material Progress</strong></h2>
+<p><span style="font-weight: 400;">This partnership arose from the need for the CNCF to find a security partner that can readily work with open source projects to support their development in an impactful way. OSTIF&#8217;s tireless work in this area to build partnerships with security firms that understand open source, and our systems that deliver strong results while maintaining full transparency was a perfect match. In this report we show that we meet every challenge and bring real tangible improvements to the open source ecosystem.</span></p>
+<p><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-2722" src="https://ostif.org/wp-content/uploads/2022/08/chart-01-1024x286.jpg" alt="" width="1024" height="286" srcset="https://ostif.org/wp-content/uploads/2022/08/chart-01-1024x286.jpg 1024w, https://ostif.org/wp-content/uploads/2022/08/chart-01-300x84.jpg 300w, https://ostif.org/wp-content/uploads/2022/08/chart-01-768x215.jpg 768w, https://ostif.org/wp-content/uploads/2022/08/chart-01-1536x429.jpg 1536w, https://ostif.org/wp-content/uploads/2022/08/chart-01-2048x572.jpg 2048w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+<p>The full CNCF/OSTIF impact report can be found on the Cloud Native Computing Foundation blog here: <a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/">https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What OSTIF is Working on in 2020</title>
+		<link>https://ostif.org/what-ostif-is-working-on-in-2020/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 18 Apr 2020 13:05:34 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[clsag]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[riot im]]></category>
+		<category><![CDATA[triptych]]></category>
+		<category><![CDATA[updates]]></category>
+		<category><![CDATA[wintun]]></category>
+		<category><![CDATA[wireguard]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2126</guid>
+
+					<description><![CDATA[OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months! Two projects with the Linux Foundation We are working with the Linux Foundation&#8217;s Core Infrastructure Initiative on the safety and security of the Linux Kernel. We are working with Atredis [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months!</p>
+<h2>Two projects with the Linux Foundation</h2>
+<p>We are working with the <a href="https://www.linuxfoundation.org/">Linux Foundation&#8217;s</a> <a href="https://www.coreinfrastructure.org/">Core Infrastructure Initiative</a> on the safety and security of the <a href="https://www.kernel.org/">Linux Kernel</a>. We are working with Atredis Partners on evaluating the processes and policies for the Kernel&#8217;s security reporting, update, and disclosure processes to seek potential areas of improvement. This is something that the Kernel team has sought to review for years and OSTIF worked with our network of partners to bring the best people to the table for the task. We will be keeping the public notified as this project progresses. Here is an excellent talk by Konstantin Ryabitsev on how the Linux Kernel currently receives updates: <a href="https://www.youtube.com/watch?v=vohrz14S6JE">https://www.youtube.com/watch?v=vohrz14S6JE</a></p>
+<p>Additionally, we are in the early stages of reviewing the handling of software signing keys for the kernel, and how they are used for signing updates to the Kernel. We will have more information about this project in the near future.</p>
+<h2>Two Projects with the Monero Community</h2>
+<p>We are working with the Monero community on CLSAG. CLSAG promises to reduce signature sizes considerably while maintaining the same privacy level that Monero currently enjoys. Jean-Philipe Aumasson and Antony Vennard of <a href="https://teserakt.io/">Teserakt</a> will be reviewing both the theoretical paper <a href="https://eprint.iacr.org/2019/654.pdf">here</a> and the implementation <a href="https://github.com/SarangNoether/monero/tree/clsag-device">here</a> after approval by the security committee and a round of fundraising with the Monero community.</p>
+<p>Additionally, we are in the early stages of organizing and audit of Monero Triptych. <a href="https://eprint.iacr.org/eprint-bin/getfile.pl?entry=2020/018&amp;version=20200107:094009&amp;file=018.pdf">Triptych</a> promises to make transactions in Monero more efficient by increasing the efficiency of the ring signature scheme. Triptych allows Monero to significantly increase the size of rings while maintaining similar transaction sizes and verification speeds. This increase in ring size (from the current 12 to over 100) would theoretically substantially improve Monero privacy. We will be updating everyone on the status of this project as it progresses.</p>
+<h2>Three VPN Related Projects</h2>
+<p>We are working with the <a href="https://openvpn.net/">OpenVPN</a> team on a review of <a href="https://github.com/OpenVPN/openvpn">OpenVPN 2.5.0</a>, which introduces a number of new features that expand the use cases of OpenVPN. This includes and obfuscation plugin system that was developed with the <a href="https://operatorfoundation.org/">Operator Foundation</a>, whom we have also been working with to develop obfuscation plugins for OpenVPN that will be ready to go on launch.</p>
+<p>We are also exploring scoping for a security review of <a href="https://wireguard.com">WireGuard&#8217;s</a> clients. This is crucially important because while WireGuard&#8217;s core code is only 5000-6000 lines and simple to review, the supporting software libraries for the individual clients adds an order of magnitude more code that doesn&#8217;t have the same brevity and quality controls of the core code. A wide-scope review of WireGuard gives the community a fine-grained review of the current security benefits of WireGuard over alternatives.</p>
+<p>Additionally, we are exploring scoping to audit <a href="https://www.wintun.net/">WinTun</a>. WinTun is particularly important because it is the virtual driver that Windows requires for VPNs to function properly. This importance is magnified by WinTun also apparently performing better than tap-windows6 which is used by OpenVPN, and support for WinTun being added to OpenVPN. This means that WinTun will likely be the primary TAP/TUN driver for both OpenVPN and WireGuard in the future, so the security properties of WinTun are crucial.</p>
+<h2>Reaching Out to RIOT.IM</h2>
+<p>We have learned that the RIOT messenger team is seeking a security review of their project. So far we have been unsuccessful in our attempts to contact them. We will continue to try to reach out to assist the project and explore if collaboration is possible.</p>
+<h2>Seeking Additional Sources of Funding</h2>
+<p>OSTIF&#8217;s primary purpose is to bring together security resources with open source projects. As we expand on both ends of this goal, and we bring on more security teams while also having an increase in requests for support, the need for manpower grows. Two of our staff (Amir and Derek) have moved to working for OSTIF full-time.</p>
+<p>Our efforts are now focused on seeking additional funding so that we can continue to effectively support projects with our time and resources. This comes in the form of us reaching out to more organizations for support, including large corporations and governments in the form of cybersecurity grants. Sponsorships and grants will be key for OSTIF going forward, as we continue to expand and magnify the amount of good we can do.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF, QuarksLab, and VeraCrypt E-mails are Being Intercepted</title>
+		<link>https://ostif.org/ostif-quarklab-and-veracrypt-e-mails-are-being-intercepted/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 13 Aug 2016 16:40:50 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=480</guid>
+
+					<description><![CDATA[OSTIF, QuarksLab, and VeraCrypt E-mails are Being Intercepted As we have began the process of staging our audit, we have set up PGP encrypted communications between OSTIF, QuarksLab, and the lead developer of the VeraCrypt project. In these communications we have discussed vulnerability information, processes and procedures for reporting findings, and exchanged confidential information about [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><a href="https://ostif.org/?p=480&amp;preview=true">OSTIF, QuarksLab, and VeraCrypt E-mails are Being Intercepted</a></h1>
+<p>As we have began the process of staging our audit, we have set up PGP encrypted communications between OSTIF, QuarksLab, and the lead developer of the VeraCrypt project. In these communications we have discussed vulnerability information, processes and procedures for reporting findings, and exchanged confidential information about the audit.</p>
+<p>We have now had a total of four email messages disappear without a trace, stemming from multiple independent senders. Not only have the emails not arrived, but there is no trace of the emails in our &#8220;sent&#8221; folders. In the case of OSTIF, this is the Google Apps business version of Gmail where these sent emails have disappeared.</p>
+<p>This suggests that outside actors are attempting to listen in on and/or interfere with the audit process.</p>
+<p>We are setting up alternate means of encrypted communications in order to move forward with the audit project.</p>
+<p>If nation-states are interested in what we are doing we must be doing something right. Right?</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>We Are Excited To Announce a New Member of Our Team!</title>
+		<link>https://ostif.org/we-are-excited-to-announce-a-new-member-of-our-team/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 01 Aug 2016 19:04:05 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[team]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=473</guid>
+
+					<description><![CDATA[We are proud to announce the addition of a new member of our team! Samara Renovato is joining us to help manage our PR and Social Media operations. She is a student at the University of Chicago studying Psychology. With a new focus on how people interact with one another in the contemporary digital world, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We are proud to announce the addition of a new member of our team! Samara Renovato is joining us to help manage our PR and Social Media operations. She is a student at the University of Chicago studying Psychology. With a new focus on how people interact with one another in the contemporary digital world, she will be able to explore the social aspects of the digital privacy movement and bring us all closer to one another in order to achieve our goals.</p>
+<p>She will be directly managing our public relations and her work on our social media campaigns will help us direct our message to the world.</p>
+<p>Welcome to our staff Samara! We all look forward to working with you!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Haystack &#8211; Four Woman Journalists Explore the Scope, Legality, and Ethical Pitfalls of Mass Surveillance.</title>
+		<link>https://ostif.org/the-haystack-four-women-journalists-explore-the-scope-legality-and-ethical-pitfalls-of-mass-surveillance/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sun, 05 Jun 2016 16:57:23 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Documentary]]></category>
+		<category><![CDATA[GCHQ]]></category>
+		<category><![CDATA[NSA]]></category>
+		<category><![CDATA[Scenes of Reason]]></category>
+		<category><![CDATA[Snooper's Charter]]></category>
+		<category><![CDATA[The Haystack]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=448</guid>
+
+					<description><![CDATA[The Haystack &#8211; Four Woman Journalists Explore the Scope, Legality, and Ethical Pitfalls of Mass Surveillance. What is mass surveillance? How do investigative powers of governments differ today from thirty years ago? How intrusive are these powers? Are these powers legal within the constitutions of their respective countries? Who decides when these surveillance powers can [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><a href="https://ostif.org/?p=448&amp;preview=true">The Haystack &#8211; Four Woman Journalists Explore the Scope, Legality, and Ethical Pitfalls of Mass Surveillance.</a></h1>
+<p>What is mass surveillance? How do investigative powers of governments differ today from thirty years ago? How intrusive are these powers? Are these powers legal within the constitutions of their respective countries? Who decides when these surveillance powers can be used, and under what circumstances?</p>
+<p>These are some of the questions explored in The Haystack; A documentary by Scenes of Reason that takes a hard look at how governments handle big data and their investigative powers.</p>
+<p>You can view the entire documentary for free on Vimeo here: <a href="https://vimeo.com/163838872">https://vimeo.com/163838872</a><br />
+<iframe loading="lazy" src="https://player.vimeo.com/video/163838872?title=0&amp;byline=0&amp;portrait=0" width="640" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p><a href="https://vimeo.com/163838872">The Haystack</a> from <a href="https://vimeo.com/scenesofreason">Scenes of Reason</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p>These issues are some of the core reasons that we have formed the OSTIF. We as citizens of the world need to push back against these intrusive invasions of our privacy and threats to our digital security. We can accomplish this goal through funding and supporting strong and trustworthy free software that will protect our data from mass surveillance systems around the world.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Special Thank You to DuckDuckGo for Supporting OSTIF and VeraCrypt</title>
+		<link>https://ostif.org/a-special-thank-you-to-duckduckgo-for-supporting-ostif-and-veracrypt/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Tue, 03 May 2016 18:14:24 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=431</guid>
+
+					<description><![CDATA[DuckDuckGo, the privacy search engine that does not track its users, has made a $25,000 contribution to the OSTIF, with the funds earmarked for the VeraCrypt project. These funds will be instrumental in supporting our goals of strengthening VeraCrypt and will directly assist the project in moving forward. DuckDuckGo&#8217;s business model is significantly different from [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://duckduckgo.com/"><img decoding="async" loading="lazy" class="aligncenter size-medium wp-image-432" src="https://ostif.org/wp-content/uploads/2016/05/DuckDuckGo-Logo-300x86.png" alt="DuckDuckGo-Logo" width="300" height="86" srcset="https://ostif.org/wp-content/uploads/2016/05/DuckDuckGo-Logo-300x86.png 300w, https://ostif.org/wp-content/uploads/2016/05/DuckDuckGo-Logo-768x221.png 768w, https://ostif.org/wp-content/uploads/2016/05/DuckDuckGo-Logo-1024x295.png 1024w, https://ostif.org/wp-content/uploads/2016/05/DuckDuckGo-Logo.png 1198w" sizes="(max-width: 300px) 100vw, 300px" />DuckDuckGo</a>, the privacy search engine that does not track its users, has <a href="https://duck.co/blog/post/303/2016-foss-donations-announcement">made a $25,000 contribution to the OSTIF</a>, with the funds earmarked for the VeraCrypt project. These funds will be instrumental in supporting our goals of strengthening VeraCrypt and will directly assist the project in moving forward.</p>
+<p>DuckDuckGo&#8217;s business model is significantly different from that of other search engines. Google, Yahoo, Bing, and others all monetize their search engines through the use of intrusive analytics that track user activity and sell it to the highest bidder. Tracking users in this way creates a permanent digital footprint that can be leveraged against them for purposes far more sinister than targeted advertising, raising concerns among privacy activists around the world.</p>
+<p>DuckDuckGo&#8217;s charitable donations support the open-source community, and help strengthen the privacy community<br />
+. Every year they select multiple projects and give significant contributions that help these innovative ideas move forward.</p>
+<p>Here is the official announcement from DuckDuckGo founder Gabriel Weinberg:<br />
+<a href="https://duck.co/blog/post/303/2016-foss-donations-announcement">https://duck.co/blog/post/303/2016-foss-donations-announcement</a></p>
+<p>A special thank you to Gabriel, Daniel, and the rest of the DuckDuckGo staff for supporting worldwide privacy and trust in the digital age.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Special Thank You</title>
+		<link>https://ostif.org/a-special-thank-you/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Tue, 08 Dec 2015 22:21:27 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=347</guid>
+
+					<description><![CDATA[I would like to thank Mike from HTPCguides.com for assisting us with migrating our servers to Linux, optimizing their performance and hardening our complex infrastructure in order to get ready for our KickStarter. We used two guides in particular: http://www.htpcguides.com/install-configure-configserver-csf-firewall-security/ http://www.htpcguides.com/install-wordpress-on-raspberry-pi-with-raspbian/ (no, our servers are not running Raspberry Pis, we used the 2nd guide to [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>I would like to thank Mike from HTPCguides.com for assisting us with migrating our servers to Linux, optimizing their performance and hardening our complex infrastructure in order to get ready for our KickStarter.</p>
+<p>We used two guides in particular:<br />
+<a href="http://www.htpcguides.com/install-configure-configserver-csf-firewall-security/" target="_blank">http://www.htpcguides.com/install-configure-configserver-csf-firewall-security/</a></p>
+<p><a href="http://www.htpcguides.com/install-wordpress-on-raspberry-pi-with-raspbian/" target="_blank">http://www.htpcguides.com/install-wordpress-on-raspberry-pi-with-raspbian/</a></p>
+<p>(no, our servers are not running Raspberry Pis, we used the 2nd guide to install and configure nginx and WordPress)</p>
+<p>Thank you again Mike!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Kickstarter Financial Goals Revealed</title>
+		<link>https://ostif.org/kickstarter-financial-goals-revealed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2015 19:53:18 +0000</pubDate>
+				<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=320</guid>
+
+					<description><![CDATA[We are releasing our final goals for the OSTIF Kickstarter project. This includes four sets of goals, from our primary goals to three sets of stretch goals should we exceed funding for our primary goal. The figures we have reached are based on multiple price quotes for services from companies that we would entrust to [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We are releasing our final goals for the OSTIF Kickstarter project. This includes four sets of goals, from our primary goals to three sets of stretch goals should we exceed funding for our primary goal. The figures we have reached are based on multiple price quotes for services from companies that we would entrust to carry out our project goals.</p>
+<p>This document is considered to be in its final form, and will only be updated for clarity or visual appeal.</p>
+<p><a href="https://ostif.org/wp-content/uploads/2015/11/ostif-timeline-with-icons-1.png"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-321" src="https://ostif.org/wp-content/uploads/2015/11/ostif-timeline-with-icons-1-647x1024.png" alt="ostif timeline with icons 1" width="647" height="1024" srcset="https://ostif.org/wp-content/uploads/2015/11/ostif-timeline-with-icons-1-647x1024.png 647w, https://ostif.org/wp-content/uploads/2015/11/ostif-timeline-with-icons-1-190x300.png 190w, https://ostif.org/wp-content/uploads/2015/11/ostif-timeline-with-icons-1.png 1024w" sizes="(max-width: 647px) 100vw, 647px" /></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

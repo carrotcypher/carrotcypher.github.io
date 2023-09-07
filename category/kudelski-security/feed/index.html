@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Kudelski Security &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/category/kudelski-security/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:19:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>Kudelski Security &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Four Audits of RandomX for Monero and Arweave have been Completed &#8211; Results</title>
+		<link>https://ostif.org/four-audits-of-randomx-for-monero-and-arweave-have-been-completed-results/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 10 Aug 2019 16:52:42 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Kudelski Security]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2004</guid>
+
+					<description><![CDATA[As always, remember that our work only happens with the support of our sponsors and the community. Consider donating to the cause and getting the companies that you work at and patronize to get involved. We are always short on funding and more money always means more research. Special thank you&#8217;s to Private Internet Access, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h5>As always, remember that our work only happens with the support of our sponsors and the community. Consider <a href="https://ostif.org/donate-to-ostif/">donating to the cause</a> and getting the companies that you work at and patronize to get involved. We are always short on funding and more money always means more research. Special thank you&#8217;s to <a href="https://www.privateinternetaccess.com/">Private Internet Access</a>, <a href="https://web.getmonero.org/resources/research-lab/">Monero Research Lab</a>, <a href="https://nordvpn.com/">NordVPN</a>, <a href="https://www.expressvpn.com/">ExpressVPN</a>, and <a href="https://mullvad.net/en/">Mullvad</a> for contributing to OSTIF and helping us move the open-source world forward. This project was primarily supported with funds from the Monero community and Monero Research Lab.</h5>
+<p>We have been working with the <a href="https://www.reddit.com/r/Monero/">Monero community</a>, <a href="https://www.arweave.org/">Arweave</a>, <a href="https://web.getmonero.org/resources/research-lab/">Monero Research Lab</a>, and four audit teams to conduct a deep an thorough review of RandomX, a new proof of work algorithm that aims to push the &#8220;egalitarian ideal&#8221; for cryptocurrency.</p>
+<p>RandomX aims to make <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">highly-optimized custom hardware</a> slower or far less efficient than general purpose computer hardware that is available to everyone. The thinking behind this move is that hardware that is available to everyone is far more likely to be used by the general populace and enthusiasts, which hedges against centralization of the computing power that is verifying cryptocurrency transactions.</p>
+<p>One of the classic problems with cryptocurrency is that if any one party (or a collaborating cartel of malicious parties) were to possess at least 51% of the computing power of the network, they can re-write transactions to duplicate currency, invalidate real transactions, or otherwise manipulate the network. The rise of custom equipment (<a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASICs</a> and <a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">FPGAs</a>) has given groups that are willing to commit those resources majority stakes in this computing power (aka hashing power).</p>
+<p>RandomX aims to solve this problem by making the algorithm too complex for ASICs and FPGAs to effectively optimize. They will either be significantly slower, too costly to build due to complexity, or too expensive to run compared to general purpose hardware (in electricity costs).</p>
+<p>RandomX is a brand-new idea, but it employs a lot of well known cryptographic functions and applies them in interesting ways.</p>
+<p>In order to verify the security properties of RandomX, Monero Research Lab, The Monero Community, and Arweave have all contributed significantly to sponsor security research that we all coordinated together.</p>
+<p>These four audits were done in a series, with the results and fixes from each audit feeding into the next one. This series of cascading audits gave us perspectives from different teams as well as opportunities to look at aspects of code that others didn&#8217;t focus on, leading to a thorough overall security review.</p>
+<h2>The Scope</h2>
+<p>The goal of these audits is to determine not only that the coding and cryptography are error free, but that the implementation does not easily allow an ASIC or FPGA design to function with a significant advantage over general-purpose hardware.</p>
+<h2>The Broad Strokes</h2>
+<p>All four security teams agree that the RandomX code is of very high quality, but that the documentation could be improved in order to prevent implementation mistakes in non-Monero and non-Arweave blockchains. None of the four teams found cryptographic short cuts in the code that would allow a significant speedup in hashing power due to a bug, nor functions or components of RandomX that could be easily bypassed with hardware optimization (ASIC or FPGA). The consensus is that the code is near deployment-ready, and that over time some small coding practice changes and documentation improvements can further improve safety as RandomX evolves and changes over time with updates. Some suggestions to further harden RandomXs resistance to hardware optimization have also been detailed.</p>
+<p><strong><span style="color: #00ff00;">FIXED</span></strong> = A patch was applied that corrects this issue.<br />
+<strong><span style="color: #0000ff;">SOLVED</span></strong> = Clarification given by the RandomX team indicates that the issue does not need patching for other reasons.<br />
+<strong><span style="color: #ff6600;">DISPUTED</span></strong> = The RandomX team disagrees with the assessment.</p>
+<p>If an issue does not have a status, it is because the issue is still being discussed between the teams. It does not indicate a dispute, only that OSTIF does not know the current status. The status of the issues will be updated here as we learn more about them.</p>
+<h2>Audit 1 &#8211; <a href="https://www.trailofbits.com/">Trail of Bits</a> sponsored by <a href="https://www.arweave.org/">Arweave</a></h2>
+<p><strong>Issue 1 &#8211;</strong><span style="color: #00ff00;"><strong> FIXED </strong></span><strong>&#8211; Single Round Used in AesGenerator</strong><br />
+RandomX was using a single round of AES in order to achieve diffusion. You need at least two rounds of AES to fully mix the source data. This is problematic because in an exploit scenario, if an attacker were able to find a similar bias in other components of RandomX, pieces of the algorithm could be effectively skipped without computation, allowing for a simpler ASIC or FPGA design to be feasible. This would only be achievable if a similar problem was present across many RandomX functions, which was not the case. Nevertheless, <a href="https://github.com/tevador/RandomX/pull/46">RandomX has now been updated to use AesGenerator4R, which performs four rounds of AES to properly mix and diffuse the data.</a></p>
+<p><strong>Issue 2 &#8211;</strong><span style="color: #00ff00;"><strong> FIXED </strong></span><strong>&#8211; Insufficient Testing and Validation of VM Correctness</strong><br />
+RandomX uses a Virtual Machine, but does not have a machine-readable specification to test against. This is important because as the implementation changes, very small changes can lead to forks at unpredictable locations in the blockchain. Being able to test against a specification detects these (potentially rare and hard to detect) problems before they become an issue on the live-chain. Testing has been significantly expanded, with unit testing available for every RandomX insruction.</p>
+<p><strong>Issue 3 &#8211;</strong><span style="color: #00ff00;"><strong> FIXED </strong></span><strong>&#8211; RandomX Configurable Parameters are Brittle &#8211; </strong><strong><a href="https://github.com/tevador/RandomX/pull/59">Pull Request 59</a></strong><span style="color: #0000ff;"><strong><br />
+</strong></span>RandomX has a lot of configuration options, in order to allow multiple cryptocurrency projects to implement RandomX. Some of these options can significantly damage the security and ASIC resistance properties of RandomX. It is strongly recommended that at the very least comments are added to parameters that have a significant impact on the security and robustness of RandomX, and it should be a long term goal to remove the ability to choose unsafe parameters entirely.The RandomX team has added checks to make sure that value are sane, and they have also added significantly more documentation about which values to select.<span style="color: #0000ff;"><strong><br />
+</strong></span></p>
+<p><strong>Additional Miscellany</strong><br />
+Some code quality improvement suggestions. Suggested improvements to randomness in SuperscalarHash. Trail of Bits also did a complex randomness analysis of RandomX and found it select various paths sufficiently, which prevents optimizing for specific paths that are selected more often via a bias. They also provided an excellent resource on which tunable parameters are safe to change in RandomX and which should be left alone. (Section E.) They also recommended specific values for Arweave, the sponsor of Trail of Bits&#8217; research.</p>
+<p>The full Arweave paper can be found <a href="https://github.com/hyc/RandomxAudits/raw/master/Report-TrailOfBits.pdf">here</a>.</p>
+<h2>Audit 2 &#8211; <a href="https://www.kudelskisecurity.com/">Kudelski Security</a> sponsored by OSTIF, Monero Research Lab, and the Monero Community</h2>
+<p>(Redundant findings from Audit 1 by Trail of Bits have been omitted.)</p>
+<p><strong>Issue 1 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Usage of Unoptimized BLAKE2</strong><br />
+RandomX&#8217;s version of the BLAKE2 hash function is unoptimized and does not take advantage of AVX512 CPU optimization. A speedup of up to 40% can be achieved by using an optimized version of BLAKE2. However, the overall performance of RandomX is not dependent on BLAKE2, so the only real advantage of improving this code is power consumption / cpu time. The RandomX team is exploring the use of LibSodium&#8217;s optimized implementation of BLAKE2 for a future release.</p>
+<p><strong>Issue 2 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Lack of NULL Checks &#8211; </strong><a href="https://github.com/tevador/RandomX/pull/88"><strong>Pull Request 88</strong></a><br />
+RandomX does not perform NULL checks when dereferencing the pointer in most areas of the code. <a href="https://cwe.mitre.org/data/definitions/476.html">NULL pointer dereferences</a> are a common security problem in languages that allow them. It is generally a good practice to maintain null checks even if you are confident in your code, because errors can be introduced later through updates that null checks will catch.</p>
+<p><strong>Issue 3 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; randomx_reciprocal() Could Divide by Zero &#8211; <a href="https://github.com/tevador/RandomX/pull/88">Pull Request 88</a></strong><br />
+Dividing by zero can cause crashes and other undesired behavior. After discussion with the development team, other areas of code make sure that this value cannot be zero. A check was added anyway in pull request 88.</p>
+<p><strong>Issue 4 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; randomx.cpp Has a Type Mismatch Error &#8211; <a href="https://github.com/tevador/RandomX/pull/88">Pull Request 88</a></strong><br />
+This type of error can lead to an attacker using crafted inputs to force undesired behavior (an <a href="https://en.wikipedia.org/wiki/Integer_overflow">integer overflow</a>). The RandomX team added checks and asserts to the code in order to cause the application to crash if these invalid inputs are encountered.</p>
+<p><strong>Issue 5 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; getCodeSize() Has a Potential Integer Underflow &#8211; <a href="https://github.com/tevador/RandomX/pull/95">Pull Request 95</a></strong></p>
+<p><strong>Issue 6 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; randomx.cpp Doesn&#8217;t Manually Check for Blake2b Hash Errors</strong><br />
+Hash errors could cause RandomX to enter an undesired state, allowing a user to bypass some steps in RandomX. Upon further investigation, there is a check for this at compile-time, but an extra layer of protection has been added to RandomX by the development team to manually check this value and to throw an assert (and crash the application) if an error is encountered.</p>
+<p><strong>Issue 7 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Potential Out-of-Bound Writes in fillAes1Rx4() and fillAes4Rx4() &#8211; <a href="https://github.com/tevador/RandomX/pull/95">Pull Request 95</a></strong><br />
+This was a non-issue as there are bounds checks at compile-time. Additional checks were added for safety.</p>
+<p><strong>Issue 8 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; isPowerOf2() Can Have an Input of Zero, Which is not a Power of 2 &#8211; <a href="https://github.com/tevador/RandomX/pull/95">Pull Request 95</a></strong><br />
+A value check was mislabeled as &#8220;isPowerOf2()&#8221; and a value of Zero could be called into the function, causing potentially undesired behavior. After talking with the RandomX team, the ability to call a zero into the function was intended, but the function was renamed for better clarity on what the check is actually doing. It is now called isZeroOrPowerOf2().</p>
+<h2>Audit 3 &#8211; <a href="https://www.x41-dsec.de/">X41 D-Sec</a> sponsored by OSTIF, Monero Research Lab, and the Monero Community</h2>
+<p><strong>Issue 1 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Hard Coded Code Size in JIT Compiler &#8211; <a href="https://github.com/tevador/RandomX/pull/98">Pull Request 98</a></strong><br />
+The RandomX JIT Compiler is hard coded to a size of 64k, which can be exceeded by changing some RandomX settings (this would affect non-Monero implementations). This could have both security and stability implications.</p>
+<p><strong>Issue 2 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Integer Handling in Jump-Target Calculation</strong><br />
+The jump-target function does not consider edge cases that could lead to <a href="https://cwe.mitre.org/data/definitions/190.html">Integer Overflows or Integer Wraparounds</a>. After talking with the RandomX team, this appears to be a non-issue because there is a small range of valid inputs that prevent this issue from arising.</p>
+<p><strong>Issue 3 &#8211;<span style="color: #00ff00;"> FIXED</span> &#8211; DatasetSize Does not Consider Usage in 32-bit Systems &#8211; <a href="https://github.com/tevador/RandomX/pull/99">Pull Request 99</a></strong><br />
+DatasetSize can overflow to a very small number in 32-bit systems, due to the size limit of memory allocation for 32-bit addressing. After speaking with the RandomX team, RandomX is not intended to work on 32-bit legacy systems, as they will never be meaningfully competitive on a modern proof-of-work algorithm. Pull Request 99 adds a check to properly throw an error instead of silently failing.</p>
+<p><strong>Issue 4 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Incorrect Code Generated in Emulation Mode &#8211; <a href="https://github.com/tevador/RandomX/pull/98">Pull Request 98</a></strong><br />
+X41 found multiple issues with RandomX running in emulation mode with non-default parameters. This is important because the default parameters are only intended to be used with Monero, and other projects will be using non-default parameters. Pull request 98 corrects these issues.</p>
+<p><strong>Issue 5 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Insufficient Diffusion in AesGenerator4R &#8211; <a href="https://github.com/tevador/RandomX/pull/76">Pull Request 76</a></strong><br />
+X41 found that key-reuse in the AesGenerator4R function allows for trivial reversal of the function. It is a best practice to use individual keys in AesGenerator4R. It is important to note that in the specific way that RandomX uses the AesGenerator4R function, this does not present a security risk because the input is a cryptographically secure hash function.</p>
+<p><strong>Issue 6 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Poor Code Coverage &#8211; <a href="https://github.com/tevador/RandomX/pull/73">Pull Request 73</a></strong><br />
+X41 noted that RandomX is monolithic and that it is hard to test individual components of RandomX rather than RandomX as a whole. This is important because rare problems can be hidden within the components that don&#8217;t get tested directly. In pull request 73, test vectors were added to the code as well as additional regression testing.</p>
+<p><strong>Issue 7 &#8211; <span style="color: #ff6600;">FIXED OPTIONALLY</span> &#8211; JIT Memory Pages for Generated Code are Writable and Executable &#8211; <a href="https://github.com/tevador/RandomX/pull/112">Pull Request 112</a></strong><br />
+The JIT compiler has simultaneous read, write, and execute permissions which are not required. Removing the ability for the JIT compiler to write and execute at the same time mitigates the possibility of an attacker exploiting a bug in the JIT compiler to execute arbitrary code. This was fixed in pull request 112, however, the switching causes a large hit on mining performance (~30%) that will be unacceptable to most. Because of this, it has been made an option to enable/disable.</p>
+<p><strong>Issue 8 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Sandboxing RandomX Execution</strong><br />
+Because the use-case for RandomX is to take user data from an outside source (a block) and process it, it can&#8217;t be ruled out that an attacker could find inputs that could bypass the security properties of the RandomX Virtual Machine. Sandboxing techniques such as those provided by AppContiner or seccomp would help mitigate any possibility of such a scenario arising. The RandomX team disagrees with this assessment, because the values that an attacker can modify (sending fake blocks) are immediately fed through Blake2 hashing, which means that the inputs cannot be effectively controlled to cause an issue if a vulnerability in RandomX existed.</p>
+<p><strong>Issue 9 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Incorrect SuperScalarHash Latency when Program Size is too Small &#8211; <a href="https://github.com/tevador/RandomX/pull/98">Pull Request 98</a></strong><br />
+Some combinations of parameters can cause invalid states where RandomX will run even though not enough memory is allocated for the application to function properly. Additional sanity checks for program size are recommended.</p>
+<p><strong>Issue 10 &#8211; Lack of a Machine-Readable Specification</strong><br />
+RandomX doesn&#8217;t have a machine readable spec to test against, meaning that there is no easy method to test if alternative implementations of RandomX will always, in all circumstances, have the same results. Having such a specification prevents issues with interoperability, and also assists developers of alternative implementations to detect and fix bugs in their own code. As the project matures, it is imperative that a machine-readable spec is established.</p>
+<p><strong>ASIC/FPGA Resistance 1 &#8211; <span style="color: #ff6600;">DISPUTED</span> &#8211; Low Reliance on Branch Prediction Unit</strong><br />
+The branch prediction unit of a CPU is a complex and large component that takes up a lot of physical space on a CPU. RandomX does not rely on branch prediction logic, so an ASIC could greatly simplify a potential ASIC by simplifying the branch prediction unit. After talking with the RandomX team, this is disputed because any logic that can be predicted by a branch predictor can be implemented in an ASIC, possibly more efficiently.</p>
+<p><strong>ASIC/FPGA Resistance 2 &#8211; Low reliance on Front-End Scheduling Logic</strong><br />
+Some parts of RandomX can be executed in parallel by using a preprocessor instead of the JIT, allowing a custom-chip design to have an advantage over CPUs. After talking with the RandomX team, this area of the code is not high-impact and does not significantly impact performance, but it would result in some power savings for an ASIC.</p>
+<p><strong>ASIC/FPGA Resistance 3 &#8211; <span style="color: #ff6600;">DISPUTED</span> &#8211; Low Reliance on Other Modern CPU Elements</strong><br />
+RandomX does not use many complex modern CPU features, such as: privileged instructions, interrupts and interrupt routing (x86 APIC), TLB 8 s, the MMU 9 and virtual memory in general, inter-core communication and cache coherence. While these features do not take up a lot of die space, they are very complex and require large amounts of R&amp;D to implement. Adding features to RandomX that use these CPU features would dramatically increase the cost of a custom chip. RandomX cannot implement many custom features because it is designed to work on many different CPU architectures that may lack those features.</p>
+<p>&nbsp;</p>
+<h2>Audit 4 &#8211; <a href="https://www.quarkslab.com">QuarksLab</a> sponsored by OSTIF, Monero Research Lab, and the Monero Community</h2>
+<p>This audit was conducted by QuarksLab after the conclusion and publishing of the other three audits, to maximize the impact of their review, they considered the latest build of RandomX and all of the work of the previous teams.</p>
+<p><strong>Issue 1 &#8211; (RNDX-N1) Usage of Hard Coded Strings<br />
+</strong>RandomX made significant effort to make components of its protocol fully customizable for a safe reuse. There are six hard coded strings as seeds of various constants and keys and it&#8217;s suggested to add these strings in the configuration set for easier management and customization.<em> This is a minor code practices issue and not a security vulnerability.</em><strong><br />
+</strong></p>
+<p><strong>Issue 2 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-N2) Warning Against RandomX Components Reuse &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+While the existing implementation of the components AesHash1R, AesGenerator1R, and AesGenerator4R are sound, there should be warnings about the re-use of these functions for developers who may be tempted to use these functions elsewhere in their own implementations of RandomX. They are dangerous if used in different contexts.</p>
+<p><strong>Issue 3 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-M1) Argon2 Implementation Does Not Enforce Minimum Salt Size &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+Argon2 requires a salt of a minimum size of 8 bytes. RandomX does not enforce this and does not throw an error if the salt is too small. A lower-bound sanity check should be added.</p>
+<p><strong>Issue 4 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-L1) RANDOMX_ARGON_LANES and RANDOMX_ARGON_ITERATIONS Need Upper Bound Limits &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+RANDOMX_ARGON_LANES needs an upper-bound limit of 2^24-1 and RANDOMX_ARGON_ITERATIONS needs an upper-bound limit of 2^32-1.</p>
+<p><strong>Issue 5 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-L2) RANDOMX_ARGON_MEMORY Needs A Lower Bound Limit of 8 &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+It has a lower-bound limit, but it is currently 1 which doesn&#8217;t consider that ARGON2_SYNC_POINTS = 4.</p>
+<p><strong>Issue 6 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-L3) Missing 64-byte Alignment of mx and ma in the Specifications &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a><br />
+</strong></p>
+<p><strong>Issue 7 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-M2) Error in Computation of DataOffset</strong><br />
+The calculations for DataOffset did not match the specification. After QuarksLab discussed this with the RandomX team, it was discovered that this was a snippet of legacy code from an older implementation of RandomX. This issue has been corrected.</p>
+<p><strong>Issue 8 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-M3) RandomX Key Size Limit Not Enforced &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+RandomX specifies a 60-byte input key, but larger keys can be loaded without error. After talking with the RandomX team, larger keys are truncated to 60 bytes by design. RandomX now informs users when longer keys have been truncated.</p>
+<h2>The Audit Papers</h2>
+<h3><a href="https://github.com/hyc/RandomxAudits/raw/master/Report-TrailOfBits.pdf">Trail of Bits</a><br />
+<a href="https://ostif.org/wp-content/uploads/2019/08/Report-Kudelski-201907022.pdf">Kudelski Security</a><br />
+<a href="https://ostif.org/wp-content/uploads/2019/08/Report-X41-201907051.pdf">X41 D-Sec</a><br />
+<a href="https://ostif.org/wp-content/uploads/2019/08/Report-Quarkslab1.pdf">QuarksLab</a></h3>
+<p>If you like our work, please consider donating and following us on social media (<a href="https://twitter.com/OSTIFofficial">@ostifofficial on Twitter</a>, <a href="https://www.reddit.com/user/ostifofficial/">/u/ostifofficial on Reddit</a>) and consider spreading the word about our cause. We work hard on these projects and none of this work gets done without funding!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>We are Working with the Monero Community for Multiple Audits of RandomX</title>
+		<link>https://ostif.org/we-are-working-with-the-monero-community-for-multiple-audits-of-randomx/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 23 May 2019 03:25:12 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Kudelski Security]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[fundraiser]]></category>
+		<category><![CDATA[RandomX]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1737</guid>
+
+					<description><![CDATA[The Open Source Technology Improvement Fund is working with the Monero community to fund at least two (and probably three) audits of Monero RandomX. What is RandomX? RandomX is a project that implements a dynamic proof of work algorithm. The aim of an algorithm that changes is to make it difficult to design efficient circuitry [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The Open Source Technology Improvement Fund is working with the Monero community to fund at least two (and probably three) audits of Monero RandomX.</p>
+<h2>What is RandomX?</h2>
+<p>RandomX is a project that implements a dynamic proof of work algorithm. The aim of an algorithm that changes is to make it difficult to design efficient circuitry that can fully automate the algorithm in an ASIC. The increased complexity of the algorithm makes it so that an ASIC would lose the advantages that it has over more traditional CPU/GPU designs that can execute many types of code and do many types of mathematics.</p>
+<p>The goal of RandomX is to be a significant boost to ASIC resistance, which is seen as a hedge against centralization.</p>
+<p>Monero (and some other cryptocurrencies) are fighting to overcome significant efforts to centralize mining under ASICs, because one of the fundamental components of cryptocurrency is that access to mining needs to be egalitarian, and custom ASIC designs place the lions&#8217; share of the processing power under the control of a few centralized entities, who then gain significant control over the blockchain.</p>
+<p>The community has selected three auditors, and a fourth, <a href="https://www.trailofbits.com/">Trail of Bits</a>, is also looking at the code through an independent group <a href="https://www.arweave.org/">Arweave.org</a>.</p>
+<p>The auditors are:</p>
+<p><a href="https://www.kudelskisecurity.com/">Kudelski Security</a></p>
+<p><a href="https://www.x41-dsec.de/">X41 D-Sec</a></p>
+<p><a href="https://www.quarkslab.com/en/">QuarksLab</a></p>
+<p>You can read the actual proposals from each team here: <a href="https://github.com/hyc/RandomxAudits">https://github.com/hyc/RandomxAudits</a></p>
+<p>The fundraising has been moving quickly, if you have some XMR that you&#8217;d like to contribute to the effort <a href="https://ccs.getmonero.org/projects/14/donate">you can pitch in here</a>!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Trail of Bits &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/category/trail-of-bits/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Thu, 02 Feb 2023 16:19:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>Trail of Bits &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Our Audit of Kubernetes Event Driven Autoscaling (KEDA) is Complete!</title>
+		<link>https://ostif.org/our-audit-of-kubernetes-event-driven-autoscaling-keda-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 02 Feb 2023 18:00:52 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[keda]]></category>
+		<category><![CDATA[kubernetes event driven autoscaling]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2826</guid>
+
+					<description><![CDATA[Results of the KEDA Security Engagement KEDA, or the Kubernetes-based Event Driven Autoscaling project, was reviewed by Trail of Bits at the end of 2022. KEDA joins a growing list of CNCF Projects audited to improve security posture and help reach graduated status thanks to strategic partner OSTIF. A combination of threat modeling, manual code [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 600;">Results of the KEDA Security Engagement</span></p>
+<p><a href="https://keda.sh/"><span style="font-weight: 400;">KEDA</span></a><span style="font-weight: 400;">, or the Kubernetes-based Event Driven Autoscaling project, was reviewed by </span><a href="https://github.com/trailofbits/publications"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;"> at the end of 2022. KEDA joins a </span><a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/"><span style="font-weight: 400;">growing list </span></a><span style="font-weight: 400;">of CNCF Projects audited to improve security posture and help reach </span><a href="https://www.cncf.io/projects/"><span style="font-weight: 400;">graduated status</span></a><span style="font-weight: 400;"> thanks to strategic partner OSTIF. A combination of threat modeling, manual code review and automated testing tools were used for this engagement. </span></p>
+<p><span style="font-weight: 400;">The audit uncovered one significant flaw in </span><i><span style="font-weight: 400;">Redis Scalers</span></i><span style="font-weight: 400;"> that could impact system confidentiality, integrity, and availability. The issue had to do with Cryptography and circumventing TLS, allowing for potential MitM attacks. An overview of the findings and security improvements can be found below:</span></p>
+<p><span style="font-weight: 500;">Remediation Updates Based on Audit Findings</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/kedacore/keda/pull/3966"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3966</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/kedacore/keda/pull/3989"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3989</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Addressed via </span><a href="https://github.com/kedacore/keda/pull/4091"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4091</span></a><span style="font-weight: 400;">. This Prometheus server has been deprecated and will be removed entirely in 2 releases according to the project’s </span><a href="https://github.com/kedacore/governance/blob/main/DEPRECATIONS.md"><span style="font-weight: 400;">deprecation policy</span></a><span style="font-weight: 400;"> in favor of operator&#8217;s Prometheus server (from operator-sdk).</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> </span><a href="https://github.com/kedacore/keda/pull/3985"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3985</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> </span><a href="https://github.com/kedacore/keda/pull/4007"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4007</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> </span><a href="https://github.com/kedacore/keda/pull/4006"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4006</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Remediated by first adding CodeQL with `security-and-quality` queries enabled and also fixing the reported issues: (1) </span><a href="https://github.com/kedacore/keda/pull/4133"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4133</span></a> <span style="font-weight: 400;">and (2) </span><a href="https://github.com/kedacore/keda/pull/4142"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4142</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Remediated due to fixes implemented for Audit Finding #3.</span></li>
+</ol>
+<p><span style="font-weight: 500;">Tooling Updates and Security Posture Improvements</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Introduced </span><a href="https://github.com/kedacore/keda/issues/3961"><span style="font-weight: 400;">semgrep as tool</span></a><span style="font-weight: 400;"> (with GitHub integration) with all golang rules enabled + </span><a href="https://github.com/dgryski/semgrep-go"><span style="font-weight: 400;">https://github.com/dgryski/semgrep-go</span></a><span style="font-weight: 400;"> rules, and also 2 custom rules, one for detecting the connection string (as proposed by audit team) and another one for detecting wrong error wrappings (to play around the tool and check how it works). A majority of the rules are in comment mode to detect them in PRs and suggest changes, and in parallel have been fixing all the alerts detected, as seen in </span><a href="https://github.com/kedacore/keda/pull/3998"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3998</span></a></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Another important security improvement is the cert management. TLS certificates have been introduced for for all KEDA communications (between the k8s API server and the metrics server, between the k8s API server and webhooks and between KEDA operator and KEDA metrics server) and for authenticate KEDA metrics server in KEDA operator gRCP server (the server exposes a TLS endpoint and requires TLS client authentication).</span></li>
+</ol>
+<p><span style="font-weight: 400;">“With KEDA, we strive to provide a secure application autoscaling solution by using an extensive suite of security tools and offer our end-users various ways to authenticate to their dependencies and meet corporate requirements. Thanks to the audit we were able to patch some minor vulnerabilities and increase our existing security toolchain to prevent new vulnerabilities from being introduced.”</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Tom Kerkhove &#8211; KEDA Maintainer, Senior Software Engineer at Microsoft </span></li>
+</ul>
+<p><span style="font-weight: 400;">&#8220;We greatly appreciate OSTIF and Trail of Bits for their thorough security audit of KEDA and for the excellent cooperation we received. The KEDA community is constantly striving to make the project better and more secure for our users, the insights provided in the audit will help us achieve that.&#8221;</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Zbynek Roubalik &#8211; KEDA Maintainer, Principal Software Engineer at Red Hat</span></li>
+</ul>
+<p><strong>Thank You</strong></p>
+<p><span style="font-weight: 400;">We thank Jorge Turrado, Tom Kerkhove, Zbynek Roubalik, and all the KEDA maintainers for their help and collaboration on this engagement. </span></p>
+<p><span style="font-weight: 400;">Special thanks to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> for sponsoring the audit and entrusting OSTIF to get the work done. We are truly grateful for the opportunity to help make critical cloud computing infrastructure more secure and sustainable.</span></p>
+<p>The full research article by Trail of Bits is here: <a href="https://ostif.org/wp-content/uploads/2023/02/2023-01-keda-securityreview.pdf">https://ostif.org/wp-content/uploads/2023/02/2023-01-keda-securityreview.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OSTIF Audit of Curl with Trail of Bits is Complete</title>
+		<link>https://ostif.org/the-ostif-audit-of-curl-with-trail-of-bits-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 21 Dec 2022 18:02:31 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[bug]]></category>
+		<category><![CDATA[curl]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2767</guid>
+
+					<description><![CDATA[Results of curl Security Audit  By: Amir Montazery, OSTIF Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for curl. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><span style="font-weight: 400;">Results of curl Security Audit </span></h1>
+<p><span style="font-weight: 400;">By: Amir Montazery, OSTIF</span></p>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (</span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF</span></a><span style="font-weight: 400;">) is thrilled to announce the results of a security audit and threat model for </span><a href="https://curl.se/"><span style="font-weight: 400;">curl</span></a><span style="font-weight: 400;">. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, television sets, routers, printers, audio equipment, mobile phones, tablets, media players and is the Internet transfer engine for thousands of software applications in over ten billion installations. It’s even </span><a href="https://daniel.haxx.se/blog/2021/04/19/mars-2020-helicopter-contributor/"><span style="font-weight: 400;">deployed on Mars</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The security review of curl was facilitated by OSTIF and sponsored by the Open Source Security Foundation (</span><a href="https://openssf.org/"><span style="font-weight: 400;">OpenSSF</span></a><span style="font-weight: 400;">) in an effort to improve the security of this critical project in the open source ecosystem. The engagement involved a team of four consultants conducting code review for approximately six engineer-weeks of effort. A total of 12 issues were addressed, including 2 High Severity findings. The technical work of the review was led by </span><a href="https://github.com/trailofbits/publications#security-reviews"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The bug fixes were validated and patched as part of the </span><a href="https://curl.se/dev/release-procedure.html"><span style="font-weight: 400;">curl release schedule</span></a><span style="font-weight: 400;">. The planned release for December 21, 2022, included all of the fixes and improvements made to curl as a result of this engagement. A detailed synopsis of the security improvements to curl can be found in the reports under </span><i><span style="font-weight: 400;">Summary of Findings </span></i><span style="font-weight: 400;">and </span><i><span style="font-weight: 400;">Fix Review Results</span></i><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Another significant accomplishment from this engagement was a component-focused threat model for curl and libcurl. Published as a separate report, the effort involved a team of two engineers focused on the identification of security control flaws that could result in a compromise. This focused effort uncovered one design-level issue that could lead to vulnerabilities along with multiple security improvements. Threat model reports like this one can be used by developer and maintainer communities to better understand components, trust zones, and threat actors and gain a deeper understanding of how to use a project like curl. </span></p>
+<p><span style="font-weight: 400;">The curl team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the review and threat modeling exercise. Curl is a good example of a critical open source project. It has been in development for over 20 years thanks largely in part to </span><a href="https://www.haxx.se/"><span style="font-weight: 400;">Haxx</span></a><span style="font-weight: 400;">, a group of open source developers and hackers in Sweden.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from OpenSSF to help make this critical project more secure. </span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links: </span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Security Assessment Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf">https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf</a></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Threat Model Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf">https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf</a></span></li>
+</ul>
+<p><span style="font-weight: 400;">We thank David A. Wheeler, Brian Behlendorf, and Bob Callaway for helping to facilitate this work, and OpenSSF for funding this audit. OSTIF is planning more security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Special thanks to Daniel Stenberg and Dan Fandrich of the curl project for actively participating in the security engagement.</span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from Trail of Bits that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the </span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF website</span></a><span style="font-weight: 400;">. We also have all of our published work on our <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">Github</a>. The OpenSSF supports work like these security audits to make open source software more secure. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem. </span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Results of the CloudEvents Security Assessment</title>
+		<link>https://ostif.org/results-of-the-cloudevents-security-assessment/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 28 Nov 2022 18:37:47 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cloudevents]]></category>
+		<category><![CDATA[linux foundation]]></category>
+		<category><![CDATA[results]]></category>
+		<category><![CDATA[security review]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2759</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund, Inc is happy to announce the results of the CloudEvents Security Assessment. CloudEvents is a specification for describing event data in a common way that simplifies event declaration and delivery across services, platforms, and beyond. CloudEvents has a robust network of contributors and active development as part of the Cloud [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund, Inc is happy to announce the results of the CloudEvents Security Assessment. CloudEvents is a </span><a href="https://cloudevents.io/"><span style="font-weight: 400;">specification</span></a><span style="font-weight: 400;"> for describing event data in a common way that simplifies event declaration and delivery across services, platforms, and beyond. CloudEvents has a robust </span><a href="https://github.com/cloudevents/spec/blob/main/docs/contributors.md"><span style="font-weight: 400;">network of contributors</span></a><span style="font-weight: 400;"> and active development as part of the Cloud Native Computing Foundation. </span></p>
+<p><span style="font-weight: 400;">The Security Assessment took place in September 2022, in which a team of two experts conducted a security review, with four person-weeks of effort. A combination of testing was performed, including dynamic and static analysis of the SDKs and manual review of the specification.</span></p>
+<p><span style="font-weight: 400;">The goal of security audits is to find vulnerabilities so they can be fixed before attackers exploit them, as well as to identify opportunities to harden a project’s implementation and processes to counter vulnerabilities in the future. The CloudEvents Assessment did not uncover any significant flaws or defects that could impact system confidentiality, integrity, or availability. </span></p>
+<p><span style="font-weight: 400;">The notable findings in the review were that some of the SDKs were using outdated dependencies that needed critical security updates, leaving some of them with multiple outdated and vulnerable dependencies. This is a common problem in software, and highlights the importance of better dependency management.  The </span><a href="https://deps.dev/"><span style="font-weight: 400;">deps.dev</span></a><span style="font-weight: 400;"> tool provides insight on project dependencies. Furthermore, the CloudEvents Assessment highlighted the need for adding fuzzing tests to SDKs and potentially adding various SDKs to the </span><a href="https://github.com/google/oss-fuzz"><span style="font-weight: 400;">OSS-fuzz</span></a><span style="font-weight: 400;"> project. </span></p>
+<p><span style="font-weight: 400;">Third-party Security Audits are an important tool for improving a project’s security posture. CloudEvents joins a </span><a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/"><span style="font-weight: 400;">long list of projects</span></a><span style="font-weight: 400;"> that have undergone audits in 2022. </span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> for funding the audit and entrusting OSTIF to manage it. A big thank you to Doug Davis for collaborating with the audit team. Lastly, thank you to </span><a href="https://github.com/trailofbits/publications#security-reviews"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;"> for performing the work. </span></p>
+<p><span style="font-weight: 400;">For full details on this engagement, see the full report here: <a href="https://ostif.org/wp-content/uploads/2022/11/CloudEvents.pdf">https://ostif.org/wp-content/uploads/2022/11/CloudEvents.pdf</a></span></p>
+<p>Trail of Bits also publishes all of their public work to their Github here: <a href="https://github.com/trailofbits/publications/tree/master/reviews">https://github.com/trailofbits/publications/tree/master/reviews</a></p>
+<p>The direct link to the full report is also hosted on the Trail of Bits Github here: <a href="https://github.com/trailofbits/publications/blob/master/reviews/CloudEvents.pdf">https://github.com/trailofbits/publications/blob/master/reviews/CloudEvents.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Review of the Linux Kernel&#8217;s Release Signing and Key Management Policies</title>
+		<link>https://ostif.org/a-review-of-the-linux-kernels-release-signing-and-key-management-policies/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 23 Jun 2021 15:54:09 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Linux Kernel]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[review]]></category>
+		<category><![CDATA[Signing Key]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2541</guid>
+
+					<description><![CDATA[The Linux Foundation sought a review of the kernel teams’ processes for release signing and for the policies and procedures for the handling of the signing keys. Working with OSTIF, Trail of Bits was selected to lead the project and a two person-week review was conducted. Unlike most OSTIF projects, this review did not cover [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.linuxfoundation.org/">The Linux Foundation</a> sought a review of the kernel teams’ processes for release signing and for the policies and procedures for the handling of the signing keys. Working with <a href="https://ostif.org">OSTIF</a>, <a href="https://www.trailofbits.com/">Trail of Bits</a> was selected to lead the project and a two person-week review was conducted.</p>
+<p>Unlike most OSTIF projects, this review did not cover code but was a policy and process overview to identify potential pain points in the key handling and key signing processes for one of the most critical pieces of infrastructure in the world. As such, there are no CVEs nor CIDs addressing vulnerabilities.</p>
+<p>Special thank-you&#8217;s go out to Greg Kroah-Hartman and Konstantin Ryabitsev for participating in the interviews that helped the reviewers clarify the documentation and setting aside time to discuss the researchers’ findings. Thank you to David A. Wheeler and Mike Dolan at the Linux Foundation for helping to facilitate the project. Thank you to Jim Miller, Mike Martel, Opal Wright, and Cara Pearson for their work in this review and for writing this assessment. And finally, a special thank you to Dan Guido at Trail of Bits for working with us to improve critical open source infrastructure.</p>
+<h1><strong>Results</strong></h1>
+<p>This review resulted in seven recommendations that can help improve the robustness of the security and use of the signing keys for the Linux Kernel. Additionally, Trail of Bits suggested that more comprehensive and up to date documentation on the current procedures and policies are needed to help organizations around the world to best understand the current stratagem.</p>
+<h1>Use of smart cards for GPG and SSH not enforced for key individuals</h1>
+<p>Individuals with commit rights on key Linux kernel repositories are not required to store private key material used for GPG or SSH on a separate smart card device, such as a Nitrokey or Yubikey.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, require individuals with access to significant repositories or systems to use a smart card device to store sensitive key material. If that is not a viable option, consider using an alternative mechanism, such as a TPM, to protect sensitive cryptographic material.</p>
+<h1><strong>Recommended smartcard does not require touch activation</strong></h1>
+<p>The Linux Foundation recommends that kernel developers use smart cards, specifically Nitrokeys, to secure their private key material. Linux Foundation-issued Nitrokeys do not require users to perform any physical actions when using smart card functions. Other devices can be configured to require the user to touch the device before the smart card operations occur. As a result, the Nitrokey is protected only by a passphrase while inserted into a workstation.</p>
+<p>While touch activation does not prevent all classes of attacks, such as ones that replace binaries on disk (e.g., for GPG and SSH) or leverage session hijacking, it prevents entire classes of less sophisticated attacks and improves the security posture of a given end-user.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Consider mandating the use of smart card devices that require physical touch to validate each smart card operation. If that is not practical, add guidance recommending that a smart card be physically connected to a workstation only when it is required to complete an operation, which would help prevent an attacker from using an attached smart card device without its user’s knowledge.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members said that because the Yubikey with touch activation is not open source, it is not possible to use for critical infrastructure security. However, they would consider updating their policies to recommend that the current Nitrokeys be physically removed from the administrator’s computer when they are not in use. In the longer term we hope for more options for open source software in touch activated devices.</p>
+<h1><strong>Lack of documented key management policies and procedures</strong></h1>
+<p>There is no centralized, authoritative documentation laying out policies and procedures for key revocation, generation, or rotation or other key management tasks. Without such documentation, users and administrators are more likely to make serious errors when engaging in routine and emergent key management tasks.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, work with administrators and developers to document current procedures and policies and compile that information into a single set of documents that can be updated as necessary.</p>
+<p>Long term, periodically review policies and procedures, assessing their applicability and appropriateness. Update the documentation as policies and procedures change.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members have affirmed that improved documentation is needed to reduce the chance of errors and improve incident response.</p>
+<h1><strong>Lack of public-key authentication resources</strong></h1>
+<p>To verify the content of kernel updates, each commit in the git tree produces a signed tag, and each release is accompanied by a signature over the release’s tarball. Public keys for Linux developers, as well as the associated key signatures forming the web of trust, are managed from a single location. Compromise of the git.kernel.org server would allow an attacker to provide users with a web of public keys not controlled by kernel developers, enabling them to post malicious kernel “releases” that would validate against the attacker’s public keys.</p>
+<p><em><strong>Bootstrapping trust for public-key systems is a hard problem, and is certainly not unique to the Linux kernel. Any software that relies on digital signatures for verification must first &#8220;bootstrap&#8221; trust by ensuring that users have the correct public key. It creates a circular problem that is difficult to solve in the general case.</strong></em></p>
+<p>The Linux Foundation is uniquely equipped to alleviate this problem. Because of Linux&#8217;s community and commercial support, kernel developers have many ways to distribute PGP key fingerprints for important developers. Key fingerprints can be included in conference presentations, periodically published on news sites such as lwn.net, included in email signatures, or published on websites maintained by Linux Foundation partners like Red Hat or IBM. Key fingerprints hosted on the kernel.org infrastructure could then be validated against multiple public sources, reducing the likelihood of a malicious key being trusted.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, identify effective ways to widely advertise developers’ key fingerprints. These could include adding key fingerprints to email signatures, periodically posting them in mailing lists, or referencing them in conference presentations. Long term, continue advertising keys through multiple channels, and work with partners to provide accessible sources of public-key corroboration.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members have expressed interest in both the short and long term recommendations.</p>
+<h1><strong>Use of older public-key algorithms and standards within web of trust</strong></h1>
+<p>PGP keys used by kernel developers vary significantly in terms of algorithm and key size. RSA is the most commonly used algorithm, followed by DSA and elliptic curve algorithms. Work estimates for attacking algorithms based on integer factorization and integer discrete logarithms vary widely, and the algorithms are frequently subject to subtle new failure modes. Trail of Bits generally recommends moving away from RSA where possible in favor of elliptic curve algorithms.</p>
+<p>Since these keys are used to verify code that is eventually incorporated into the kernel, modern primitives should be used. Using a single modern algorithm and key size will help reduce the attack surface for sophisticated attackers.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, choose a single algorithm and key size for new keys incorporated into the kernel web of trust and the PGP key repository. The current kernel developer guidance suggests using ECDSA or Ed25519 keys. Requiring all new keys to conform to this guidance would be an effective step toward standardization.</p>
+<p>Long term, work with developers to gradually replace older RSA and traditional DSA keys with new policy-compliant keys and integrate them into the kernel web of trust. Establish a “sunset date” by which all keys should be switched over.</p>
+<h1><strong>Lack of external integrity validation mechanisms</strong></h1>
+<p>Kernel releases involve a series of steps such as merging changes in Git repositories, pushing tags, and generating a tarball for release. Currently, verification of the steps’ integrity largely depends on the wider community to notice incorrect or malicious behavior. Although this can be effective, additional integrity checks would greatly increase the robustness of the system and help reduce the implicit trust placed in the infrastructure.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, consider releasing tooling that can compare release tarball content with the content of the tagged Git release, as well as tooling that can ensure that all commits to key repositories hosted on kernel.org are signed with an expected identity. Also consider running a verifier on kernel.org systems.</p>
+<p>Long term, consider advocating for interested independent parties to run these verification tools to bolster the integrity verification mechanisms of the wider Linux kernel community.</p>
+<h1><strong>Lack of SSH key rotation</strong></h1>
+<p>Currently, SSH keys used to access kernel.org infrastructure are static. Because SSH keys can often be leveraged to access additional systems, they are frequently targeted by attackers. Under the current setup, recovery of a single developer’s SSH key could allow indefinite access to kernel.org resources.</p>
+<p>A key rotation schedule would mitigate the impact of an SSH key compromise on the kernel.org system. Moreover, with a system in place for rotating SSH keys, the Linux Foundation could respond to an attack that compromises these keys more quickly.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, develop an appropriate key rotation schedule to limit the impact of a compromised SSH key.</p>
+<p>Long term, ensure that key rotation policy is followed and that administrators are practiced in key rotation procedures. This will limit the threat posed by compromised keys and ensure that administrators are capable of quickly rotating keys when a compromise is discovered.</p>
+<h1>A link to the full paper &#8220;Linux Kernel Release Signing &#8211; Security Assessment&#8221; by Trail of Bits below (PDF warning).</h1>
+<p><a href="https://ostif.org/wp-content/uploads/2021/06/Linux-Kernel-Release-Signing-OSTIF-and-Trail-of-Bits.pdf">Linux Kernel Release Signing OSTIF and Trail of Bits</a></p>
+<p>Trail of Bits has also posted the research to Github here: <a href="https://github.com/trailofbits/publications/blob/master/reviews/LinuxKernelReleaseSigning.pdf">https://github.com/trailofbits/publications/blob/master/reviews/LinuxKernelReleaseSigning.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Four Audits of RandomX for Monero and Arweave have been Completed &#8211; Results</title>
+		<link>https://ostif.org/four-audits-of-randomx-for-monero-and-arweave-have-been-completed-results/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 10 Aug 2019 16:52:42 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Kudelski Security]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2004</guid>
+
+					<description><![CDATA[As always, remember that our work only happens with the support of our sponsors and the community. Consider donating to the cause and getting the companies that you work at and patronize to get involved. We are always short on funding and more money always means more research. Special thank you&#8217;s to Private Internet Access, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h5>As always, remember that our work only happens with the support of our sponsors and the community. Consider <a href="https://ostif.org/donate-to-ostif/">donating to the cause</a> and getting the companies that you work at and patronize to get involved. We are always short on funding and more money always means more research. Special thank you&#8217;s to <a href="https://www.privateinternetaccess.com/">Private Internet Access</a>, <a href="https://web.getmonero.org/resources/research-lab/">Monero Research Lab</a>, <a href="https://nordvpn.com/">NordVPN</a>, <a href="https://www.expressvpn.com/">ExpressVPN</a>, and <a href="https://mullvad.net/en/">Mullvad</a> for contributing to OSTIF and helping us move the open-source world forward. This project was primarily supported with funds from the Monero community and Monero Research Lab.</h5>
+<p>We have been working with the <a href="https://www.reddit.com/r/Monero/">Monero community</a>, <a href="https://www.arweave.org/">Arweave</a>, <a href="https://web.getmonero.org/resources/research-lab/">Monero Research Lab</a>, and four audit teams to conduct a deep an thorough review of RandomX, a new proof of work algorithm that aims to push the &#8220;egalitarian ideal&#8221; for cryptocurrency.</p>
+<p>RandomX aims to make <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">highly-optimized custom hardware</a> slower or far less efficient than general purpose computer hardware that is available to everyone. The thinking behind this move is that hardware that is available to everyone is far more likely to be used by the general populace and enthusiasts, which hedges against centralization of the computing power that is verifying cryptocurrency transactions.</p>
+<p>One of the classic problems with cryptocurrency is that if any one party (or a collaborating cartel of malicious parties) were to possess at least 51% of the computing power of the network, they can re-write transactions to duplicate currency, invalidate real transactions, or otherwise manipulate the network. The rise of custom equipment (<a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASICs</a> and <a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">FPGAs</a>) has given groups that are willing to commit those resources majority stakes in this computing power (aka hashing power).</p>
+<p>RandomX aims to solve this problem by making the algorithm too complex for ASICs and FPGAs to effectively optimize. They will either be significantly slower, too costly to build due to complexity, or too expensive to run compared to general purpose hardware (in electricity costs).</p>
+<p>RandomX is a brand-new idea, but it employs a lot of well known cryptographic functions and applies them in interesting ways.</p>
+<p>In order to verify the security properties of RandomX, Monero Research Lab, The Monero Community, and Arweave have all contributed significantly to sponsor security research that we all coordinated together.</p>
+<p>These four audits were done in a series, with the results and fixes from each audit feeding into the next one. This series of cascading audits gave us perspectives from different teams as well as opportunities to look at aspects of code that others didn&#8217;t focus on, leading to a thorough overall security review.</p>
+<h2>The Scope</h2>
+<p>The goal of these audits is to determine not only that the coding and cryptography are error free, but that the implementation does not easily allow an ASIC or FPGA design to function with a significant advantage over general-purpose hardware.</p>
+<h2>The Broad Strokes</h2>
+<p>All four security teams agree that the RandomX code is of very high quality, but that the documentation could be improved in order to prevent implementation mistakes in non-Monero and non-Arweave blockchains. None of the four teams found cryptographic short cuts in the code that would allow a significant speedup in hashing power due to a bug, nor functions or components of RandomX that could be easily bypassed with hardware optimization (ASIC or FPGA). The consensus is that the code is near deployment-ready, and that over time some small coding practice changes and documentation improvements can further improve safety as RandomX evolves and changes over time with updates. Some suggestions to further harden RandomXs resistance to hardware optimization have also been detailed.</p>
+<p><strong><span style="color: #00ff00;">FIXED</span></strong> = A patch was applied that corrects this issue.<br />
+<strong><span style="color: #0000ff;">SOLVED</span></strong> = Clarification given by the RandomX team indicates that the issue does not need patching for other reasons.<br />
+<strong><span style="color: #ff6600;">DISPUTED</span></strong> = The RandomX team disagrees with the assessment.</p>
+<p>If an issue does not have a status, it is because the issue is still being discussed between the teams. It does not indicate a dispute, only that OSTIF does not know the current status. The status of the issues will be updated here as we learn more about them.</p>
+<h2>Audit 1 &#8211; <a href="https://www.trailofbits.com/">Trail of Bits</a> sponsored by <a href="https://www.arweave.org/">Arweave</a></h2>
+<p><strong>Issue 1 &#8211;</strong><span style="color: #00ff00;"><strong> FIXED </strong></span><strong>&#8211; Single Round Used in AesGenerator</strong><br />
+RandomX was using a single round of AES in order to achieve diffusion. You need at least two rounds of AES to fully mix the source data. This is problematic because in an exploit scenario, if an attacker were able to find a similar bias in other components of RandomX, pieces of the algorithm could be effectively skipped without computation, allowing for a simpler ASIC or FPGA design to be feasible. This would only be achievable if a similar problem was present across many RandomX functions, which was not the case. Nevertheless, <a href="https://github.com/tevador/RandomX/pull/46">RandomX has now been updated to use AesGenerator4R, which performs four rounds of AES to properly mix and diffuse the data.</a></p>
+<p><strong>Issue 2 &#8211;</strong><span style="color: #00ff00;"><strong> FIXED </strong></span><strong>&#8211; Insufficient Testing and Validation of VM Correctness</strong><br />
+RandomX uses a Virtual Machine, but does not have a machine-readable specification to test against. This is important because as the implementation changes, very small changes can lead to forks at unpredictable locations in the blockchain. Being able to test against a specification detects these (potentially rare and hard to detect) problems before they become an issue on the live-chain. Testing has been significantly expanded, with unit testing available for every RandomX insruction.</p>
+<p><strong>Issue 3 &#8211;</strong><span style="color: #00ff00;"><strong> FIXED </strong></span><strong>&#8211; RandomX Configurable Parameters are Brittle &#8211; </strong><strong><a href="https://github.com/tevador/RandomX/pull/59">Pull Request 59</a></strong><span style="color: #0000ff;"><strong><br />
+</strong></span>RandomX has a lot of configuration options, in order to allow multiple cryptocurrency projects to implement RandomX. Some of these options can significantly damage the security and ASIC resistance properties of RandomX. It is strongly recommended that at the very least comments are added to parameters that have a significant impact on the security and robustness of RandomX, and it should be a long term goal to remove the ability to choose unsafe parameters entirely.The RandomX team has added checks to make sure that value are sane, and they have also added significantly more documentation about which values to select.<span style="color: #0000ff;"><strong><br />
+</strong></span></p>
+<p><strong>Additional Miscellany</strong><br />
+Some code quality improvement suggestions. Suggested improvements to randomness in SuperscalarHash. Trail of Bits also did a complex randomness analysis of RandomX and found it select various paths sufficiently, which prevents optimizing for specific paths that are selected more often via a bias. They also provided an excellent resource on which tunable parameters are safe to change in RandomX and which should be left alone. (Section E.) They also recommended specific values for Arweave, the sponsor of Trail of Bits&#8217; research.</p>
+<p>The full Arweave paper can be found <a href="https://github.com/hyc/RandomxAudits/raw/master/Report-TrailOfBits.pdf">here</a>.</p>
+<h2>Audit 2 &#8211; <a href="https://www.kudelskisecurity.com/">Kudelski Security</a> sponsored by OSTIF, Monero Research Lab, and the Monero Community</h2>
+<p>(Redundant findings from Audit 1 by Trail of Bits have been omitted.)</p>
+<p><strong>Issue 1 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Usage of Unoptimized BLAKE2</strong><br />
+RandomX&#8217;s version of the BLAKE2 hash function is unoptimized and does not take advantage of AVX512 CPU optimization. A speedup of up to 40% can be achieved by using an optimized version of BLAKE2. However, the overall performance of RandomX is not dependent on BLAKE2, so the only real advantage of improving this code is power consumption / cpu time. The RandomX team is exploring the use of LibSodium&#8217;s optimized implementation of BLAKE2 for a future release.</p>
+<p><strong>Issue 2 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Lack of NULL Checks &#8211; </strong><a href="https://github.com/tevador/RandomX/pull/88"><strong>Pull Request 88</strong></a><br />
+RandomX does not perform NULL checks when dereferencing the pointer in most areas of the code. <a href="https://cwe.mitre.org/data/definitions/476.html">NULL pointer dereferences</a> are a common security problem in languages that allow them. It is generally a good practice to maintain null checks even if you are confident in your code, because errors can be introduced later through updates that null checks will catch.</p>
+<p><strong>Issue 3 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; randomx_reciprocal() Could Divide by Zero &#8211; <a href="https://github.com/tevador/RandomX/pull/88">Pull Request 88</a></strong><br />
+Dividing by zero can cause crashes and other undesired behavior. After discussion with the development team, other areas of code make sure that this value cannot be zero. A check was added anyway in pull request 88.</p>
+<p><strong>Issue 4 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; randomx.cpp Has a Type Mismatch Error &#8211; <a href="https://github.com/tevador/RandomX/pull/88">Pull Request 88</a></strong><br />
+This type of error can lead to an attacker using crafted inputs to force undesired behavior (an <a href="https://en.wikipedia.org/wiki/Integer_overflow">integer overflow</a>). The RandomX team added checks and asserts to the code in order to cause the application to crash if these invalid inputs are encountered.</p>
+<p><strong>Issue 5 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; getCodeSize() Has a Potential Integer Underflow &#8211; <a href="https://github.com/tevador/RandomX/pull/95">Pull Request 95</a></strong></p>
+<p><strong>Issue 6 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; randomx.cpp Doesn&#8217;t Manually Check for Blake2b Hash Errors</strong><br />
+Hash errors could cause RandomX to enter an undesired state, allowing a user to bypass some steps in RandomX. Upon further investigation, there is a check for this at compile-time, but an extra layer of protection has been added to RandomX by the development team to manually check this value and to throw an assert (and crash the application) if an error is encountered.</p>
+<p><strong>Issue 7 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Potential Out-of-Bound Writes in fillAes1Rx4() and fillAes4Rx4() &#8211; <a href="https://github.com/tevador/RandomX/pull/95">Pull Request 95</a></strong><br />
+This was a non-issue as there are bounds checks at compile-time. Additional checks were added for safety.</p>
+<p><strong>Issue 8 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; isPowerOf2() Can Have an Input of Zero, Which is not a Power of 2 &#8211; <a href="https://github.com/tevador/RandomX/pull/95">Pull Request 95</a></strong><br />
+A value check was mislabeled as &#8220;isPowerOf2()&#8221; and a value of Zero could be called into the function, causing potentially undesired behavior. After talking with the RandomX team, the ability to call a zero into the function was intended, but the function was renamed for better clarity on what the check is actually doing. It is now called isZeroOrPowerOf2().</p>
+<h2>Audit 3 &#8211; <a href="https://www.x41-dsec.de/">X41 D-Sec</a> sponsored by OSTIF, Monero Research Lab, and the Monero Community</h2>
+<p><strong>Issue 1 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Hard Coded Code Size in JIT Compiler &#8211; <a href="https://github.com/tevador/RandomX/pull/98">Pull Request 98</a></strong><br />
+The RandomX JIT Compiler is hard coded to a size of 64k, which can be exceeded by changing some RandomX settings (this would affect non-Monero implementations). This could have both security and stability implications.</p>
+<p><strong>Issue 2 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Integer Handling in Jump-Target Calculation</strong><br />
+The jump-target function does not consider edge cases that could lead to <a href="https://cwe.mitre.org/data/definitions/190.html">Integer Overflows or Integer Wraparounds</a>. After talking with the RandomX team, this appears to be a non-issue because there is a small range of valid inputs that prevent this issue from arising.</p>
+<p><strong>Issue 3 &#8211;<span style="color: #00ff00;"> FIXED</span> &#8211; DatasetSize Does not Consider Usage in 32-bit Systems &#8211; <a href="https://github.com/tevador/RandomX/pull/99">Pull Request 99</a></strong><br />
+DatasetSize can overflow to a very small number in 32-bit systems, due to the size limit of memory allocation for 32-bit addressing. After speaking with the RandomX team, RandomX is not intended to work on 32-bit legacy systems, as they will never be meaningfully competitive on a modern proof-of-work algorithm. Pull Request 99 adds a check to properly throw an error instead of silently failing.</p>
+<p><strong>Issue 4 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Incorrect Code Generated in Emulation Mode &#8211; <a href="https://github.com/tevador/RandomX/pull/98">Pull Request 98</a></strong><br />
+X41 found multiple issues with RandomX running in emulation mode with non-default parameters. This is important because the default parameters are only intended to be used with Monero, and other projects will be using non-default parameters. Pull request 98 corrects these issues.</p>
+<p><strong>Issue 5 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Insufficient Diffusion in AesGenerator4R &#8211; <a href="https://github.com/tevador/RandomX/pull/76">Pull Request 76</a></strong><br />
+X41 found that key-reuse in the AesGenerator4R function allows for trivial reversal of the function. It is a best practice to use individual keys in AesGenerator4R. It is important to note that in the specific way that RandomX uses the AesGenerator4R function, this does not present a security risk because the input is a cryptographically secure hash function.</p>
+<p><strong>Issue 6 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Poor Code Coverage &#8211; <a href="https://github.com/tevador/RandomX/pull/73">Pull Request 73</a></strong><br />
+X41 noted that RandomX is monolithic and that it is hard to test individual components of RandomX rather than RandomX as a whole. This is important because rare problems can be hidden within the components that don&#8217;t get tested directly. In pull request 73, test vectors were added to the code as well as additional regression testing.</p>
+<p><strong>Issue 7 &#8211; <span style="color: #ff6600;">FIXED OPTIONALLY</span> &#8211; JIT Memory Pages for Generated Code are Writable and Executable &#8211; <a href="https://github.com/tevador/RandomX/pull/112">Pull Request 112</a></strong><br />
+The JIT compiler has simultaneous read, write, and execute permissions which are not required. Removing the ability for the JIT compiler to write and execute at the same time mitigates the possibility of an attacker exploiting a bug in the JIT compiler to execute arbitrary code. This was fixed in pull request 112, however, the switching causes a large hit on mining performance (~30%) that will be unacceptable to most. Because of this, it has been made an option to enable/disable.</p>
+<p><strong>Issue 8 &#8211; <span style="color: #0000ff;">SOLVED</span> &#8211; Sandboxing RandomX Execution</strong><br />
+Because the use-case for RandomX is to take user data from an outside source (a block) and process it, it can&#8217;t be ruled out that an attacker could find inputs that could bypass the security properties of the RandomX Virtual Machine. Sandboxing techniques such as those provided by AppContiner or seccomp would help mitigate any possibility of such a scenario arising. The RandomX team disagrees with this assessment, because the values that an attacker can modify (sending fake blocks) are immediately fed through Blake2 hashing, which means that the inputs cannot be effectively controlled to cause an issue if a vulnerability in RandomX existed.</p>
+<p><strong>Issue 9 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; Incorrect SuperScalarHash Latency when Program Size is too Small &#8211; <a href="https://github.com/tevador/RandomX/pull/98">Pull Request 98</a></strong><br />
+Some combinations of parameters can cause invalid states where RandomX will run even though not enough memory is allocated for the application to function properly. Additional sanity checks for program size are recommended.</p>
+<p><strong>Issue 10 &#8211; Lack of a Machine-Readable Specification</strong><br />
+RandomX doesn&#8217;t have a machine readable spec to test against, meaning that there is no easy method to test if alternative implementations of RandomX will always, in all circumstances, have the same results. Having such a specification prevents issues with interoperability, and also assists developers of alternative implementations to detect and fix bugs in their own code. As the project matures, it is imperative that a machine-readable spec is established.</p>
+<p><strong>ASIC/FPGA Resistance 1 &#8211; <span style="color: #ff6600;">DISPUTED</span> &#8211; Low Reliance on Branch Prediction Unit</strong><br />
+The branch prediction unit of a CPU is a complex and large component that takes up a lot of physical space on a CPU. RandomX does not rely on branch prediction logic, so an ASIC could greatly simplify a potential ASIC by simplifying the branch prediction unit. After talking with the RandomX team, this is disputed because any logic that can be predicted by a branch predictor can be implemented in an ASIC, possibly more efficiently.</p>
+<p><strong>ASIC/FPGA Resistance 2 &#8211; Low reliance on Front-End Scheduling Logic</strong><br />
+Some parts of RandomX can be executed in parallel by using a preprocessor instead of the JIT, allowing a custom-chip design to have an advantage over CPUs. After talking with the RandomX team, this area of the code is not high-impact and does not significantly impact performance, but it would result in some power savings for an ASIC.</p>
+<p><strong>ASIC/FPGA Resistance 3 &#8211; <span style="color: #ff6600;">DISPUTED</span> &#8211; Low Reliance on Other Modern CPU Elements</strong><br />
+RandomX does not use many complex modern CPU features, such as: privileged instructions, interrupts and interrupt routing (x86 APIC), TLB 8 s, the MMU 9 and virtual memory in general, inter-core communication and cache coherence. While these features do not take up a lot of die space, they are very complex and require large amounts of R&amp;D to implement. Adding features to RandomX that use these CPU features would dramatically increase the cost of a custom chip. RandomX cannot implement many custom features because it is designed to work on many different CPU architectures that may lack those features.</p>
+<p>&nbsp;</p>
+<h2>Audit 4 &#8211; <a href="https://www.quarkslab.com">QuarksLab</a> sponsored by OSTIF, Monero Research Lab, and the Monero Community</h2>
+<p>This audit was conducted by QuarksLab after the conclusion and publishing of the other three audits, to maximize the impact of their review, they considered the latest build of RandomX and all of the work of the previous teams.</p>
+<p><strong>Issue 1 &#8211; (RNDX-N1) Usage of Hard Coded Strings<br />
+</strong>RandomX made significant effort to make components of its protocol fully customizable for a safe reuse. There are six hard coded strings as seeds of various constants and keys and it&#8217;s suggested to add these strings in the configuration set for easier management and customization.<em> This is a minor code practices issue and not a security vulnerability.</em><strong><br />
+</strong></p>
+<p><strong>Issue 2 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-N2) Warning Against RandomX Components Reuse &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+While the existing implementation of the components AesHash1R, AesGenerator1R, and AesGenerator4R are sound, there should be warnings about the re-use of these functions for developers who may be tempted to use these functions elsewhere in their own implementations of RandomX. They are dangerous if used in different contexts.</p>
+<p><strong>Issue 3 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-M1) Argon2 Implementation Does Not Enforce Minimum Salt Size &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+Argon2 requires a salt of a minimum size of 8 bytes. RandomX does not enforce this and does not throw an error if the salt is too small. A lower-bound sanity check should be added.</p>
+<p><strong>Issue 4 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-L1) RANDOMX_ARGON_LANES and RANDOMX_ARGON_ITERATIONS Need Upper Bound Limits &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+RANDOMX_ARGON_LANES needs an upper-bound limit of 2^24-1 and RANDOMX_ARGON_ITERATIONS needs an upper-bound limit of 2^32-1.</p>
+<p><strong>Issue 5 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-L2) RANDOMX_ARGON_MEMORY Needs A Lower Bound Limit of 8 &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+It has a lower-bound limit, but it is currently 1 which doesn&#8217;t consider that ARGON2_SYNC_POINTS = 4.</p>
+<p><strong>Issue 6 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-L3) Missing 64-byte Alignment of mx and ma in the Specifications &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a><br />
+</strong></p>
+<p><strong>Issue 7 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-M2) Error in Computation of DataOffset</strong><br />
+The calculations for DataOffset did not match the specification. After QuarksLab discussed this with the RandomX team, it was discovered that this was a snippet of legacy code from an older implementation of RandomX. This issue has been corrected.</p>
+<p><strong>Issue 8 &#8211; <span style="color: #00ff00;">FIXED</span> &#8211; (RNDX-M3) RandomX Key Size Limit Not Enforced &#8211; <a href="https://github.com/tevador/RandomX/pull/111">Pull Request 111</a></strong><br />
+RandomX specifies a 60-byte input key, but larger keys can be loaded without error. After talking with the RandomX team, larger keys are truncated to 60 bytes by design. RandomX now informs users when longer keys have been truncated.</p>
+<h2>The Audit Papers</h2>
+<h3><a href="https://github.com/hyc/RandomxAudits/raw/master/Report-TrailOfBits.pdf">Trail of Bits</a><br />
+<a href="https://ostif.org/wp-content/uploads/2019/08/Report-Kudelski-201907022.pdf">Kudelski Security</a><br />
+<a href="https://ostif.org/wp-content/uploads/2019/08/Report-X41-201907051.pdf">X41 D-Sec</a><br />
+<a href="https://ostif.org/wp-content/uploads/2019/08/Report-Quarkslab1.pdf">QuarksLab</a></h3>
+<p>If you like our work, please consider donating and following us on social media (<a href="https://twitter.com/OSTIFofficial">@ostifofficial on Twitter</a>, <a href="https://www.reddit.com/user/ostifofficial/">/u/ostifofficial on Reddit</a>) and consider spreading the word about our cause. We work hard on these projects and none of this work gets done without funding!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>We are Working with the Monero Community for Multiple Audits of RandomX</title>
+		<link>https://ostif.org/we-are-working-with-the-monero-community-for-multiple-audits-of-randomx/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 23 May 2019 03:25:12 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Kudelski Security]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[fundraiser]]></category>
+		<category><![CDATA[RandomX]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1737</guid>
+
+					<description><![CDATA[The Open Source Technology Improvement Fund is working with the Monero community to fund at least two (and probably three) audits of Monero RandomX. What is RandomX? RandomX is a project that implements a dynamic proof of work algorithm. The aim of an algorithm that changes is to make it difficult to design efficient circuitry [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The Open Source Technology Improvement Fund is working with the Monero community to fund at least two (and probably three) audits of Monero RandomX.</p>
+<h2>What is RandomX?</h2>
+<p>RandomX is a project that implements a dynamic proof of work algorithm. The aim of an algorithm that changes is to make it difficult to design efficient circuitry that can fully automate the algorithm in an ASIC. The increased complexity of the algorithm makes it so that an ASIC would lose the advantages that it has over more traditional CPU/GPU designs that can execute many types of code and do many types of mathematics.</p>
+<p>The goal of RandomX is to be a significant boost to ASIC resistance, which is seen as a hedge against centralization.</p>
+<p>Monero (and some other cryptocurrencies) are fighting to overcome significant efforts to centralize mining under ASICs, because one of the fundamental components of cryptocurrency is that access to mining needs to be egalitarian, and custom ASIC designs place the lions&#8217; share of the processing power under the control of a few centralized entities, who then gain significant control over the blockchain.</p>
+<p>The community has selected three auditors, and a fourth, <a href="https://www.trailofbits.com/">Trail of Bits</a>, is also looking at the code through an independent group <a href="https://www.arweave.org/">Arweave.org</a>.</p>
+<p>The auditors are:</p>
+<p><a href="https://www.kudelskisecurity.com/">Kudelski Security</a></p>
+<p><a href="https://www.x41-dsec.de/">X41 D-Sec</a></p>
+<p><a href="https://www.quarkslab.com/en/">QuarksLab</a></p>
+<p>You can read the actual proposals from each team here: <a href="https://github.com/hyc/RandomxAudits">https://github.com/hyc/RandomxAudits</a></p>
+<p>The fundraising has been moving quickly, if you have some XMR that you&#8217;d like to contribute to the effort <a href="https://ccs.getmonero.org/projects/14/donate">you can pitch in here</a>!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

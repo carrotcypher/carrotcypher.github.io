@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>gitlab &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/gitlab/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Wed, 18 Jan 2023 17:33:26 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>gitlab &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The Audit of Git is Complete!</title>
+		<link>https://ostif.org/the-audit-of-git-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Tue, 17 Jan 2023 18:10:53 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[chainguard]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[github]]></category>
+		<category><![CDATA[gitlab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[x41]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2782</guid>
+
+					<description><![CDATA[Results of Git Security Audit Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for git. Git is the world&#8217;s most widely used version control system, and it underpins not only open source, but the vast majority of public and private software development today. To [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h2>Results of Git Security Audit</h2>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for <a href="https://git-scm.com/">git</a>. Git is the world&#8217;s most widely used version control system, and it underpins not only open source, but the vast majority of public and private software development today. To say that git is infrastructure is an understatement, it reaches nearly every corner of software development and touches nearly every product that has software in one way or another.</span></p>
+<p><span style="font-weight: 400;">For this reason, git is one of OSTIFs top priorities to help with security resources and has built a large coalition of companies to work on multiple facets of the git project. The security audit conducted by Markus Vervier and Eric Sesterhenn from <a href="https://x41-dsec.de/">X41</a> and Joern Schneeweisz from <a href="https://about.gitlab.com/">GitLab</a> is only a part of the total efforts coordinated by OSTIF. <a href="https://github.com/">Github&#8217;s</a> <a href="https://codeql.github.com/">CodeQL team</a> (thank you Turbo!) is helping the git developers build a custom ruleset for CodeQL to help give the developers more meaningful results and cull false positives so that the tool is more usable than the previous static analysis tools (that the core git team had stopped using due to multiple difficulties). Additionally, Adolfo Veytia and John Speed Meyers from <a href="https://www.chainguard.dev/">Chainguard</a> along with Dennis Appelt from GitLab are working on how the Windows version of git is distributed to make recommendations and changes to improve the supply chain security of git. We will be releasing the results of those efforts as each of these projects is completed. This coalition of efforts is unified through our shared interests in git and the critical role that it plays in the open source world.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from the <a href="https://blog.google/technology/safety-security/shared-success-in-building-a-safer-open-source-community/">Google Open Source Security Team (GOSST)</a> and the help of the <a href="https://openssf.org/">OpenSSF</a> to help make this critical project more secure.</span></p>
+<p><span style="font-weight: 400;">For this portion of the research a total of 35 issues were discovered, including 2 critical severity findings and a high severity finding. Additionally, because of this research, a number of potentially catastrophic security bugs were discovered and resolved internally by the git security team. (A special thank you to Patrick Steinhardt for all of their work on the formatting issues related to CVE-2022-41903).<br />
+</span></p>
+<p><span style="font-weight: 400;">The serious bug fixes are in the latest release of Git (released today).</span></p>
+<p><span style="font-weight: 400;"> The most notable issues were:</span></p>
+<p><span style="font-weight: 400;"><strong>CRITICAL</strong> &#8211; CVE-2022-41903 &#8211; <a href="https://github.com/git/git/security/advisories/GHSA-475x-2q3q-hvwq">Out-of-Bounds Memory Write in Log Formatting</a> (this had multiple collateral issues that were fixed by the git security team that were critical in nature)</span></p>
+<p><span style="font-weight: 400;"><strong>CRITICAL</strong> &#8211; CVE-2022-23251 &#8211; Truncated Allocation Leading to Out of Bounds Write Via Large Number of Attributes</span></p>
+<p><span style="font-weight: 400;"><strong>HIGH</strong> &#8211; Out-of-Bounds Read Via Padding Placeholders</span></p>
+<p><span style="font-weight: 400;">The git team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the initial meetings and security review. We&#8217;d like to thank everyone at git who helped us with this audit, with security tooling questions, and with understanding the git build process.</span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links:</span></p>
+<p><span style="font-weight: 400;">Git Security Assessment Full Report &#8211; <a href="https://ostif.org/wp-content/uploads/2023/01/X41-OSTIF-Gitlab-Git-Security-Audit-20230117-public.pdf">https://ostif.org/wp-content/uploads/2023/01/X41-OSTIF-Gitlab-Git-Security-Audit-20230117-public.pdf</a><br />
+More information from X41&#8217;s blog post here: <a href="https://www.x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/">https://www.x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/</a><br />
+</span><span style="font-weight: 400;">Information on the latest git patch: <a href="https://www.openwall.com/lists/oss-security/2023/01/17/4">https://www.openwall.com/lists/oss-security/2023/01/17/4</a><br />
+OSTIF is planning many security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from <a href="https://x41-dsec.de/">X41</a> and <a href="https://about.gitlab.com/">GitLab</a> that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the OSTIF website. <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">We also have all of our published work on our Github</a>. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem.</span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Notation &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/notation/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Mon, 10 Jul 2023 15:28:39 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>Notation &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>OSTIF’s Security Audit of Notation-duly Noted!</title>
+		<link>https://ostif.org/2023-14/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Tue, 11 Jul 2023 03:00:19 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[Notation]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2952</guid>
+
+					<description><![CDATA[During the Spring of 2023, OSTIF, ADA Logics, and The Notary Project collaborated on a security audit of the new Notation libraries. Notation is a CLI project to add signatures as standard items in the registry ecosystem and to build a set of simple tooling for signing and verifying signatures.  Seven issues were found by [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">During the Spring of 2023, OSTIF, </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400">, and </span><a href="https://notaryproject.dev/"><span style="font-weight: 400">The Notary Project</span></a><span style="font-weight: 400"> collaborated on a security audit of the new Notation libraries. </span><a href="https://github.com/notaryproject/notation"><span style="font-weight: 400">Notation</span></a><span style="font-weight: 400"> is a CLI project to add signatures as standard items in the registry ecosystem and to build a set of simple tooling for signing and verifying signatures. </span></p>
+<p><span style="font-weight: 400">Seven issues were found by the audit team and remediated by the Notary Project team. A single high vulnerability identified during the engagement allowed unverified descriptors to be fetched from a remote registry. This was classified as </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33959"><span style="font-weight: 400">CVE-2023-33959</span></a><span style="font-weight: 400">. Such an action could allow a malicious actor to sign or verify an artifact that could fool a user into using a malicious artifact. A solution was devised by using the library to validate descriptors as being provided by the user. Three issues (two medium and one low) were related to signature processing, using endless data attacks to cause resource exhaustion that could lead to denial of service. See </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33957"><span style="font-weight: 400">CVE-2023-33957</span></a><span style="font-weight: 400"> and </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33958"><span style="font-weight: 400">CVE-2023-33958</span></a><span style="font-weight: 400"> for more details. The fix for these scenarios was uncomplicated, and can even be modified by users should it be necessary for their use of the library. </span></p>
+<p><span style="font-weight: 400">The CVEs linked above were issued for three of the seven findings, and the other four received documentation to track them or CLI command flag name changes. These resolutions are in place in subsequent releases including RC-7 and 1.0.0 of Notary. </span></p>
+<p><span style="font-weight: 400">The Notary Project team was eager and reactive to solving reported issues, and as a result their development and release processes were tested and improved. Thank you particularly to Feynman Zhou, Junjie Gao, Pritesh Bandi, Patrick Zheng, Samir Kakkar, Shiwei Zhang, Toddy Mladenov, Vani Rao, and Yi Zha for their involvement in this audit. ADA Logics created and imparted wonderful work with this audit and report, and we are thankful to them for their part. Finally, OSTIF would like to offer our gratitude to </span><a href="https://www.cncf.io/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400"> for their financial support of work like this and other efforts that improve open source security. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">You can read more details about the work done here at ADA Logics’ blog </span><a href="https://adalogics.com/blog/notation-security-audit-2023"><span style="font-weight: 400">https://adalogics.com/blog/notation-security-audit-2023</span></a></p>
+<p><a href="https://github.com/notaryproject/notaryproject/blob/main/security/reports/audit/ADA-notation-security-audit-23.pdf"><span style="font-weight: 400">For full details on the audit and methodology followed, see the full report here</span></a></p>
+<p><span style="font-weight: 400">For further information on Notation, see this link </span><a href="https://github.com/notaryproject/notation"><span style="font-weight: 400">https://github.com/notaryproject/notation</span></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>x41-Dsec &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/x41-dsec/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:21:23 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>x41-Dsec &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>We are Raising Money to Audit Unbound DNS</title>
+		<link>https://ostif.org/we-are-raising-money-to-audit-unbound-dns/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 09 Feb 2019 01:20:45 +0000</pubDate>
+				<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Unbound DNS]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[dns]]></category>
+		<category><![CDATA[fundraiser]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[unbound]]></category>
+		<category><![CDATA[x41-Dsec]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1681</guid>
+
+					<description><![CDATA[We have just completed our review of OpenSSL 1.1.1 with QuarksLab, and we are moving on to our next big project, Unbound DNS! What is Unbound and Why is it Important? One of the core functions of the internet is domain name resolution. This means that when you type in a domain name like &#8220;ostif.org&#8221; [&#8230;]]]></description>
+										<content:encoded><![CDATA[
+<p>We have just completed our review of <a href="https://ostif.org/the-ostif-and-quarkslab-audit-of-openssl-is-complete/">OpenSSL 1.1.1 with QuarksLab</a>, and we are moving on to our next big project, Unbound DNS!</p>
+
+
+
+<h2 class="wp-block-heading"><br />What is Unbound and Why is it Important?</h2>
+
+
+
+<p>One of the core functions of the internet is domain name resolution. This means that when you type in a domain name like &#8220;ostif.org&#8221; into your browser, your computer asks a <a href="https://en.wikipedia.org/wiki/Domain_Name_System">Domain Name Server</a> (DNS Server) where OSTIF.org is, and that server returns an address to your browser so that it knows where to go to load the site. This same system is used in apps, operating systems, and every web-connected service.</p>
+
+
+
+<p>The entire DNS system is decades old and was not originally designed with security or privacy in mind. This means that DNS was designed as &#8220;connectionless&#8221; and without encryption. This opens up DNS to all kinds of problem like <a href="https://krebsonsecurity.com/tag/dns-reflection-attack/">DNS reflection attacks</a> (hijacking many DNS servers to knock down websites via a <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack">Distributed Denial of Service attack</a>), <a href="https://en.wikipedia.org/wiki/DNS_spoofing">DNS Spoofing and DNS Poisoning</a> (an attacker intercepting your DNS requests and sending back malicious IP addresses), and wholesale surveillance (all DNS requests going through multiple parties on the web who can <a href="https://en.wikipedia.org/wiki/DNS_analytics">record every website you visit and every service you use</a>).</p>
+
+
+
+<p>To fix this, standards have been developed to make DNS more trustworthy by encrypting the connections and verifying the data coming back from the servers is not from an interloper. <a href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a> and <a href="https://en.wikipedia.org/wiki/DNS_over_TLS">DNS over TLS</a> are the two major solutions used today.</p>
+
+
+
+<p>The most popular open-source solution out there is <a href="https://nlnetlabs.nl/projects/unbound/about/">Unbound</a> by <a href="https://nlnetlabs.nl/">NLNetLabs</a>.</p>
+
+
+
+<blockquote class="wp-block-quote">
+<p>To help increase online privacy, Unbound supports <a href="https://tools.ietf.org/html/rfc7858">DNS-over-TLS</a> which allows clients to encrypt their communication. In addition, it supports various modern standards that limit the amount of data exchanged with authoritative servers. These standards do not only improve privacy but also help making the DNS more robust. The most important are <a href="https://tools.ietf.org/html/rfc7816">Query Name Minimisation</a>, the <a href="https://tools.ietf.org/html/rfc8198">Aggressive Use of DNSSEC-Validated Cache</a> and support for <a href="https://tools.ietf.org/html/rfc7706">authority zones</a>, which can be used to load a copy of the root zone.</p>
+<cite>https://nlnetlabs.nl/projects/unbound/about</cite></blockquote>
+
+
+
+<p>Not only is it widely used in many sites and services, but it is integrated into projects like <a href="https://letsencrypt.org/">Let&#8217;s Encrypt</a> that are increasing the security of the entire Internet through enabling widespread use of free security certificates for Domain Names. Let&#8217;s Encrypt serves over 150 million domain certificates that enable https on websites around the world.</p>
+
+
+
+<h2 class="wp-block-heading">How Are We Collaborating?</h2>
+
+
+
+<p>OSTIF and Unbound have been discussing their current security practices and potential improvements, as well as establishing secure communications with NLNetLabs for reporting issues. Now, we are raising money for a full security review of Unbound, which will be conducted with <a href="https://www.x41-dsec.de/">X41-Dsec in Germany</a>. After all issues are resolved we will publish the audit report for the public to review, and then Unbound will join our bug-bounty program to bring white-hat hackers around the world in to do continuous review of the code and locate further issues.</p>
+
+
+
+<h2 class="wp-block-heading">How much do we need to raise?</h2>
+
+
+
+<p>We need to raise approximately <strong>$139,000</strong> in total to cover the cost of the audit, the pool of money for the bug bounty system, and various operations costs (transaction fees on donations, etc). These numbers come from the size of the code base, the complexity of the code, the quality of the documentation on how the app works, and the current security practices which influence the scope of the audit.</p>
+
+
+
+<h2 class="wp-block-heading">HOW TO GET INVOLVED!</h2>
+
+
+
+<p>You can donate to us through a huge number of easy options <a href="https://ostif.org/donate-to-ostif/">here</a>. Recurring donations through <a href="https://www.paypal.com/donate/?token=-Lm4ufIoIVeBypaM9HgKtQOGXhNDuJbgMacyGeP-zT8KFI9pmdsOKu2Q50CtJDt5DbYQN0&amp;country.x=US&amp;locale.x=US">Paypal</a> or <a href="https://www.patreon.com/OSTIF">Patreon</a> help us more than one-time commitments, as recurring funding allows us to better budget and plan our finances. Every little bit helps. The community effect adds up to help us cover all of our operations costs and tech expenses!</p>
+
+
+
+<p>More importantly, you can help spread the word about our work. These projects only succeed because people hear about us and get involved. We have an active twitter account <a href="https://twitter.com/ostifofficial?lang=en">@ostifofficial</a> and we are frequently on Reddit as <a href="https://www.reddit.com/user/ostifofficial">/u/ostifofficial</a>. Tell people about our project and that we are making the Internet a safer place for all of us.</p>
+
+
+
+<p>Additionally, if you work for a company that utilizes open-source software like OpenVPN, OpenSSL, Unbound, Open Office, BitMessage, VeraCrypt, MariaDB or VLC Media Player, PHP, Apache, DD-WRT, or GnuPG GPA, encourage them to get involved in the effort. We have various support tiers that companies can join to both help us make the internet more secure while simultaneously improving their own security. Companies that get involved also get a direct line to our managers to help us select future projects and direct the organization through our advisory counsel and steering committees.</p>
+
+
+
+<p>We are excited to bring Unbound onto OSTIF support! Let&#8217;s get this done!</p>
+
+
+
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

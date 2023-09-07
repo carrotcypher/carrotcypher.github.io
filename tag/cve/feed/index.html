@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>cve &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/cve/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Wed, 06 Sep 2023 16:27:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>cve &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dampening Vulnerabilities in Dapr: Security Audit of Dapr</title>
+		<link>https://ostif.org/dapr-audit/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Wed, 06 Sep 2023 10:00:39 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[Dapr]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[threat model]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=3001</guid>
+
+					<description><![CDATA[In May and June of 2023, OSTIF and ADA Logics worked with the open source project Dapr on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">In May and June of 2023, OSTIF and </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400"> worked with the open source project </span><a href="https://dapr.io/"><span style="font-weight: 400">Dapr</span></a><span style="font-weight: 400"> on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks with building blocks running best practices. Existing under the umbrella of the </span><a href="https://www.cncf.io/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400">, Dapr is an incubating project. </span></p>
+<p><span style="font-weight: 400">The ADA Logics team used a variety of tools and techniques to perform the security audit. Goals for the audit of the code assets in scope were to formalize a threat model, perform a manual code audit, do an evaluation of Dapr&#8217;s fuzzing suite, and carry out a SLSA review. These goals covered a range of the project’s needs and security concerns. </span></p>
+<p><span style="font-weight: 400">The threat model visualization and documentation acted as an aid and guide for the audit and can be used for future audits and by Dapr internally. It was feasible and important for both a high-level overview and more specific models to be created about the flow of Dapr, as they became walk-throughs that informed the identification of five possible threat actors and the four trust zones of the application. </span></p>
+<p><span style="font-weight: 400">Dapr’s fuzzing suite received an additional five fuzzers written by ADA Logics’ team. The fuzzers were added to the project’s OSS-Fuzz integration, making them run continuously since their introduction to the code. This way, the new fuzzers can run for longer, explore more, and test the latest master branch.</span></p>
+<p><span style="font-weight: 400">During the process of manual code review, seven security issues were found. They were classified as four moderate, two low, and one informational issue respectively. Four of said issues were umbrella issues of a specific class that can affect multiple components in the same building block in a similar way. One of the issues was a high-severity vulnerability in a 3rd-party dependency to Dapr that was issued CVE-2023-37475, however, it did not affect Dapr in a high-severity way and was scored as moderate from the perspective of Daprs threat model.</span></p>
+<p><span style="font-weight: 400">OSTIF would like to thank the team at ADA Logics, specifically Adam and David Korczynski, for their work, dedication, and final report on this audit. Our further gratitude to the Dapr community and maintainers, notably Yaron Schneider, Alessandro Segala, and Artur Souza, for their collaboration, contributions, and efforts on this audit and their project. Finally, recognition goes to the CNCF for their funding and support of open source security work. </span></p>
+<p><span style="font-weight: 400">Read the audit report <a href="https://ostif.org/wp-content/uploads/2023/09/Dapr-audit-2023.pdf">HERE</a></span></p>
+<p><span style="font-weight: 400">Read ADA Logic’s blog </span><a href="https://adalogics.com/blog/dapr-security-audit-2023"><span style="font-weight: 400">HERE</span></a></p>
+<p>Read Dapr&#8217;s blog <a href="https://blog.dapr.io/posts/2023/09/05/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+<p>Read CNCF&#8217;s blog <a href="https://www.cncf.io/blog/2023/09/06/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OSTIF Audit of Curl with Trail of Bits is Complete</title>
+		<link>https://ostif.org/the-ostif-audit-of-curl-with-trail-of-bits-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 21 Dec 2022 18:02:31 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[bug]]></category>
+		<category><![CDATA[curl]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2767</guid>
+
+					<description><![CDATA[Results of curl Security Audit  By: Amir Montazery, OSTIF Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for curl. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><span style="font-weight: 400;">Results of curl Security Audit </span></h1>
+<p><span style="font-weight: 400;">By: Amir Montazery, OSTIF</span></p>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (</span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF</span></a><span style="font-weight: 400;">) is thrilled to announce the results of a security audit and threat model for </span><a href="https://curl.se/"><span style="font-weight: 400;">curl</span></a><span style="font-weight: 400;">. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, television sets, routers, printers, audio equipment, mobile phones, tablets, media players and is the Internet transfer engine for thousands of software applications in over ten billion installations. It’s even </span><a href="https://daniel.haxx.se/blog/2021/04/19/mars-2020-helicopter-contributor/"><span style="font-weight: 400;">deployed on Mars</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The security review of curl was facilitated by OSTIF and sponsored by the Open Source Security Foundation (</span><a href="https://openssf.org/"><span style="font-weight: 400;">OpenSSF</span></a><span style="font-weight: 400;">) in an effort to improve the security of this critical project in the open source ecosystem. The engagement involved a team of four consultants conducting code review for approximately six engineer-weeks of effort. A total of 12 issues were addressed, including 2 High Severity findings. The technical work of the review was led by </span><a href="https://github.com/trailofbits/publications#security-reviews"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The bug fixes were validated and patched as part of the </span><a href="https://curl.se/dev/release-procedure.html"><span style="font-weight: 400;">curl release schedule</span></a><span style="font-weight: 400;">. The planned release for December 21, 2022, included all of the fixes and improvements made to curl as a result of this engagement. A detailed synopsis of the security improvements to curl can be found in the reports under </span><i><span style="font-weight: 400;">Summary of Findings </span></i><span style="font-weight: 400;">and </span><i><span style="font-weight: 400;">Fix Review Results</span></i><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Another significant accomplishment from this engagement was a component-focused threat model for curl and libcurl. Published as a separate report, the effort involved a team of two engineers focused on the identification of security control flaws that could result in a compromise. This focused effort uncovered one design-level issue that could lead to vulnerabilities along with multiple security improvements. Threat model reports like this one can be used by developer and maintainer communities to better understand components, trust zones, and threat actors and gain a deeper understanding of how to use a project like curl. </span></p>
+<p><span style="font-weight: 400;">The curl team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the review and threat modeling exercise. Curl is a good example of a critical open source project. It has been in development for over 20 years thanks largely in part to </span><a href="https://www.haxx.se/"><span style="font-weight: 400;">Haxx</span></a><span style="font-weight: 400;">, a group of open source developers and hackers in Sweden.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from OpenSSF to help make this critical project more secure. </span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links: </span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Security Assessment Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf">https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf</a></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Threat Model Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf">https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf</a></span></li>
+</ul>
+<p><span style="font-weight: 400;">We thank David A. Wheeler, Brian Behlendorf, and Bob Callaway for helping to facilitate this work, and OpenSSF for funding this audit. OSTIF is planning more security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Special thanks to Daniel Stenberg and Dan Fandrich of the curl project for actively participating in the security engagement.</span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from Trail of Bits that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the </span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF website</span></a><span style="font-weight: 400;">. We also have all of our published work on our <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">Github</a>. The OpenSSF supports work like these security audits to make open source software more secure. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem. </span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of sigstore is complete. High risk vulnerability found and fixed.</title>
+		<link>https://ostif.org/our-audit-of-sigstore-is-complete-high-risk-vulnerability-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 18 Jul 2022 17:06:32 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Include Security]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[include security]]></category>
+		<category><![CDATA[OpenSSF]]></category>
+		<category><![CDATA[sigstore]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2691</guid>
+
+					<description><![CDATA[We’re excited to report the results for the security audit of sigstore.  Sigstore is a new standard for signing, verifying and protecting software; and has quickly grown into a premier tool for securing the software supply chain. The security review was facilitated by Open Source Technology Improvement Fund and carried out by Include Security. The [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">We’re excited to report the results for the security audit of </span><a href="https://www.sigstore.dev/"><span style="font-weight: 400;">sigstore</span></a><span style="font-weight: 400;">.  Sigstore is a new standard for signing, verifying and protecting software; and has quickly grown into a premier tool for securing the software supply chain. The security review was facilitated by Open Source Technology Improvement Fund and carried out by </span><a href="https://includesecurity.com/"><span style="font-weight: 400;">Include Security</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The goal of security audits is to find vulnerabilities so they can be fixed before attackers exploit them, as well as to identify opportunities to harden a project’s implementation and processes to counter vulnerabilities in the future. The sigstore team demonstrated a strong commitment to improving security posture by requesting independent review and actively participating in the audit process. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><span style="font-weight: 400;">The results of the security audit are three findings (1 High Risk, 2 Low Risk), fuzzing improvements, and a documented threat model. </span></p>
+<p><span style="font-weight: 400;">The high-risk finding along with one of the low-risk findings identified through this security audit has been fixed and validated. See below for the full report. </span></p>
+<p><span style="font-weight: 400;">A big thank you to the </span><a href="https://www.linuxfoundation.org/"><span style="font-weight: 400;">Linux Foundation</span></a><span style="font-weight: 400;"> and </span><a href="https://openssf.org/"><span style="font-weight: 400;">OpenSSF</span></a><span style="font-weight: 400;"> for supporting the work and to the </span><a href="https://www.sigstore.dev/"><span style="font-weight: 400;">sigstore project</span></a><span style="font-weight: 400;"> for funding the audit. Furthermore, thank you to the Include Security team for executing the audit and working with us to make and validate fixes. </span></p>
+<p><span style="font-weight: 400;">Also special thanks to Bob Calloway, Brian Behlendorf, David A. Wheeler, Dan Lorenc, and Luke Hinds for their role in the engagement. </span></p>
+<p><span style="font-weight: 400;">Proactive security audits go a long way in detecting and fixing vulnerabilities. Everyone around the world depends on OSS, and we would love to do more security audits! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>References:</strong></p>
+<p><span style="font-weight: 400;">Link to full report: <a href="https://ostif.org/wp-content/uploads/2022/07/OSTIF-2022-Q1-Sigstore-Report-v3.pdf">https://ostif.org/wp-content/uploads/2022/07/OSTIF-2022-Q1-Sigstore-Report-v3.pdf</a></span></p>
+<p><span style="font-weight: 400;">Link to OpenSSF blog post: <a href="https://openssf.org/blog/2022/07/18/results-of-sigstore-and-slf4j-security-audits/">https://openssf.org/blog/2022/07/18/results-of-sigstore-and-slf4j-security-audits/</a></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Argo is Complete. Critical and High Severity Security Issues Found and Fixed.</title>
+		<link>https://ostif.org/our-audit-of-argo-is-complete-critical-and-high-severity-security-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 18 Jul 2022 15:02:40 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[argo]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[xss]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2676</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is happy to report the results of yet another security audit, this time of the Argo project. The Argo project is a collection of tools for getting work done with Kubernetes. The main components of Argo audited are:  Argo Workflows &#8211; Container-native Workflow Engine Argo CD &#8211; Declarative GitOps Continuous [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is happy to report the results of yet another security audit, this time of the </span><a href="https://github.com/argoproj/argoproj"><span style="font-weight: 400;">Argo</span></a><span style="font-weight: 400;"> project. </span><span style="font-weight: 400;">The Argo project is a collection of tools for getting work done with Kubernetes. The main components of Argo audited are: </span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-workflows"><span style="font-weight: 400;">Argo Workflows</span></a><span style="font-weight: 400;"> &#8211; Container-native Workflow Engine</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-cd"><span style="font-weight: 400;">Argo CD</span></a><span style="font-weight: 400;"> &#8211; Declarative GitOps Continuous Delivery</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-events"><span style="font-weight: 400;">Argo Events</span></a><span style="font-weight: 400;"> &#8211; Event-based Dependency Manager</span></li>
+</ol>
+<p><span style="font-weight: 400;">The research findings resulted in 26 security issues including 1 critical and 4 high severity bugs that were fixed. The most significant finding is an XSS injection in ArgoCD </span><a href="https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6x78-8vrj"><span style="font-weight: 400;">https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6&#215;78-8vrj</span></a><span style="font-weight: 400;"> that allows an attacker to execute javascript code in the UI, which could allow an attacker to take admin control of the kubernetes cluster.</span></p>
+<p><span style="font-weight: 400;">Additionally, the Ada Logics team built 7 new fuzzers to integrate into the ossfuzz testing suite for Argo that focus on security relevant functions. The Argo team and community demonstrated a strong commitment to improving the project’s security posture. See the full report and Argo team’s synopsis below for detailed information.</span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. </span></p>
+<p><span style="font-weight: 400;">Special thanks to David Korczynski and Adam Korczynski of </span><a href="https://adalogics.com/"><span style="font-weight: 400;">Ada Logics</span></a><span style="font-weight: 400;"> for auditing the software and to the Argo team </span><span style="font-weight: 400;">Alex Collins, Derek Wang, Hari Rongali, Henrik Blixt, Jann Fischer, Michael Crenshaw and Jesse Suen </span><span style="font-weight: 400;">for their committed support. Strong collaboration between the review team and project maintainers helps the audit process be more impactful, especially with the help of the community. </span></p>
+<p><span style="font-weight: 400;">Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>References: </strong></p>
+<p><span style="font-weight: 400;">Argo Full Audit Report: <a href="https://ostif.org/wp-content/uploads/2022/07/ostif_argo_security_audit_2022.pdf">https://ostif.org/wp-content/uploads/2022/07/ostif_argo_security_audit_2022.pdf</a></span></p>
+<p>Ada Logics Blog: <a href="https://adalogics.com/blog/argo-security-audit">https://adalogics.com/blog/argo-security-audit</a></p>
+<p>Argo Blog:</p>
+<p>Cloud Native Computing Fund Announcement:</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of KubeEdge is Complete. Multiple Security Issues Found and Fixed.</title>
+		<link>https://ostif.org/our-audit-of-kubeedge-is-complete-multiple-security-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 11 Jul 2022 14:05:07 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[kubeedge]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2659</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund (ostif.org) is thrilled to report the results of a security audit of KubeEdge. KubeEdge is an edge computing framework built on top of Kubernetes and extends native containerized application orchestration and management to hosts at the edge. The result of this engagement is the finding and fixing of multiple medium [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Open Source Technology Improvement Fund (<a href="https://ostif.org">ostif.org</a>) is thrilled to report the results of a security audit of <a href="https://kubeedge.io">KubeEdge</a>. KubeEdge is an edge computing framework built on top of <a href="https://kubernetes.io/">Kubernetes</a> and extends native containerized application orchestration and management to hosts at the edge.</p>
+<p>The result of this engagement is the finding and fixing of multiple medium severity issues, threat modeling, and integration to <a href="https://github.com/google/oss-fuzz">OSS Fuzz</a>. 10 fuzzers in total were written, and these fuzzers were set up to run in the CI for pull requests. Several issues were found by the fuzzers, including 2 of the 8 CVEs.</p>
+<p>The KubeEdge team demonstrated a strong commitment to security and was fast to reproduce crashes and respond with patches. This type of engagement and collaboration from project maintainers helps the security audit process be more effective and impactful. We thank Kevin Wang, Fisher Xu, Vincent Lin and everyone who helped with this engagement.</p>
+<p>Thank you to the <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. Special thanks to David Korczynski and Adam Korczynski of <a href="https://adalogics.com/">Ada Logics</a> for conducting the audit.</p>
+<p>Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact amir@ostif.org.</p>
+<p><strong>References:</strong></p>
+<p>FULL AUDIT REPORT: <a href="https://ostif.org/wp-content/uploads/2022/07/OSTIF-2022-Q3-KubeEdge-audit.pdf">https://ostif.org/wp-content/uploads/2022/07/OSTIF-2022-Q3-KubeEdge-audit.pdf</a></p>
+<p>The Ada Logics Blog: <a href="https://adalogics.com/blog/kubeedge-security-engagement">https://adalogics.com/blog/kubeedge-security-engagement</a></p>
+<p>The Cloud Native Computing Foundation Blog: <a href="https://www.cncf.io/blog/2022/07/11/ostifs-audit-of-kubeedge-is-complete-multiple-security-issues-found-and-fixed/">https://www.cncf.io/blog/2022/07/11/ostifs-audit-of-kubeedge-is-complete-multiple-security-issues-found-and-fixed/https://www.cncf.io/blog/</a></p>
+<p>KubeEdge Blog: <a href="https://kubeedge.io/en/blog/security-threat-model/">https://kubeedge.io/en/blog/security-threat-model/</a></p>
+<p>KubeEdge security advisories: <a href="https://github.com/kubeedge/kubeedge/security/advisories">https://github.com/kubeedge/kubeedge/security/advisories</a></p>
+<p>Information about all of our projects can be found on our Github page: <a href="https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md">https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of CRI-O is Complete &#8211; High Severity Issues Found and Fixed</title>
+		<link>https://ostif.org/our-audit-of-cri-o-is-complete-high-severity-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 06 Jun 2022 19:00:24 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Chainguard]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[chainguard]]></category>
+		<category><![CDATA[cloud native computing foundation]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[containerd]]></category>
+		<category><![CDATA[cri-o]]></category>
+		<category><![CDATA[crio]]></category>
+		<category><![CDATA[cve]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2617</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is thrilled to report the results of a security audit of CRI-O. CRI-O is an open source software (OSS) project that is an implementation of the Kubernetes Container Runtime Interface. It can run any OCI-compatible container, providing an enormous number of applications and environments.  The primary security finding of the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is thrilled to report the results of a security audit of </span><a href="https://github.com/cri-o/cri-o"><span style="font-weight: 400;">CRI-O</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;">CRI-O</span><span style="font-weight: 400;"> is an open source software (OSS) project </span><span style="font-weight: 400;">that</span><span style="font-weight: 400;"> is an implementation of the Kubernetes Container Runtime Interface.</span><span style="font-weight: 400;"> It can run any OCI-compatible container, providing an enormous number of applications and environments. </span></p>
+<p><span style="font-weight: 400;">The primary security finding of the work is a single high-severity issue. A few minor issues were found as well, however, the Audit Team’s view from completing this engagement is that CRI-O is a well-written project that has a high level of security assurance.</span></p>
+<p><span style="font-weight: 400;">The high severity finding is a denial of service attack on a given cluster by way of resource exhaustion of nodes. The attack is performed by way of pod creation, which means any user that can create a pod can cause denial of service on the given node that is used for pod creation. The CVE for the this vulnerability is </span><span style="font-weight: 400;">CVE-2022-1708 and Github advisory can be found here: </span><a href="https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j"><span style="font-weight: 400;">https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j</span></a></p>
+<p><span style="font-weight: 400;">Interestingly, the denial of service attack also occurred in other container runtime interface implementations, most notably Containerd. Specifically, the exact same attack that exhausts memory in CRI-O can be used to exhaust memory of Containerd. The CVE for this issue in containerd is CVE-2022-31030 and the Github security advisory can be found here: </span><a href="https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf"><span style="font-weight: 400;">https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf</span></a><span style="font-weight: 400;"> </span></p>
+<p><span style="font-weight: 400;">Furthermore, an extensive fuzzing suite targeting the CRI-O infrastructure was integrated as a result of this engagement, providing long-lasting improvements to the security posture of the project.</span></p>
+<p><span style="font-weight: 400;">Lastly, we commissioned </span><a href="https://www.chainguard.dev/"><span style="font-weight: 400;">Chainguard</span></a><span style="font-weight: 400;"> to perform a dedicated Supply Chain Security Assessment of CRI-O as part of the security audit. The assessment was designed to analyze CRI-O practices and recommend steps and strategies to increase </span><a href="https://slsa.dev/"><span style="font-weight: 400;">SLSA compliance</span></a><span style="font-weight: 400;">. The full assessment can be found in the report. </span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. </span></p>
+<p><span style="font-weight: 400;">Special thanks to David Korczynski and Adam Korczynski of </span><a href="https://adalogics.com/"><span style="font-weight: 400;">Ada Logics</span></a><span style="font-weight: 400;"> for auditing the software, Dan Lorenc and Adolfo García Veytia of Chainguard, and to the CRI-O team’s Peter Hunt and Mrunal Patel for their support. </span></p>
+<p><span style="font-weight: 400;">Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">References: </span></p>
+<p>FULL AUDIT REPORT (PDF)</p>
+<p><a href="https://ostif.org/wp-content/uploads/2022/06/CRI-O-audit-by-ada-logics-chainguard-ostif.pdf">https://ostif.org/wp-content/uploads/2022/06/CRI-O-audit-by-ada-logics-chainguard-ostif.pdf</a></p>
+<p>Announcement by Ada Logics</p>
+<p><a href="https://adalogics.com/blog/cri-o-security-engagement">https://adalogics.com/blog/cri-o-security-engagement</a></p>
+<p><span style="font-weight: 400;">Announcements by the Cloud Native Computing Foundation</span></p>
+<p><a href="https://www.cncf.io/blog/2022/06/06/ostifs-audit-of-cri-o-is-complete-high-severity-issues-found-and-fixed/">https://www.cncf.io/blog/2022/06/06/ostifs-audit-of-cri-o-is-complete-high-severity-issues-found-and-fixed/</a></p>
+<p><a href="https://www.cncf.io/blog/2022/06/06/ada-logics-cri-o-holistic-security-audit-engagement/">https://www.cncf.io/blog/2022/06/06/ada-logics-cri-o-holistic-security-audit-engagement/</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Flux2 is Complete</title>
+		<link>https://ostif.org/our-audit-of-flux2-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2021 17:08:03 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[flux]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2594</guid>
+
+					<description><![CDATA[We have been working with the team over at the Flux project on a security review and improving their tooling. The Cloud Native Computing Foundation contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected ADA Logics to do both the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have been working with the team over at the <a href="https://github.com/fluxcd/flux2">Flux</a> project on a security review and improving their tooling. The <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected <a href="https://adalogics.com/">ADA Logics</a> to do both the fuzzing integration work and the security review.</p>
+<p>We are happy to report that our project has completed and Flux has its first CVE as a result! The bug allows an authenticated user with some specific permissions to escalate their privileges all the way to kubernetes cluster admin by injecting malicious shell scripts as Kubernetes Secrets in kustomize-controller. This issue impacts multiple large cloud vendors who have been notified to update. Flux version 1.18 and above contain the fix.</p>
+<p><a href="https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7"><strong>CVE-2021-41254</strong>:</a> [Privilege escalation to cluster admin on multi-tenant Flux]</p>
+<p>ADA Logics and the Flux team were excellent to work with! Our collaborative work has led to multiple fixes, improved overall testing with continuous fuzzing by way of OSS-Fuzz, and the comprehensive report below. The Flux team also created a<a href="https://github.com/orgs/fluxcd/projects/5"> public and easy to track dashboard showing all of the work we&#8217;ve done together</a> and is a fantastic example of good issue-tracking and remediation.</p>
+<p>A special thank you to the Cloud Native Computing Foundation for sponsoring this work and improving the security of Flux for everyone!</p>
+<p><a href="https://ostif.org/wp-content/uploads/2021/11/FluxreportFinalV1.1.pdf">Click here for the full report</a> (PDF)</p>
+<p>More information:<br />
+<a href="https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/">https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/</a><br />
+<a href="https://fluxcd.io/blog/2021-11-10-flux-security-audit/">https://fluxcd.io/blog/2021-11-10-flux-security-audit/</a><br />
+<a href="https://fluxcd.io/security/">https://fluxcd.io/security/</a><br />
+<a href="https://github.com/cncf/toc/blob/main/docs/projects.md">https://github.com/cncf/toc/blob/main/docs/projects.md</a><br />
+<a href="https://adalogics.com/blog/fluxcd-security-audit">https://adalogics.com/blog/fluxcd-security-audit</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Congratulations to Guido Vranken for earning our first bug bounty!</title>
+		<link>https://ostif.org/congratulations-to-guido-vranken-for-earning-our-first-bug-bounty/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2017 02:42:21 +0000</pubDate>
+				<category><![CDATA[Bug Bounties]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[bug bounty]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1095</guid>
+
+					<description><![CDATA[Security researcher Guido Vranken has had the honor of being our first bug bounty payout totaling $5000 USD for his work on fuzzing OpenVPN 2.4.2 and finding a variety of memsafe and error handling flaws, responsibly disclosing them, and working with OSTIF and the OpenVPN security team to integrate his custom code into the OpenVPN [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Security researcher Guido Vranken has had the honor of being our first bug bounty payout totaling $5000 USD for his work on fuzzing OpenVPN 2.4.2 and finding a variety of memsafe and error handling flaws, responsibly disclosing them, and working with OSTIF and the OpenVPN security team to integrate his custom code into the OpenVPN project to eliminate this class of bugs from resurfacing in OpenVPN.</p>
+<p>This bounty was for responsibly disclosing multiple flaws that led to CVEs as well as some other minor bug fixes:</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-7521" target="_blank" rel="noopener noreferrer">CVE-2017-7521</a></p>
+<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7508" target="_blank" rel="noopener noreferrer">CVE-2017-7508</a></p>
+<p>The combined total bounty for his bug reporting was $3500 USD. He was awarded a $1500 bonus for his work integrating his tools into the OpenVPN developer program to prevent future occurrences of this type of flaw.</p>
+<p>Thank you Guido for your fantastic work, from all of us at OSTIF.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

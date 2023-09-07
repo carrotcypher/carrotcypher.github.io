@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>riot im &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/riot-im/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:26:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>riot im &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What OSTIF is Working on in 2020</title>
+		<link>https://ostif.org/what-ostif-is-working-on-in-2020/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 18 Apr 2020 13:05:34 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[clsag]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[riot im]]></category>
+		<category><![CDATA[triptych]]></category>
+		<category><![CDATA[updates]]></category>
+		<category><![CDATA[wintun]]></category>
+		<category><![CDATA[wireguard]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2126</guid>
+
+					<description><![CDATA[OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months! Two projects with the Linux Foundation We are working with the Linux Foundation&#8217;s Core Infrastructure Initiative on the safety and security of the Linux Kernel. We are working with Atredis [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months!</p>
+<h2>Two projects with the Linux Foundation</h2>
+<p>We are working with the <a href="https://www.linuxfoundation.org/">Linux Foundation&#8217;s</a> <a href="https://www.coreinfrastructure.org/">Core Infrastructure Initiative</a> on the safety and security of the <a href="https://www.kernel.org/">Linux Kernel</a>. We are working with Atredis Partners on evaluating the processes and policies for the Kernel&#8217;s security reporting, update, and disclosure processes to seek potential areas of improvement. This is something that the Kernel team has sought to review for years and OSTIF worked with our network of partners to bring the best people to the table for the task. We will be keeping the public notified as this project progresses. Here is an excellent talk by Konstantin Ryabitsev on how the Linux Kernel currently receives updates: <a href="https://www.youtube.com/watch?v=vohrz14S6JE">https://www.youtube.com/watch?v=vohrz14S6JE</a></p>
+<p>Additionally, we are in the early stages of reviewing the handling of software signing keys for the kernel, and how they are used for signing updates to the Kernel. We will have more information about this project in the near future.</p>
+<h2>Two Projects with the Monero Community</h2>
+<p>We are working with the Monero community on CLSAG. CLSAG promises to reduce signature sizes considerably while maintaining the same privacy level that Monero currently enjoys. Jean-Philipe Aumasson and Antony Vennard of <a href="https://teserakt.io/">Teserakt</a> will be reviewing both the theoretical paper <a href="https://eprint.iacr.org/2019/654.pdf">here</a> and the implementation <a href="https://github.com/SarangNoether/monero/tree/clsag-device">here</a> after approval by the security committee and a round of fundraising with the Monero community.</p>
+<p>Additionally, we are in the early stages of organizing and audit of Monero Triptych. <a href="https://eprint.iacr.org/eprint-bin/getfile.pl?entry=2020/018&amp;version=20200107:094009&amp;file=018.pdf">Triptych</a> promises to make transactions in Monero more efficient by increasing the efficiency of the ring signature scheme. Triptych allows Monero to significantly increase the size of rings while maintaining similar transaction sizes and verification speeds. This increase in ring size (from the current 12 to over 100) would theoretically substantially improve Monero privacy. We will be updating everyone on the status of this project as it progresses.</p>
+<h2>Three VPN Related Projects</h2>
+<p>We are working with the <a href="https://openvpn.net/">OpenVPN</a> team on a review of <a href="https://github.com/OpenVPN/openvpn">OpenVPN 2.5.0</a>, which introduces a number of new features that expand the use cases of OpenVPN. This includes and obfuscation plugin system that was developed with the <a href="https://operatorfoundation.org/">Operator Foundation</a>, whom we have also been working with to develop obfuscation plugins for OpenVPN that will be ready to go on launch.</p>
+<p>We are also exploring scoping for a security review of <a href="https://wireguard.com">WireGuard&#8217;s</a> clients. This is crucially important because while WireGuard&#8217;s core code is only 5000-6000 lines and simple to review, the supporting software libraries for the individual clients adds an order of magnitude more code that doesn&#8217;t have the same brevity and quality controls of the core code. A wide-scope review of WireGuard gives the community a fine-grained review of the current security benefits of WireGuard over alternatives.</p>
+<p>Additionally, we are exploring scoping to audit <a href="https://www.wintun.net/">WinTun</a>. WinTun is particularly important because it is the virtual driver that Windows requires for VPNs to function properly. This importance is magnified by WinTun also apparently performing better than tap-windows6 which is used by OpenVPN, and support for WinTun being added to OpenVPN. This means that WinTun will likely be the primary TAP/TUN driver for both OpenVPN and WireGuard in the future, so the security properties of WinTun are crucial.</p>
+<h2>Reaching Out to RIOT.IM</h2>
+<p>We have learned that the RIOT messenger team is seeking a security review of their project. So far we have been unsuccessful in our attempts to contact them. We will continue to try to reach out to assist the project and explore if collaboration is possible.</p>
+<h2>Seeking Additional Sources of Funding</h2>
+<p>OSTIF&#8217;s primary purpose is to bring together security resources with open source projects. As we expand on both ends of this goal, and we bring on more security teams while also having an increase in requests for support, the need for manpower grows. Two of our staff (Amir and Derek) have moved to working for OSTIF full-time.</p>
+<p>Our efforts are now focused on seeking additional funding so that we can continue to effectively support projects with our time and resources. This comes in the form of us reaching out to more organizations for support, including large corporations and governments in the form of cybersecurity grants. Sponsorships and grants will be key for OSTIF going forward, as we continue to expand and magnify the amount of good we can do.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>linux &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/linux/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Thu, 08 Apr 2021 18:19:14 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>linux &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>A Review of the Linux Kernel&#8217;s Vulnerability Reporting and Remediation</title>
+		<link>https://ostif.org/a-review-of-the-linux-kernels-vulnerability-reporting-and-remediation/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 15 Jan 2021 20:57:55 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[linux foundation]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2516</guid>
+
+					<description><![CDATA[The Linux Foundation has sponsored a review of the Linux Kernel&#8217;s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public. OSTIF, working with the team at Atredis Partners and a coalition of interested parties from [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.linuxfoundation.org/">The Linux Foundation</a> has sponsored a review of the Linux Kernel&#8217;s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public.</p>
+<p><a href="https://ostif.org/">OSTIF</a>, working with the team at <a href="https://www.atredis.com/">Atredis Partners</a> and a coalition of interested parties from the <a href="https://www.kernel.org/">Kernel team</a> including the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>, <a href="https://www.android.com/">Google Android</a>, <a href="https://cloud.google.com/">Google Cloud</a>, and <a href="https://www.redhat.com/">Red Hat</a> worked together to map out the current system in place, and look for opportunities to improve upon that system to potentially improve the overall security of the kernel and to resolve potential problems with downstream projects like Android, Debian, Red Hat Enterprise Linux, Fedora, Ubuntu, CentOS, Arch, OpenSuse, and so many more.</p>
+<p>This project involved multiple one-on-one interviews with members of the kernel team as well as representatives from the stakeholders where opportunities to investigate and address issues were discussed. Additionally, the Atredis team looked at documentation, articles, public talks, and discussions that took place over the last few years to construct a best-possible picture of the current topology and look toward standard industry practices to see how they could best inform their analysis.</p>
+<p>This project took careful consideration for the unique needs of open source projects, and the extraordinary position that the Linux Kernel holds in the open source world. The findings had to weigh a careful balance between the needs of the enormous Linux community and coupled that with sound industry best practices that fit into that niche.</p>
+<p>Usually, these articles outlay a list of issues found within a project and directly address those issues with fixes. This blog post will be unique in that we will lay out the two key recommendations from the Atredis report, and supply short descriptions of the reasoning behind these suggestions. <em><strong>We strongly recommend reading the full report at the bottom of this post if you feel passionately about this topic, as we expect many engineers and contributors do.</strong></em></p>
+<p>It is worth noting these recommendations are just that &#8211; <em>recommendations</em>. Our public disclosure of the audit results does not guarantee that these recommendations will be enacted. The Linux kernel community is already discussing how these recommendations might be acted upon, and given some complex transitions required, what timeline they could be acted upon.</p>
+<h1>Recommendation One &#8211; Keep All Security Discussions Public Instead of Private</h1>
+<p>Atredis recommends that the Linux Kernel move to a public security bug reporting system. This is because a private reporting system runs counter to the spirit of open source generally; it opens up the project to criticism about transparency. The key reasoning behind this recommendation is that because serious security issues are resolved quickly in the kernel, and that there&#8217;s usually a long lead-time before kernel fixes make it into the various Linux distributions which erases much of the real world benefits of private reporting. The problems of keeping security reports private outweigh the potential benefits of public discussion.</p>
+<p>This recommendation also considers other factors. Infrastructure decisions are often made on the basis of a particular version of a kernel having &#8220;no CVEs&#8221; or &#8220;no documented security bugs&#8221; with the misunderstanding that this means that the software is free of known security bugs. This policy change could help close the information gap that leads decision-makers to keep vulnerable versions of the Kernel in their products, as they will be able to clearly see security reports and the fixes that are applied.</p>
+<p>We acknowledge that this will be contentious in some circles. That said, we think it’s an important idea that’s worth discussion.</p>
+<h1>Recommendation Two &#8211; CVE Reporting Should Reside with Downstream Distributions</h1>
+<p>Atredis recommends that the downstream distributions manage CVE reporting. This is because the Linux Kernel is implemented differently across so many products that the resources required to test and trace bug findings is too broad and resource intensive. This finding is corroborated by a recent MITRE finding that because the Linux Kernel is not an end-product, CVE reporting was not designed for and is not appropriate for the Linux Kernel.</p>
+<p>This recommendation asserts that the contributors to the various distributions know their products best and because of the practices of backporting fixes and integrating updates in a piecemeal fashion, a system where the kernel issued CVEs would not be helpful as the risk profiles of the individual distributions that admins are actually using is still unknown without more information. This means that a hypothetical kernel CVE system would produce lower-quality information than CVE reporting systems that are guided and driven by the distributions.</p>
+<p>This recommendation also considers that there are some efforts to more rapidly integrate kernel fixes directly into distributions without selective backporting. Google pushing toward mainline Linux support in Android is an example of this. Even in cases where the latest version of the kernel is running on a device, some components may still never be used and the security properties of a kernel bug may not impact one distribution as much as another. Even in this case where the latest kernel is running on a device as-is, it would be best for CVEs to be issued by the distro.</p>
+<p>Our understanding is that this recommendation (having CVE reporting residing in downstream distributions) is in the process of being more formally implemented.</p>
+<p><strong>Thank You</strong></p>
+<p>We&#8217;d like to thank all of the people and orgs that made this complex project happen. Atredis for throwing every possible resource including all of their managing partners at this project, the Linux Foundation for both sponsoring the work and helping us get the Kernel developers involved, Google and Red Hat for appointing representatives to meet with our teams.<br />
+Special thanks to Greg Kroah-Hartman, Roy Yang, Kees Cook, Garth Mollet, Leslie Hawthorn, Deb Bryant, David A. Wheeler, Kostya Serebryany, Kim Lewandowski, Dmitry Vyukov, Mike Dolan, Konstantin Ryabitsev, Steve Watt, Luke Hinds and all of the Atredians who made this project possible.</p>
+<p>The Full Report &#8211; Linux Kernel Vulnerability Reporting and Remediation Practices Review (PDF)</p>
+<p><a href="https://ostif.org/wp-content/uploads/2021/01/2020-Atredis-Partners-OSTIF-Linux-Kernel-Vulnerability-Reporting-and-Remediation-Practices-Review-Report.pdf">https://ostif.org/wp-content/uploads/2021/01/2020-Atredis-Partners-OSTIF-Linux-Kernel-Vulnerability-Reporting-and-Remediation-Practices-Review-Report.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

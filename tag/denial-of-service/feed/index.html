@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>denial of service &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/denial-of-service/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:19:01 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>denial of service &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The OSTIF and Quarkslab Audit of OpenSSL is Complete</title>
+		<link>https://ostif.org/the-ostif-and-quarkslab-audit-of-openssl-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 21 Jan 2019 17:46:08 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[OpenSSL]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[denial of service]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[TLS 1.3]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1449</guid>
+
+					<description><![CDATA[We would like to thank our sponsors Private Internet Access and DuckDuckGo for helping to fund this security review, as well as all of our  donors and individual supporters. This crucial work doesn’t happen without support from the community. The quick and dirty: OpenSSL version 1.1.1 was evaluated with special foci on new TLS 1.3 features and changes made [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We would like to thank our sponsors <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.privateinternetaccess.com/">Private Internet Access</a></span> and <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://duckduckgo.com/">DuckDuckGo</a></span> for helping to fund this security review, as well as all of our  donors and individual supporters. This crucial work doesn’t happen without support from the community.</p>
+<h2>The quick and dirty:</h2>
+<p>OpenSSL version 1.1.1 was evaluated with special foci on new TLS 1.3 features and changes made to the Pseudo Random Number Generator (PRNG). The PRNG review was conducted by Dr JP Aumasson and Antony Vennard with a follow-up review by the QuarksLab team. The general review was for all new code in OpenSSL 1.1.1 with a focus on TLS 1.3 and the changed PRNG.</p>
+<p>QuarksLab found a number of small issues, all of which were resolved before the public release of OpenSSL version 1.1.1. Issues one and two would have led to <em>client-side denial-of-service vulnerabilities</em>, where a malicious man-in-the-middle could cause OpenSSL to crash by sending invalid information.</p>
+<p><strong>Issue 1:</strong> In some situations a connection could fail without an alert being sent. <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://github.com/openssl/openssl/pull/6852">https://github.com/openssl/openssl/pull/6852</a></span></p>
+<p><strong>Issue 2:</strong> Multiple issues with TLS v1.3 alerts. <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://github.com/openssl/openssl/pull/6887">https://github.com/openssl/openssl/pull/6887</a></span></p>
+<p><strong>Issue 3: New PRNG</strong> – The new pseudorandom number generator in OpenSSL does follow the NIST standard implementation SP800-90A, but the code quality could improve, with better comments and more clearly defined functions. (Note: The version of the code reviewed was after the improvements made that were <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/our-review-of-the-openssl-1-1-1-random-number-generation-update/">recommended by our other team, led by JP Aumasson</a></span>.)</p>
+<p><strong>Issue 4: SRP Authentication Protocol</strong> – The SRP auth protocol is correctly implemented, but the code quality could improve, with better comments and more clearly defined functions. Also, SRP lacked some return value checks that would ensure that values are in an expected state. This was improved with <a href="https://github.com/openssl/openssl/pull/8019"><span style="color: #289dcc;">https://github.com/openssl/openssl/pull/8019</span></a> The specific commit is here: <a href="https://github.com/liqifyl/openssl-image/commit/495a1e5c3aec4d44558cd86161b8385f1b1b6822"><span style="color: #289dcc;">https://github.com/liqifyl/openssl-image/commit/495a1e5c3aec4d44558cd86161b8385f1b1b6822</span></a></p>
+<p><strong>Issue 5: CAPI</strong> – The code lacks comments, making the implementation hard to follow and understand. Other than these best practices issues, the code is well written and no problems were found.</p>
+<p><strong>Issue 6: Global Lack of NULL Checks</strong> – The QuarksLab team recommended that null checks be present in many of the internal functions of OpenSSL, as a null value being passed where it is not expected by the software leads to unpredictable behavior that can lead to security or stability problems.</p>
+<p>The OpenSSL development team intentionally omits null checks for performance reasons, and further notes that there no known ways to pass null values in OpenSSL <em>that lead to vulnerabilities</em>.</p>
+<p>OSTIF consulted two other security experts regarding this issue, and both agreed that while null checks can be a best practice for a defense-in-depth code strategy, it is unlikely that a vulnerability from a lack of null checks will surface unless it is portions of the code that can be called remotely.</p>
+<p>This is a small best practices issue that does not cause any known vulnerability or problem, and the expert opinions on the real impact differ, and the OpenSSL team did not patch.</p>
+<h2>Conclusion</h2>
+<p>OpenSSL has successfully transitioned to TLS 1.3 without any serious security problems that we’ve found. The code quality and comments could stand to be improved in areas, but the code is functional, secure, and fast. The OpenSSL security team was fantastic throughout the entire process, assisting us with questions and quickly responding to concerns that were raised as we found them.</p>
+<p>Our work on OpenSSL has led to a total of 16 recommendations and changes in OpenSSL, and we will be adding OpenSSL to our bug bounty program for version 1.1.1a and later through our partnership with the <a href="https://internetbugbounty.org/"><span style="color: #289dcc;">Internet Bug Bounty</span></a> on <a href="https://www.hackerone.com/"><span style="color: #289dcc;">HackerOne</span></a>.</p>
+<p>The full text of the report is here: (PDF Warning) <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/wp-content/uploads/2019/01/18-04-720-REP_v1.2.pdf">OpenSSL-FINAL_v1.2</a></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

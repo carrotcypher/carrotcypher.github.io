@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>TLS 1.3 &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/tls-1-3/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:19:01 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>TLS 1.3 &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The OSTIF and Quarkslab Audit of OpenSSL is Complete</title>
+		<link>https://ostif.org/the-ostif-and-quarkslab-audit-of-openssl-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 21 Jan 2019 17:46:08 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[OpenSSL]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[denial of service]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[TLS 1.3]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1449</guid>
+
+					<description><![CDATA[We would like to thank our sponsors Private Internet Access and DuckDuckGo for helping to fund this security review, as well as all of our  donors and individual supporters. This crucial work doesn’t happen without support from the community. The quick and dirty: OpenSSL version 1.1.1 was evaluated with special foci on new TLS 1.3 features and changes made [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We would like to thank our sponsors <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.privateinternetaccess.com/">Private Internet Access</a></span> and <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://duckduckgo.com/">DuckDuckGo</a></span> for helping to fund this security review, as well as all of our  donors and individual supporters. This crucial work doesn’t happen without support from the community.</p>
+<h2>The quick and dirty:</h2>
+<p>OpenSSL version 1.1.1 was evaluated with special foci on new TLS 1.3 features and changes made to the Pseudo Random Number Generator (PRNG). The PRNG review was conducted by Dr JP Aumasson and Antony Vennard with a follow-up review by the QuarksLab team. The general review was for all new code in OpenSSL 1.1.1 with a focus on TLS 1.3 and the changed PRNG.</p>
+<p>QuarksLab found a number of small issues, all of which were resolved before the public release of OpenSSL version 1.1.1. Issues one and two would have led to <em>client-side denial-of-service vulnerabilities</em>, where a malicious man-in-the-middle could cause OpenSSL to crash by sending invalid information.</p>
+<p><strong>Issue 1:</strong> In some situations a connection could fail without an alert being sent. <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://github.com/openssl/openssl/pull/6852">https://github.com/openssl/openssl/pull/6852</a></span></p>
+<p><strong>Issue 2:</strong> Multiple issues with TLS v1.3 alerts. <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://github.com/openssl/openssl/pull/6887">https://github.com/openssl/openssl/pull/6887</a></span></p>
+<p><strong>Issue 3: New PRNG</strong> – The new pseudorandom number generator in OpenSSL does follow the NIST standard implementation SP800-90A, but the code quality could improve, with better comments and more clearly defined functions. (Note: The version of the code reviewed was after the improvements made that were <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/our-review-of-the-openssl-1-1-1-random-number-generation-update/">recommended by our other team, led by JP Aumasson</a></span>.)</p>
+<p><strong>Issue 4: SRP Authentication Protocol</strong> – The SRP auth protocol is correctly implemented, but the code quality could improve, with better comments and more clearly defined functions. Also, SRP lacked some return value checks that would ensure that values are in an expected state. This was improved with <a href="https://github.com/openssl/openssl/pull/8019"><span style="color: #289dcc;">https://github.com/openssl/openssl/pull/8019</span></a> The specific commit is here: <a href="https://github.com/liqifyl/openssl-image/commit/495a1e5c3aec4d44558cd86161b8385f1b1b6822"><span style="color: #289dcc;">https://github.com/liqifyl/openssl-image/commit/495a1e5c3aec4d44558cd86161b8385f1b1b6822</span></a></p>
+<p><strong>Issue 5: CAPI</strong> – The code lacks comments, making the implementation hard to follow and understand. Other than these best practices issues, the code is well written and no problems were found.</p>
+<p><strong>Issue 6: Global Lack of NULL Checks</strong> – The QuarksLab team recommended that null checks be present in many of the internal functions of OpenSSL, as a null value being passed where it is not expected by the software leads to unpredictable behavior that can lead to security or stability problems.</p>
+<p>The OpenSSL development team intentionally omits null checks for performance reasons, and further notes that there no known ways to pass null values in OpenSSL <em>that lead to vulnerabilities</em>.</p>
+<p>OSTIF consulted two other security experts regarding this issue, and both agreed that while null checks can be a best practice for a defense-in-depth code strategy, it is unlikely that a vulnerability from a lack of null checks will surface unless it is portions of the code that can be called remotely.</p>
+<p>This is a small best practices issue that does not cause any known vulnerability or problem, and the expert opinions on the real impact differ, and the OpenSSL team did not patch.</p>
+<h2>Conclusion</h2>
+<p>OpenSSL has successfully transitioned to TLS 1.3 without any serious security problems that we’ve found. The code quality and comments could stand to be improved in areas, but the code is functional, secure, and fast. The OpenSSL security team was fantastic throughout the entire process, assisting us with questions and quickly responding to concerns that were raised as we found them.</p>
+<p>Our work on OpenSSL has led to a total of 16 recommendations and changes in OpenSSL, and we will be adding OpenSSL to our bug bounty program for version 1.1.1a and later through our partnership with the <a href="https://internetbugbounty.org/"><span style="color: #289dcc;">Internet Bug Bounty</span></a> on <a href="https://www.hackerone.com/"><span style="color: #289dcc;">HackerOne</span></a>.</p>
+<p>The full text of the report is here: (PDF Warning) <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/wp-content/uploads/2019/01/18-04-720-REP_v1.2.pdf">OpenSSL-FINAL_v1.2</a></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Review of the OpenSSL 1.1.1 Random Number Generation Update</title>
+		<link>https://ostif.org/our-review-of-the-openssl-1-1-1-random-number-generation-update/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 26 Sep 2018 14:53:32 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[OpenSSL]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[TLS 1.3]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1533</guid>
+
+					<description><![CDATA[We have completed the security review of the new Pseudorandom Number Generator (PRNG) for OpenSSL1.1.1. This security review was sponsored by Private Internet Access, ExpressVPN, DuckDuckGo, OpenVPN, and the privacy community. Random number generation is a crucial component in all cryptography, because the “randomness” of numbers is the mechanism that makes secret numbers hard to guess. Problems with number generation can lead [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have completed the security review of the new <a href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom Number Generator (PRNG)</a> for <a href="https://www.openssl.org/">OpenSSL</a>1.1.1.</p>
+<p>This security review was sponsored by <a href="https://privateinternetaccess.com/">Private Internet Access</a>, <a href="https://expressvpn.com/">ExpressVPN</a>, <a href="https://duckduckgo.com/">DuckDuckGo</a>, <a href="https://openvpn.net/">OpenVPN</a>, and the privacy community.</p>
+<p>Random number generation is a crucial component in all cryptography, because the “randomness” of numbers is the mechanism that makes secret numbers hard to guess. Problems with number generation can lead to <a href="https://en.wikipedia.org/wiki/Random_number_generator_attack">serious consequences</a>. When we learned that OpenSSL is getting a shiny new PRNG, we decided that it was crucial that we focus on making sure that the new code is as safe and robust as possible.</p>
+<p>We had a team specifically review the new PRNG, which is also covered with a 2nd review by the cryptography review from QuarksLab. JP Aumasson and Antony Vennard carried out this component of our comprehensive review.</p>
+<p>A total of ten issues were raised to improve the performance and/or randomness of the data created by the PRNG.</p>
+<p>Because of these issues being found and corrected, OpenSSL’s new PRNG  is safer, performs better, and will provide safer crypto to the world!</p>
+<hr />
+<h2>Issues Identified in OpenSSLs New PRNG:</h2>
+<ul>
+<li><strong>Issue 1: Insufficient Privileges Check</strong><br />
+The OpenSSL PRNG checks privileges before allowing random bytes to be called. This check did not account for any future changes to the structure of privileges in Linux, specifically, POSIX privileges in Fedora and its downstream neighbors.</li>
+</ul>
+<p>Status: Issue reported and patch issued here:<a href="https://github.com/openssl/openssl/pull/6993"> https://github.com/openssl/openssl/pull/6993</a></p>
+<ul>
+<li><strong>Issue 2: Entropy Bytes Discarded</strong><br />
+The OpenSSL PRNG was structured in such a way that it frequently threw away bytes if the function called too many or too few bytes of random data, leading to sub-optimal performance.</li>
+</ul>
+<p>Status: Issue reported and patches issued here: <a href="https://github.com/openssl/openssl/issues/6978">https://github.com/openssl/openssl/issues/6978 </a>and here <a href="https://github.com/openssl/openssl/pull/6990">https://github.com/openssl/openssl/pull/6990</a></p>
+<ul>
+<li><strong>Issue 3: Insufficient Size Comparison</strong><br />
+The OpenSSL PRNG function ctr_128 checked if exactly 128 bits of keylength were in use, instead of greater than 128 bits of keylength.</li>
+</ul>
+<p>The OpenSSL security team responded that these checks are sufficient in the context that they are used, because if the keylength doesn’t match the behavior of the software changes in a safe way, regardless of the keylength being larger or smaller than intended.</p>
+<ul>
+<li><strong>Issue 4: Missing Null Pointer Checks in API Functions</strong><br />
+The API for some PRNG functions fails to check for null pointers.</li>
+</ul>
+<p>The OpenSSL security team responded that these checks are omitted by design. There is significant debate within the OpenSSL community on whether OpenSSL should employ null pointer checks or not. The full response by Matt Caswell of OpenSSL is below:</p>
+<blockquote><p>Passing NULL through in certain parameters is disallowed by the API. If you do it then you are incorrectly using the API &#8211; and the behavior is undefined.</p></blockquote>
+<blockquote><p>Similarly if you pass NULL through to certain C library functions then you might see a crash.</p></blockquote>
+<blockquote><p>It&#8217;s an ongoing debate within the OpenSSL community as to whether we should add NULL pointer checks or not. The big advantage to not having these checks (as per the argument of those in favour of not having them) is that you get immediate feedback that you&#8217;ve got a bug in your code, rather than potentially attempting to carry on even through an earlier operation failed. There is of course an overhead involved continually checking for NULL pointers through the whole library. Others take the opposite view that we should never allow a crash in the library if we can avoid it.</p></blockquote>
+<blockquote><p>The Debate continues with no clear consensus at the current time.</p></blockquote>
+<blockquote><p>In any case not having NULL checks in the specific locations identified was a deliberate choice. No changes were made a result of this issue.</p></blockquote>
+<ul>
+<li><strong>Issue 5: Ordering of Seed Sources</strong><br />
+The Linux getrandom() function is prioritized over all others, even if other sources of entropy are specified. It is recommended that OpenSSL mixes entropy sources if others are specified through XOR or some other mixing function.</li>
+</ul>
+<p>The OpenSSL team has requested that their exact response be shown here for clarity:</p>
+<blockquote><p><span class="im">For performance reasons, and also in order not to hog a scarce system resource (see e.g. issue #5849), we should not collect more than the requested amount of entropy and return as soon as we succeeded. Also, XORing the random data of different sources would not be necessary, because we use a derivation function: Concatenating the data is </span>sufficient, it will be mixed by the derivation function in the end. Note that if getrandom() fails for some reason then the other entropy sources will be used as fallbacks.</p></blockquote>
+<ul>
+<li><strong>Issue 6: Support for NONE Entropy Source</strong><br />
+OpenSSL can be compiled with NONE as an entropy option. It is suggested that a warning be issued when a user attempts to do this as it is far less secure.</li>
+</ul>
+<p>Status: Issue reported and patch issued here: <a href="https://github.com/openssl/openssl/issues/6980">https://github.com/openssl/openssl/issues/6980</a>and <a href="https://github.com/openssl/openssl/pull/6981">https://github.com/openssl/openssl/pull/6981</a></p>
+<p>The OpenSSL team has requested that their exact response be shown here for clarity:</p>
+<blockquote><p>This option -with-rand-seed=none is only meant as last resort in cases where OpenSSL does not know which entropy source to use. Note, however, that it does *not* relax the requirement for seeding the DRBG properly, it only disables *automatic* (re-)seeding. The DRBG will remain in an uninitialized state unless the application seeds it manually using RAND_add(). Provided that the application seeds (and reseeds) the DRBG manually with sufficient entropy from a reliable entropy source, this should be just as good as automatic reseeding.</p></blockquote>
+<blockquote><p>The -with-rand-seed option and the manual reseeding process is documented in detail in the RAND_DRBG(7) manual page.</p></blockquote>
+<ul>
+<li><strong>Issue 7: Role of Additional Data</strong><br />
+OpenSSL allows optional personalization data to be added to the PRNG. This data is low-entropy and will not help security in any scenario.</li>
+</ul>
+<p>The OpenSSL team disagreed with our analysis. The full response by Matt Caswell of OpenSSL is below:</p>
+<blockquote><p>This is a requirement of SP800-90A. The idea is to differentiate the output from different instantiations of the DRBG. See section 8.7.1 of that document for more details.</p></blockquote>
+<ul>
+<li><strong>Issue 8: UEFI Randomness Generation</strong><br />
+UEFI and VXWorks only support the “none” option for generating random data in OpenSSL. This is far less secure than other options. It is suggested that the OpenSSL team look into options like EFI_RNG_PROTOCOL or just rdrand. Both options are superior to using “none” as an entropy source.</li>
+</ul>
+<p>The OpenSSL team wanted to contact the UEFI team to expand on this issue. As of this writing no changes have been made to our knowledge. We are waiting for additional comment from the OpenSSL Security Team on this issue.</p>
+<ul>
+<li><strong>Issue 9: Modern Windows Randomness Generation</strong><br />
+Older versions of Windows used an old entropy source called CryptGenRandom(). This was replaced in Windows XP and above by RtlGenRandom() which is a more modern and better source of entropy.</li>
+</ul>
+<p>The team agreed that this may be a good change. As of this writing no changes have been made.</p>
+<ul>
+<li><strong>Issue 10: Confusing Terminology in Documentation</strong><br />
+OpenSSL comments and documentation use the words “entropy” and “entropy length” in non-standard ways, which can lead to confusion among developers trying to review and/or implement OpenSSL-based code.</li>
+</ul>
+<p>The OpenSSL team said that the use of the words are in compliance with NISTs definition. The concern is that the NIST definition may be confusing to developers and lead to implementation errors for devs using OpenSSL as a library for their software.</p>
+<p>The full report is below, please do not hot link to this report. Linking to this page instead allows us to bring more awareness to our cause! Thank you!</p>
+<p><a href="https://ostif.org/wp-content/uploads/2018/09/opensslrng-audit-report.pdf">https://ostif.org/wp-content/uploads/2018/09/opensslrng-audit-report.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Stop the Spies &#8211; OpenSSL 1.1.1 Fundraiser</title>
+		<link>https://ostif.org/stop-the-spies-openssl-1-1-1-fundraiser/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 30 Mar 2018 19:29:12 +0000</pubDate>
+				<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[OpenSSL]]></category>
+		<category><![CDATA[CrowdRise]]></category>
+		<category><![CDATA[DuckDuckGo]]></category>
+		<category><![CDATA[heartbleed]]></category>
+		<category><![CDATA[NSA]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[prng]]></category>
+		<category><![CDATA[TLS 1.3]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1313</guid>
+
+					<description><![CDATA[UPDATE: We are now 81% funded! Keep spreading the word! Matched donations by DuckDuckGo on Crowdrise here: https://www.crowdrise.com/o/en/campaign/ostif1/ostif Ways to contribute for FREE: https://ostif.org/how-to-contribute-to-ostif-for-free/ Donate using a huge number of options here: https://ostif.org/donate What are we working on? OpenSSL powers everything. 70% of the top million websites use OpenSSL to provide encryption services to their visitors and [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1>UPDATE: We are now 81% funded! Keep spreading the word!</h1>
+<p><img decoding="async" loading="lazy" class="aligncenter size-full wp-image-1327" src="https://ostif.org/wp-content/uploads/2018/03/fundraiser-thermometer-fixed.gif" alt="" width="600" height="100" /></p>
+<p><strong>Matched donations by DuckDuckGo on Crowdrise</strong> here: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.crowdrise.com/o/en/campaign/ostif1/ostif">https://www.crowdrise.com/o/en/campaign/ostif1/ostif</a></span></p>
+<p>Ways to contribute for FREE: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://ostif.org/how-to-contribute-to-ostif-for-free/">https://ostif.org/how-to-contribute-to-ostif-for-free/</a></span></p>
+<p>Donate using a huge number of options here: <a href="https://ostif.org/donate"><span style="color: #0000ff;">https://ostif.org/donate</span></a></p>
+<h2>What are we working on?</h2>
+<p><span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.openssl.org/">OpenSSL</a></span> powers everything. 70% of the top million websites use OpenSSL to provide encryption services to their visitors and to encrypt user information. It&#8217;s in thousands of apps, and the internet as we know it relies on OpenSSL to protect our information.</p>
+<p>The NSA has tried to compromise OpenSSL before, by<span style="color: #0000ff;"> <a style="color: #0000ff;" href="https://blog.cryptographyengineering.com/2015/01/14/hopefully-last-post-ill-ever-write-on/">introducing weakened standards</a> </span>and<span style="color: #0000ff;"> <a style="color: #0000ff;" href="https://www.reuters.com/article/us-usa-security-rsa/exclusive-secret-contract-tied-nsa-and-security-industry-pioneer-idUSBRE9BJ1C220131220">bribing companies to use those weakened components</a></span>.</p>
+<p>OpenSSL is getting a major update with version 1.1.1, called<span style="color: #0000ff;"> <a style="color: #0000ff;" href="http://www.eweek.com/security/tls-1.3-encryption-standard-moves-forward-improving-internet-security">TLS 1.3</a>.</span> It is a new set of security standards and cryptography for the next generation of encryption. There&#8217;s a lot of new code, new options, and new features.</p>
+<p>We need to publicly review this code to make sure that it is as safe as possible. Specific areas that the NSA has attacked before (the Pseudorandom Number Generator or PRNG) are getting big updates and need to be independently verified.</p>
+<p>We don&#8217;t want another compromised PRNG, Heartbleed, Logjam, FREAK, or CCS Injection problem to slip through the cracks. We need to ensure that OpenSSL is safe for all of us to use long into the future.</p>
+<p>For more technical details on the scope of the audit, look here: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://ostif.org/the-openssl-1-1-1-audit-fundraising-has-begun/">https://ostif.org/the-openssl-1-1-1-audit-fundraising-has-begun/</a></span></p>
+<p><strong>These projects do not happen without your support. Tell your friends. Spread the word. Donate. We need to build a safer internet together.</strong></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

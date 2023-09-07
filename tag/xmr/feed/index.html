@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>XMR &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/xmr/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sun, 30 Jun 2019 23:04:41 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>XMR &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The OSTIF and QuarksLab Audit of Monero Bulletproofs is Complete &#8211; Critical Bug Patched</title>
+		<link>https://ostif.org/the-ostif-and-quarkslab-audit-of-monero-bulletproofs-is-complete-critical-bug-patched/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 22 Oct 2018 12:58:21 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[XMR]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1643</guid>
+
+					<description><![CDATA[Bulletproofs are a specific type of range proof based on new cryptography by Benedikt Bunz et al. Bulletproofs are a trustless proofs setup that are substantially smaller than the current Borromean style range proofs that were previously used, which reduces the size of Monero transactions by 80-90%. Monero’s latest network update, which is now live, has [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" loading="lazy" class="alignright wp-image-1835 size-medium" src="https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities-300x300.png" alt="" width="300" height="300" srcset="https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities-300x300.png 300w, https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities-150x150.png 150w, https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities.png 428w" sizes="(max-width: 300px) 100vw, 300px" /><a href="https://crypto.stanford.edu/bulletproofs/"><span style="color: #289dcc;">Bulletproofs</span></a> are a specific type of range proof based on new cryptography by Benedikt Bunz et al. Bulletproofs are a trustless proofs setup that are substantially smaller than the current Borromean style range proofs that were previously used, which reduces the size of Monero transactions by 80-90%.</p>
+<p>Monero’s latest network update, which is now live, has enabled Bulletproofs and corrected all outstanding issues that were raised by the Kudelski and QuarksLab projects.</p>
+<p><strong>QuarksLab found:</strong><br />
+8 <span style="color: #cc284b;">Critical</span> Vulnerabilities<br />
+2 <span style="color: #cca928;">Medium</span> Vulnerabilities<br />
+20 <span style="color: #28cc57;">Low</span> or <span style="color: #28cc57;">Informational</span> Vulnerabilities / Concerns / Recommendations</p>
+<hr />
+<h4><span style="color: #cc284b;">One live-chain critical flaw identified and fixed:</span></h4>
+<p>QuarksLab found a denial of service vulnerability that could allow an attacker to <strong>arbitrarily crash Monero nodes remotely</strong>, creating a vulnerability for a large-scale denial of service campaign for the Monero network and further potentially leading to a 51% attack and forced chain split, ultimately leading to double-spends.</p>
+<p>Because this flaw impacted live code, OSTIF, QuarksLab, and the Monero team agreed to a disclosure embargo on this report until after the latest network upgrade that forced users to upgrade their nodes to patched code. The Monero XMR network is now safe from this flaw.</p>
+<hr />
+<h2>Other serious bugs that were identified and fixed:</h2>
+<ul>
+<li><span style="color: #cc284b;"><em>A lack of null value checks in the Bulletproofs proving algorithm.</em></span> The bulletproofs code relies on values being passed to it not being null, but did not proactively ensure that null values cannot be passed or checked for.</li>
+<li><span style="color: #cc284b;"><em>Dependent Generators in original java version of Bulletproofs are not secure.</em></span> The code had to be revised to improve number generation.</li>
+<li><span style="color: #cc284b;"><em>Overflow in double scalar multiplication.</em></span> The code needed to be patched to prevent the overflow of data.</li>
+<li><span style="color: #cc284b;"><em>Erroneous identity output in Bos-Coster multi-exponentiation.</em></span> The structure of the code could select the wrong input and return incorrect values.</li>
+<li><span style="color: #cc284b;"><em>Silently discarded element in Pippenger multi-exponentiation.</em></span> An optimization designed to discard large numbers of leading zeros could return the identity if a value of x^0 was entered into the function, meaning that the operation can return the identity unmodified. The optimization also had the additional issue of possibly discarding critical values for exact powers of two as inputs.</li>
+<li><span style="color: #cc284b;"><em>Invalid Verify input parameters.</em></span> There are no checks that the points provided are indeed points of Ed25519 and that they are on the main subgroup.</li>
+<li><span style="color: #cc284b;"><em>Key compromise in Schnorr signature.</em></span> In order to generate a valid Schnorr signature, the value k cannot be null or zero. If the value is null, an attacker can detect this and know the value of the key used to sign. If the value k is zero, then the value of the result is independent of the key and invalid. Checks needed to be added to the Schnorr signature to verify that the value k is not null or zero.</li>
+<li><span style="color: #cc284b;"><em>Failures in input size validation during (de)serialization.</em></span> A serialization error could allow an attacker to allocate up to 4GB of memory by initializing a value of 0 for nbp. Consequently, this can lead to memory being allocated for partially completed containers.</li>
+<li><span style="color: #cc284b;"><em>Failures in input type validation during (de)serialization.</em></span> A lack of robust checking for input type error from untrusted sources can lead to undesired behavior and error states.</li>
+<li><span style="color: #cc284b;"><em>Twenty other recommendations to improve security, robustness, practices, and performance.</em></span> The team also made a number of recommendations to code practices to improve the robustness of Monero code, to optimize performance, to improve error handling, and to reduce the attack surface of the software.</li>
+</ul>
+<hr />
+<p>This is the second of two audits that were conducted for Monero Bulletproofs. The first audit of Bulletproofs was conducted by Kudelski Security and the results <a href="https://ostif.org/the-quarkslab-and-kudelski-security-audits-of-monero-bulletproofs-are-complete/">are here</a>.</p>
+<p>If you would like to review the full QuarksLab audit the direct link is below: (please do not hotlink directly to the PDF, we would like visitors to come to the OSTIF site, it helps us gain more support for the cause, thank you!)<br />
+<a href="https://ostif.org/wp-content/uploads/2018/10/OSTIF-QuarksLab-Monero-Bulletproofs-Final2.pdf">https://ostif.org/wp-content/uploads/2018/10/OSTIF-QuarksLab-Monero-Bulletproofs-Final2.pdf</a></p>
+<p>We are working hard to make open source software safer and easier to use. Follow our activity both on our website and through <a href="https://twitter.com/OSTIFofficial">our Twitter</a>.</p>
+<hr />
+<p>The <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/">Open Source Technology Improvement Fund</a></span>, <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://getmonero.org/resources/research-lab/index.html">Monero Research Lab</a></span>, <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.quarkslab.com/en/">QuarksLab</a></span>, and the <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.reddit.com/r/monero">Monero community</a></span> have come together to sponsor in-depth research looking into Monero Bulletproofs. The audit was funded by Monero community donations, with coordination and exchange support from OSTIF. The audit was conducted by QuarksLab. We’d like to thank our OSTIF sponsors <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.privateinternetaccess.com/">Private Internet Access</a></span>, <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.expressvpn.com/">ExpressVPN</a></span>, and <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://duckduckgo.com/">DuckDuckGo</a></span>, for making OSTIF possible and helping to make this opportunity happen.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF is Working with Monero Research Lab on Bulletproofs</title>
+		<link>https://ostif.org/ostif-is-working-with-monero-research-labs-on-bulletproofs/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 02 Mar 2018 08:49:05 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[Bulletproofs]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[XMR]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1297</guid>
+
+					<description><![CDATA[OSTIF is Working with Monero Research Lab on Bulletproofs We are happy to announce that we have been working with the Monero project to help them locate auditing resources for Bulletproofs. This code review is to evaluate the safety of the implementation of Bulletproofs into Monero, which promises to dramatically reduce transaction sizes for Monero, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1>OSTIF is Working with Monero Research Lab on Bulletproofs</h1>
+<p>We are happy to announce that we have been working with the <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://getmonero.org/">Monero</a></span> project to help them locate auditing resources for Bulletproofs. This code review is to evaluate the safety of the implementation of Bulletproofs into Monero, which promises to dramatically reduce transaction sizes for Monero, which will substantially reduce transaction fees, processing times and the size of the actual blockchain.</p>
+<p>We have been working with two companies, <a href="https://www.quarkslab.com/"><span style="color: #0000ff;">QuarksLab</span></a> in Paris and <a href="https://www.x41-dsec.de/"><span style="color: #0000ff;">X41 D-Sec</span></a> in Berlin to produce Statement of Work proposals and ensure that this review can be conducted entirely in public view and transparently. This allows everyone to view the final reports and see that the work was completed thoroughly and with significant oversight.</p>
+<p>On top of assisting <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://lab.getmonero.org/">Monero Research Lab</a></span> with locating auditors willing to work in public, OSTIF is also assisting with financial resource issues, offering to accept Monero XMR and paying out the auditors in EUR to facilitate their participation.</p>
+<p>The Monero community is in the process of selecting which teams will be conducting the review now.</p>
+<p>You can participate in the discussion:</p>
+<p>Here on Reddit: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.reddit.com/r/Monero/comments/817zt0/mrl_bulletproof_audit_ffs_request/">https://www.reddit.com/r/Monero/comments/817zt0/mrl_bulletproof_audit_ffs_request/</a></span></p>
+<p>Or here on Monero&#8217;s forums: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://forum.getmonero.org/7/open-tasks/89993/bulletproofs-audit">https://forum.getmonero.org/7/open-tasks/89993/bulletproofs-audit</a></span></p>
+<h2>The next step for selecting auditors:</h2>
+<p>Monero will create an FFS &#8211; a post on their Forum Funding System here:<br />
+<a href="https://forum.getmonero.org/8/funding-required"><span style="color: #0000ff;">https://forum.getmonero.org/8/funding-required</span></a></p>
+<p>On the FFS, anyone can donate Monero XMR to support the project. Once funded, the project proceeds and the auditors conduct their work.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF Now Accepts Monero Donations</title>
+		<link>https://ostif.org/ostif-now-accepts-monero-donations/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 14 Sep 2017 04:49:44 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[donation]]></category>
+		<category><![CDATA[XMR]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1013</guid>
+
+					<description><![CDATA[We have set up the infrastructure to enable donations via Monero. Monero is a fully open-source and decentralized cryptocurrency that improves on the privacy shortcomings of Bitcoin through obfuscation technologies like RingCT and is currently working on an i2p based routing system to further privatize transactions, called Kovri. The Monero project has been instrumental in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have set up the infrastructure to enable donations via Monero.</p>
+<p><a href="https://getmonero.org/" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">Monero</span></a> is a fully open-source and decentralized cryptocurrency that improves on the privacy shortcomings of Bitcoin through obfuscation technologies like <a href="https://www.youtube.com/watch?v=M3AHp9KgTkQ" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">RingCT</span></a> and is currently working on an i2p based routing system to further privatize transactions, called <a href="https://github.com/monero-project/kovri" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">Kovri</span></a>.</p>
+<p>The Monero project has been instrumental in improving on privacy weaknesses in traditional cryptocurrencies, and they have had strong development progress and incident response.</p>
+<p>Our Monero donation information will appear on the <a href="https://ostif.org/donate-to-ostif/" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">donate page</span></a> in the coming days.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

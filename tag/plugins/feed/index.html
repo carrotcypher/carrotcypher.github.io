@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>plugins &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/plugins/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:17:27 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>plugins &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Announcing the OSTIF Anti-Censorship Project</title>
+		<link>https://ostif.org/announcing-the-ostif-anti-censorship-project/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 17 Jul 2019 14:15:22 +0000</pubDate>
+				<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[meek]]></category>
+		<category><![CDATA[meekheavy]]></category>
+		<category><![CDATA[obfs4]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[shadowsocks]]></category>
+		<category><![CDATA[tor]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1988</guid>
+
+					<description><![CDATA[Censorship is an increasing problem on the internet. As the technology to manipulate what users see on the web gets cheaper, more countries, ISPs, and service providers are amping up their ability to not only monitor what their users see, but to orchestrate what those users see and experience. We define censorship as anything that [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Censorship is an increasing problem on the internet. As the technology to manipulate what users see on the web gets cheaper, more countries, ISPs, and service providers are amping up their ability to not only monitor what their users see, but to orchestrate what those users see and experience. We define censorship as anything that prevents a user from experiencing the Internet in all of its glory. This can be directly blocking content, or throttling it to speeds that are so slow that they are effectively blocked. The principles of Net-Neutrality are often talked about in political circles as something that needs to be defended, but little is said about the technological solutions that help break censorship. On the Internet, these are encrypted networks like Tor, I2P, and VPN networks. In the past, these tools could be used to bypass censorship systems. Now, deep packet inspection is used to automatically block these services dynamically using various techniques.</p>
+<p>This cat and mouse game has been going on for years. As the anti-censorship organizations deploy technology to bypass censors, the censors immediately work to find new methods to detect and block those tunnels. The pace of development of this tech has also led to a decline in usability. These tools are increasingly hard to deploy for savvy users, making it nearly impossible for average users to get access to censored information.</p>
+<h2>The OSTIF Anti-Censorship Project</h2>
+<p>Today we are announcing that we have been working with <a href="https://community.openvpn.net/openvpn">OpenVPN</a>, <a href="https://operatorfoundation.org/">The Operator Foundation</a> and <a href="https://en.greatfire.org/">Greatfire.org</a> to improve the existing working tools out there. The core aim of the project is to improve ease-of-use for installation and setup, to improve documentation, and to improve the tools themselves to reduce detection rates. This project has multiple parts, as relying on only one anti-censorship method can leave users stranded if their censor improves their methods against a particular tool.</p>
+<h3>The MeekHeavy Project</h3>
+<p>The MeekHeavy project is an evolution of the existing <a href="https://trac.torproject.org/projects/tor/wiki/doc/meek">Meek project that is headed by Tor.</a> Meek uses a technique called <a href="https://en.wikipedia.org/wiki/Domain_fronting">Domain Fronting</a> with SNI. Domain Fronting makes the servers for a network service (like a VPN or Tor) look like a generic server operating at a cloud provider. Current tools are specifically resistant to many types of automated analysis, impersonating real services and fooling many censorship systems. However, there are issues. The technology could be improved to further evade detection, and the usability needs some work, and the documentation could be dramatically improved (it is currently <a href="https://trac.torproject.org/projects/tor/wiki/doc/meek">a single article on Tor&#8217;s Trac</a>).</p>
+<p><strong>MeekHeavy will work as a standalone service</strong> as well, which will mean that <strong>MeekHeavy can work on WireGuard, Tor, I2P and any other service that wishes to implement MeekHeavy censorship resistance.</strong></p>
+<p>We aim to:</p>
+<p><strong>Implement Encrypted SNI (ESNI)</strong> using <a href="https://blog.cloudflare.com/esni/">CloudFlare&#8217;s draft version of ESNI</a> that they currently have implemented. We think that their implementation looks very much like what a <a href="https://datatracker.ietf.org/doc/draft-ietf-tls-esni/">final version of ESNI will look like</a>, with minor tweaks that we can adapt to once ESNI becomes a standard. ESNI is crucially important because it encrypts the information about the certificate that is sent between the client and server, and it restricts an interloper&#8217;s ability to blacklist specific certificates. This is re-establishes the &#8220;Mexican Standoff&#8221; approach to domain fronting. In order for a censor to be able to block a service that utilizes domain fronting, they&#8217;d have to block the entire cloud provider, which has far more collateral damage than blocking one particular service or website. Maximizing the collateral damage is a crucial step in dissuading censors from taking action against services. A block on all of Amazon Web Services, all of MS Azure, or all of CloudFlare is unthinkable.</p>
+<p><strong>Implement DNS-over-HTTPS support</strong>. <a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS">DNS over HTTPS</a> removes the DNS server from the censorship equation by establishing a secure connection between the DNS server and the client. This prevent a common censorship technique called DNS Poisoning, which is a tampering method that sends invalid DNS responses to users and redirects them to censored versions of websites.</p>
+<p><strong>Remove hard-coded components (server names) that can be detected.</strong> This is to improve resistance to detection.</p>
+<p><strong>Add an easier method to switch cloud providers and improve the documentation surrounding this.</strong></p>
+<p>Additionally, we want to further improve the UX/UI of MeekHeavy, and to get our changes audited by an outside team. We will need to raise additional funds to get there, <strong>so we need as much help as possible getting people to donate!</strong></p>
+<h3>The OpenVPN Plugin Projects</h3>
+<p>OpenVPN 2.5.0 will have a plugin API that allows obfuscation transports (censorship evasion tech) to be added directly into OpenVPN. This is to support a project being headed by Google Jigsaw, but this API is open to function with tech developed by anyone in order to easily implement anti-censorship measures.</p>
+<p>We aim to:</p>
+<p><strong>Build obfs4, shadowsocks and MeekHeavy directly into an OpenVPN build.</strong> This will allow users much easier access to these tools and they will be able to implement the technology by following simple guides. This will significantly raise the bar for censors as users will have easy access to effective tools for bypassing most types of censorship.</p>
+<p>The primary goal of these plugins is to <strong>keep the number of steps to installing and using these tools to a minimum.</strong></p>
+<p>We will want to improve the UX/UI of these plugins in a custom version of OpenVPN GUI as well, and to get our custom code audited by a 3rd party.<strong> So again, we need the help of our community! Get the word out on social media, blogs, and donate donate donate!</strong></p>
+<h2>Open Source and Free to All</h2>
+<p>This project will be open source, but will also provide compiled installers that will allow easy installation for non-savvy users. We haven&#8217;t decided where the files be hosted (yet), but we will have an active GitHub once these tools near release quality code.</p>
+<h2>We need help!</h2>
+<p>This project will require significant support from the community in order to succeed. Once the tools are created, they will need ongoing maintenance to improve as well as significant security review by outside parties. Get your hosting company involved. Get your cloud provider, and your VPN involved. Get your anti-censorship and news orgs involved. If you know a way that you can assist us in this massive task, get in touch!</p>
+<p>Most importantly, talk about this project. Make sure that people know about our work and that what we do is valuable.</p>
+<p>We are active on Reddit and Twitter so if you are on those platforms keep tabs on us!</p>
+<h3>Thank Yous</h3>
+<p>A special thank you goes out to our sponsors that have helped get us to a position where we can work on important projects like this one. <a href="https://www.privateinternetaccess.com/">Private Internet Access</a>, <a href="https://web.getmonero.org/">Monero Research Lab</a>, <a href="https://nordvpn.com/">NordVPN</a>, <a href="https://mullvad.net/en/">Mullvad</a>, and <a href="https://www.expressvpn.com/">ExpressVPN</a> have all given us critical support to push this project forward. We need more support to keep doing great things and to keep moving this community in a positive direction.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

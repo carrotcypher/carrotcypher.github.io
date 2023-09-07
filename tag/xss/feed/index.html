@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>xss &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/xss/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Mon, 18 Jul 2022 16:58:35 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>xss &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Our Audit of Argo is Complete. Critical and High Severity Security Issues Found and Fixed.</title>
+		<link>https://ostif.org/our-audit-of-argo-is-complete-critical-and-high-severity-security-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 18 Jul 2022 15:02:40 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[argo]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[xss]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2676</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is happy to report the results of yet another security audit, this time of the Argo project. The Argo project is a collection of tools for getting work done with Kubernetes. The main components of Argo audited are:  Argo Workflows &#8211; Container-native Workflow Engine Argo CD &#8211; Declarative GitOps Continuous [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is happy to report the results of yet another security audit, this time of the </span><a href="https://github.com/argoproj/argoproj"><span style="font-weight: 400;">Argo</span></a><span style="font-weight: 400;"> project. </span><span style="font-weight: 400;">The Argo project is a collection of tools for getting work done with Kubernetes. The main components of Argo audited are: </span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-workflows"><span style="font-weight: 400;">Argo Workflows</span></a><span style="font-weight: 400;"> &#8211; Container-native Workflow Engine</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-cd"><span style="font-weight: 400;">Argo CD</span></a><span style="font-weight: 400;"> &#8211; Declarative GitOps Continuous Delivery</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-events"><span style="font-weight: 400;">Argo Events</span></a><span style="font-weight: 400;"> &#8211; Event-based Dependency Manager</span></li>
+</ol>
+<p><span style="font-weight: 400;">The research findings resulted in 26 security issues including 1 critical and 4 high severity bugs that were fixed. The most significant finding is an XSS injection in ArgoCD </span><a href="https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6x78-8vrj"><span style="font-weight: 400;">https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6&#215;78-8vrj</span></a><span style="font-weight: 400;"> that allows an attacker to execute javascript code in the UI, which could allow an attacker to take admin control of the kubernetes cluster.</span></p>
+<p><span style="font-weight: 400;">Additionally, the Ada Logics team built 7 new fuzzers to integrate into the ossfuzz testing suite for Argo that focus on security relevant functions. The Argo team and community demonstrated a strong commitment to improving the project’s security posture. See the full report and Argo team’s synopsis below for detailed information.</span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. </span></p>
+<p><span style="font-weight: 400;">Special thanks to David Korczynski and Adam Korczynski of </span><a href="https://adalogics.com/"><span style="font-weight: 400;">Ada Logics</span></a><span style="font-weight: 400;"> for auditing the software and to the Argo team </span><span style="font-weight: 400;">Alex Collins, Derek Wang, Hari Rongali, Henrik Blixt, Jann Fischer, Michael Crenshaw and Jesse Suen </span><span style="font-weight: 400;">for their committed support. Strong collaboration between the review team and project maintainers helps the audit process be more impactful, especially with the help of the community. </span></p>
+<p><span style="font-weight: 400;">Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>References: </strong></p>
+<p><span style="font-weight: 400;">Argo Full Audit Report: <a href="https://ostif.org/wp-content/uploads/2022/07/ostif_argo_security_audit_2022.pdf">https://ostif.org/wp-content/uploads/2022/07/ostif_argo_security_audit_2022.pdf</a></span></p>
+<p>Ada Logics Blog: <a href="https://adalogics.com/blog/argo-security-audit">https://adalogics.com/blog/argo-security-audit</a></p>
+<p>Argo Blog:</p>
+<p>Cloud Native Computing Fund Announcement:</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>linux kernel &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/linux-kernel/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Fri, 25 Jun 2021 13:30:42 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>linux kernel &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>A Review of the Linux Kernel&#8217;s Release Signing and Key Management Policies</title>
+		<link>https://ostif.org/a-review-of-the-linux-kernels-release-signing-and-key-management-policies/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 23 Jun 2021 15:54:09 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Linux Kernel]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[review]]></category>
+		<category><![CDATA[Signing Key]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2541</guid>
+
+					<description><![CDATA[The Linux Foundation sought a review of the kernel teams’ processes for release signing and for the policies and procedures for the handling of the signing keys. Working with OSTIF, Trail of Bits was selected to lead the project and a two person-week review was conducted. Unlike most OSTIF projects, this review did not cover [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.linuxfoundation.org/">The Linux Foundation</a> sought a review of the kernel teams’ processes for release signing and for the policies and procedures for the handling of the signing keys. Working with <a href="https://ostif.org">OSTIF</a>, <a href="https://www.trailofbits.com/">Trail of Bits</a> was selected to lead the project and a two person-week review was conducted.</p>
+<p>Unlike most OSTIF projects, this review did not cover code but was a policy and process overview to identify potential pain points in the key handling and key signing processes for one of the most critical pieces of infrastructure in the world. As such, there are no CVEs nor CIDs addressing vulnerabilities.</p>
+<p>Special thank-you&#8217;s go out to Greg Kroah-Hartman and Konstantin Ryabitsev for participating in the interviews that helped the reviewers clarify the documentation and setting aside time to discuss the researchers’ findings. Thank you to David A. Wheeler and Mike Dolan at the Linux Foundation for helping to facilitate the project. Thank you to Jim Miller, Mike Martel, Opal Wright, and Cara Pearson for their work in this review and for writing this assessment. And finally, a special thank you to Dan Guido at Trail of Bits for working with us to improve critical open source infrastructure.</p>
+<h1><strong>Results</strong></h1>
+<p>This review resulted in seven recommendations that can help improve the robustness of the security and use of the signing keys for the Linux Kernel. Additionally, Trail of Bits suggested that more comprehensive and up to date documentation on the current procedures and policies are needed to help organizations around the world to best understand the current stratagem.</p>
+<h1>Use of smart cards for GPG and SSH not enforced for key individuals</h1>
+<p>Individuals with commit rights on key Linux kernel repositories are not required to store private key material used for GPG or SSH on a separate smart card device, such as a Nitrokey or Yubikey.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, require individuals with access to significant repositories or systems to use a smart card device to store sensitive key material. If that is not a viable option, consider using an alternative mechanism, such as a TPM, to protect sensitive cryptographic material.</p>
+<h1><strong>Recommended smartcard does not require touch activation</strong></h1>
+<p>The Linux Foundation recommends that kernel developers use smart cards, specifically Nitrokeys, to secure their private key material. Linux Foundation-issued Nitrokeys do not require users to perform any physical actions when using smart card functions. Other devices can be configured to require the user to touch the device before the smart card operations occur. As a result, the Nitrokey is protected only by a passphrase while inserted into a workstation.</p>
+<p>While touch activation does not prevent all classes of attacks, such as ones that replace binaries on disk (e.g., for GPG and SSH) or leverage session hijacking, it prevents entire classes of less sophisticated attacks and improves the security posture of a given end-user.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Consider mandating the use of smart card devices that require physical touch to validate each smart card operation. If that is not practical, add guidance recommending that a smart card be physically connected to a workstation only when it is required to complete an operation, which would help prevent an attacker from using an attached smart card device without its user’s knowledge.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members said that because the Yubikey with touch activation is not open source, it is not possible to use for critical infrastructure security. However, they would consider updating their policies to recommend that the current Nitrokeys be physically removed from the administrator’s computer when they are not in use. In the longer term we hope for more options for open source software in touch activated devices.</p>
+<h1><strong>Lack of documented key management policies and procedures</strong></h1>
+<p>There is no centralized, authoritative documentation laying out policies and procedures for key revocation, generation, or rotation or other key management tasks. Without such documentation, users and administrators are more likely to make serious errors when engaging in routine and emergent key management tasks.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, work with administrators and developers to document current procedures and policies and compile that information into a single set of documents that can be updated as necessary.</p>
+<p>Long term, periodically review policies and procedures, assessing their applicability and appropriateness. Update the documentation as policies and procedures change.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members have affirmed that improved documentation is needed to reduce the chance of errors and improve incident response.</p>
+<h1><strong>Lack of public-key authentication resources</strong></h1>
+<p>To verify the content of kernel updates, each commit in the git tree produces a signed tag, and each release is accompanied by a signature over the release’s tarball. Public keys for Linux developers, as well as the associated key signatures forming the web of trust, are managed from a single location. Compromise of the git.kernel.org server would allow an attacker to provide users with a web of public keys not controlled by kernel developers, enabling them to post malicious kernel “releases” that would validate against the attacker’s public keys.</p>
+<p><em><strong>Bootstrapping trust for public-key systems is a hard problem, and is certainly not unique to the Linux kernel. Any software that relies on digital signatures for verification must first &#8220;bootstrap&#8221; trust by ensuring that users have the correct public key. It creates a circular problem that is difficult to solve in the general case.</strong></em></p>
+<p>The Linux Foundation is uniquely equipped to alleviate this problem. Because of Linux&#8217;s community and commercial support, kernel developers have many ways to distribute PGP key fingerprints for important developers. Key fingerprints can be included in conference presentations, periodically published on news sites such as lwn.net, included in email signatures, or published on websites maintained by Linux Foundation partners like Red Hat or IBM. Key fingerprints hosted on the kernel.org infrastructure could then be validated against multiple public sources, reducing the likelihood of a malicious key being trusted.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, identify effective ways to widely advertise developers’ key fingerprints. These could include adding key fingerprints to email signatures, periodically posting them in mailing lists, or referencing them in conference presentations. Long term, continue advertising keys through multiple channels, and work with partners to provide accessible sources of public-key corroboration.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members have expressed interest in both the short and long term recommendations.</p>
+<h1><strong>Use of older public-key algorithms and standards within web of trust</strong></h1>
+<p>PGP keys used by kernel developers vary significantly in terms of algorithm and key size. RSA is the most commonly used algorithm, followed by DSA and elliptic curve algorithms. Work estimates for attacking algorithms based on integer factorization and integer discrete logarithms vary widely, and the algorithms are frequently subject to subtle new failure modes. Trail of Bits generally recommends moving away from RSA where possible in favor of elliptic curve algorithms.</p>
+<p>Since these keys are used to verify code that is eventually incorporated into the kernel, modern primitives should be used. Using a single modern algorithm and key size will help reduce the attack surface for sophisticated attackers.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, choose a single algorithm and key size for new keys incorporated into the kernel web of trust and the PGP key repository. The current kernel developer guidance suggests using ECDSA or Ed25519 keys. Requiring all new keys to conform to this guidance would be an effective step toward standardization.</p>
+<p>Long term, work with developers to gradually replace older RSA and traditional DSA keys with new policy-compliant keys and integrate them into the kernel web of trust. Establish a “sunset date” by which all keys should be switched over.</p>
+<h1><strong>Lack of external integrity validation mechanisms</strong></h1>
+<p>Kernel releases involve a series of steps such as merging changes in Git repositories, pushing tags, and generating a tarball for release. Currently, verification of the steps’ integrity largely depends on the wider community to notice incorrect or malicious behavior. Although this can be effective, additional integrity checks would greatly increase the robustness of the system and help reduce the implicit trust placed in the infrastructure.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, consider releasing tooling that can compare release tarball content with the content of the tagged Git release, as well as tooling that can ensure that all commits to key repositories hosted on kernel.org are signed with an expected identity. Also consider running a verifier on kernel.org systems.</p>
+<p>Long term, consider advocating for interested independent parties to run these verification tools to bolster the integrity verification mechanisms of the wider Linux kernel community.</p>
+<h1><strong>Lack of SSH key rotation</strong></h1>
+<p>Currently, SSH keys used to access kernel.org infrastructure are static. Because SSH keys can often be leveraged to access additional systems, they are frequently targeted by attackers. Under the current setup, recovery of a single developer’s SSH key could allow indefinite access to kernel.org resources.</p>
+<p>A key rotation schedule would mitigate the impact of an SSH key compromise on the kernel.org system. Moreover, with a system in place for rotating SSH keys, the Linux Foundation could respond to an attack that compromises these keys more quickly.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, develop an appropriate key rotation schedule to limit the impact of a compromised SSH key.</p>
+<p>Long term, ensure that key rotation policy is followed and that administrators are practiced in key rotation procedures. This will limit the threat posed by compromised keys and ensure that administrators are capable of quickly rotating keys when a compromise is discovered.</p>
+<h1>A link to the full paper &#8220;Linux Kernel Release Signing &#8211; Security Assessment&#8221; by Trail of Bits below (PDF warning).</h1>
+<p><a href="https://ostif.org/wp-content/uploads/2021/06/Linux-Kernel-Release-Signing-OSTIF-and-Trail-of-Bits.pdf">Linux Kernel Release Signing OSTIF and Trail of Bits</a></p>
+<p>Trail of Bits has also posted the research to Github here: <a href="https://github.com/trailofbits/publications/blob/master/reviews/LinuxKernelReleaseSigning.pdf">https://github.com/trailofbits/publications/blob/master/reviews/LinuxKernelReleaseSigning.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Review of the Linux Kernel&#8217;s Vulnerability Reporting and Remediation</title>
+		<link>https://ostif.org/a-review-of-the-linux-kernels-vulnerability-reporting-and-remediation/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 15 Jan 2021 20:57:55 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[linux]]></category>
+		<category><![CDATA[linux foundation]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2516</guid>
+
+					<description><![CDATA[The Linux Foundation has sponsored a review of the Linux Kernel&#8217;s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public. OSTIF, working with the team at Atredis Partners and a coalition of interested parties from [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.linuxfoundation.org/">The Linux Foundation</a> has sponsored a review of the Linux Kernel&#8217;s practices and policies around how security vulnerabilities are reported to the kernel team, how those reports are processed and addressed, and how those vulnerabilities are disclosed to the public.</p>
+<p><a href="https://ostif.org/">OSTIF</a>, working with the team at <a href="https://www.atredis.com/">Atredis Partners</a> and a coalition of interested parties from the <a href="https://www.kernel.org/">Kernel team</a> including the <a href="https://www.linuxfoundation.org/">Linux Foundation</a>, <a href="https://www.android.com/">Google Android</a>, <a href="https://cloud.google.com/">Google Cloud</a>, and <a href="https://www.redhat.com/">Red Hat</a> worked together to map out the current system in place, and look for opportunities to improve upon that system to potentially improve the overall security of the kernel and to resolve potential problems with downstream projects like Android, Debian, Red Hat Enterprise Linux, Fedora, Ubuntu, CentOS, Arch, OpenSuse, and so many more.</p>
+<p>This project involved multiple one-on-one interviews with members of the kernel team as well as representatives from the stakeholders where opportunities to investigate and address issues were discussed. Additionally, the Atredis team looked at documentation, articles, public talks, and discussions that took place over the last few years to construct a best-possible picture of the current topology and look toward standard industry practices to see how they could best inform their analysis.</p>
+<p>This project took careful consideration for the unique needs of open source projects, and the extraordinary position that the Linux Kernel holds in the open source world. The findings had to weigh a careful balance between the needs of the enormous Linux community and coupled that with sound industry best practices that fit into that niche.</p>
+<p>Usually, these articles outlay a list of issues found within a project and directly address those issues with fixes. This blog post will be unique in that we will lay out the two key recommendations from the Atredis report, and supply short descriptions of the reasoning behind these suggestions. <em><strong>We strongly recommend reading the full report at the bottom of this post if you feel passionately about this topic, as we expect many engineers and contributors do.</strong></em></p>
+<p>It is worth noting these recommendations are just that &#8211; <em>recommendations</em>. Our public disclosure of the audit results does not guarantee that these recommendations will be enacted. The Linux kernel community is already discussing how these recommendations might be acted upon, and given some complex transitions required, what timeline they could be acted upon.</p>
+<h1>Recommendation One &#8211; Keep All Security Discussions Public Instead of Private</h1>
+<p>Atredis recommends that the Linux Kernel move to a public security bug reporting system. This is because a private reporting system runs counter to the spirit of open source generally; it opens up the project to criticism about transparency. The key reasoning behind this recommendation is that because serious security issues are resolved quickly in the kernel, and that there&#8217;s usually a long lead-time before kernel fixes make it into the various Linux distributions which erases much of the real world benefits of private reporting. The problems of keeping security reports private outweigh the potential benefits of public discussion.</p>
+<p>This recommendation also considers other factors. Infrastructure decisions are often made on the basis of a particular version of a kernel having &#8220;no CVEs&#8221; or &#8220;no documented security bugs&#8221; with the misunderstanding that this means that the software is free of known security bugs. This policy change could help close the information gap that leads decision-makers to keep vulnerable versions of the Kernel in their products, as they will be able to clearly see security reports and the fixes that are applied.</p>
+<p>We acknowledge that this will be contentious in some circles. That said, we think it’s an important idea that’s worth discussion.</p>
+<h1>Recommendation Two &#8211; CVE Reporting Should Reside with Downstream Distributions</h1>
+<p>Atredis recommends that the downstream distributions manage CVE reporting. This is because the Linux Kernel is implemented differently across so many products that the resources required to test and trace bug findings is too broad and resource intensive. This finding is corroborated by a recent MITRE finding that because the Linux Kernel is not an end-product, CVE reporting was not designed for and is not appropriate for the Linux Kernel.</p>
+<p>This recommendation asserts that the contributors to the various distributions know their products best and because of the practices of backporting fixes and integrating updates in a piecemeal fashion, a system where the kernel issued CVEs would not be helpful as the risk profiles of the individual distributions that admins are actually using is still unknown without more information. This means that a hypothetical kernel CVE system would produce lower-quality information than CVE reporting systems that are guided and driven by the distributions.</p>
+<p>This recommendation also considers that there are some efforts to more rapidly integrate kernel fixes directly into distributions without selective backporting. Google pushing toward mainline Linux support in Android is an example of this. Even in cases where the latest version of the kernel is running on a device, some components may still never be used and the security properties of a kernel bug may not impact one distribution as much as another. Even in this case where the latest kernel is running on a device as-is, it would be best for CVEs to be issued by the distro.</p>
+<p>Our understanding is that this recommendation (having CVE reporting residing in downstream distributions) is in the process of being more formally implemented.</p>
+<p><strong>Thank You</strong></p>
+<p>We&#8217;d like to thank all of the people and orgs that made this complex project happen. Atredis for throwing every possible resource including all of their managing partners at this project, the Linux Foundation for both sponsoring the work and helping us get the Kernel developers involved, Google and Red Hat for appointing representatives to meet with our teams.<br />
+Special thanks to Greg Kroah-Hartman, Roy Yang, Kees Cook, Garth Mollet, Leslie Hawthorn, Deb Bryant, David A. Wheeler, Kostya Serebryany, Kim Lewandowski, Dmitry Vyukov, Mike Dolan, Konstantin Ryabitsev, Steve Watt, Luke Hinds and all of the Atredians who made this project possible.</p>
+<p>The Full Report &#8211; Linux Kernel Vulnerability Reporting and Remediation Practices Review (PDF)</p>
+<p><a href="https://ostif.org/wp-content/uploads/2021/01/2020-Atredis-Partners-OSTIF-Linux-Kernel-Vulnerability-Reporting-and-Remediation-Practices-Review-Report.pdf">https://ostif.org/wp-content/uploads/2021/01/2020-Atredis-Partners-OSTIF-Linux-Kernel-Vulnerability-Reporting-and-Remediation-Practices-Review-Report.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What OSTIF is Working on in 2020</title>
+		<link>https://ostif.org/what-ostif-is-working-on-in-2020/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 18 Apr 2020 13:05:34 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[clsag]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[riot im]]></category>
+		<category><![CDATA[triptych]]></category>
+		<category><![CDATA[updates]]></category>
+		<category><![CDATA[wintun]]></category>
+		<category><![CDATA[wireguard]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2126</guid>
+
+					<description><![CDATA[OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months! Two projects with the Linux Foundation We are working with the Linux Foundation&#8217;s Core Infrastructure Initiative on the safety and security of the Linux Kernel. We are working with Atredis [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months!</p>
+<h2>Two projects with the Linux Foundation</h2>
+<p>We are working with the <a href="https://www.linuxfoundation.org/">Linux Foundation&#8217;s</a> <a href="https://www.coreinfrastructure.org/">Core Infrastructure Initiative</a> on the safety and security of the <a href="https://www.kernel.org/">Linux Kernel</a>. We are working with Atredis Partners on evaluating the processes and policies for the Kernel&#8217;s security reporting, update, and disclosure processes to seek potential areas of improvement. This is something that the Kernel team has sought to review for years and OSTIF worked with our network of partners to bring the best people to the table for the task. We will be keeping the public notified as this project progresses. Here is an excellent talk by Konstantin Ryabitsev on how the Linux Kernel currently receives updates: <a href="https://www.youtube.com/watch?v=vohrz14S6JE">https://www.youtube.com/watch?v=vohrz14S6JE</a></p>
+<p>Additionally, we are in the early stages of reviewing the handling of software signing keys for the kernel, and how they are used for signing updates to the Kernel. We will have more information about this project in the near future.</p>
+<h2>Two Projects with the Monero Community</h2>
+<p>We are working with the Monero community on CLSAG. CLSAG promises to reduce signature sizes considerably while maintaining the same privacy level that Monero currently enjoys. Jean-Philipe Aumasson and Antony Vennard of <a href="https://teserakt.io/">Teserakt</a> will be reviewing both the theoretical paper <a href="https://eprint.iacr.org/2019/654.pdf">here</a> and the implementation <a href="https://github.com/SarangNoether/monero/tree/clsag-device">here</a> after approval by the security committee and a round of fundraising with the Monero community.</p>
+<p>Additionally, we are in the early stages of organizing and audit of Monero Triptych. <a href="https://eprint.iacr.org/eprint-bin/getfile.pl?entry=2020/018&amp;version=20200107:094009&amp;file=018.pdf">Triptych</a> promises to make transactions in Monero more efficient by increasing the efficiency of the ring signature scheme. Triptych allows Monero to significantly increase the size of rings while maintaining similar transaction sizes and verification speeds. This increase in ring size (from the current 12 to over 100) would theoretically substantially improve Monero privacy. We will be updating everyone on the status of this project as it progresses.</p>
+<h2>Three VPN Related Projects</h2>
+<p>We are working with the <a href="https://openvpn.net/">OpenVPN</a> team on a review of <a href="https://github.com/OpenVPN/openvpn">OpenVPN 2.5.0</a>, which introduces a number of new features that expand the use cases of OpenVPN. This includes and obfuscation plugin system that was developed with the <a href="https://operatorfoundation.org/">Operator Foundation</a>, whom we have also been working with to develop obfuscation plugins for OpenVPN that will be ready to go on launch.</p>
+<p>We are also exploring scoping for a security review of <a href="https://wireguard.com">WireGuard&#8217;s</a> clients. This is crucially important because while WireGuard&#8217;s core code is only 5000-6000 lines and simple to review, the supporting software libraries for the individual clients adds an order of magnitude more code that doesn&#8217;t have the same brevity and quality controls of the core code. A wide-scope review of WireGuard gives the community a fine-grained review of the current security benefits of WireGuard over alternatives.</p>
+<p>Additionally, we are exploring scoping to audit <a href="https://www.wintun.net/">WinTun</a>. WinTun is particularly important because it is the virtual driver that Windows requires for VPNs to function properly. This importance is magnified by WinTun also apparently performing better than tap-windows6 which is used by OpenVPN, and support for WinTun being added to OpenVPN. This means that WinTun will likely be the primary TAP/TUN driver for both OpenVPN and WireGuard in the future, so the security properties of WinTun are crucial.</p>
+<h2>Reaching Out to RIOT.IM</h2>
+<p>We have learned that the RIOT messenger team is seeking a security review of their project. So far we have been unsuccessful in our attempts to contact them. We will continue to try to reach out to assist the project and explore if collaboration is possible.</p>
+<h2>Seeking Additional Sources of Funding</h2>
+<p>OSTIF&#8217;s primary purpose is to bring together security resources with open source projects. As we expand on both ends of this goal, and we bring on more security teams while also having an increase in requests for support, the need for manpower grows. Two of our staff (Amir and Derek) have moved to working for OSTIF full-time.</p>
+<p>Our efforts are now focused on seeking additional funding so that we can continue to effectively support projects with our time and resources. This comes in the form of us reaching out to more organizations for support, including large corporations and governments in the form of cybersecurity grants. Sponsorships and grants will be key for OSTIF going forward, as we continue to expand and magnify the amount of good we can do.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Monero &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/monero/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:26:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>Monero &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>The OSTIF Audit of Monero CLSAG is Complete! &#8211; Results</title>
+		<link>https://ostif.org/the-ostif-audit-of-monero-clsag-is-complete-results/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 31 Jul 2020 15:58:07 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Antony Vennard]]></category>
+		<category><![CDATA[clsag]]></category>
+		<category><![CDATA[JP Aumasson]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2180</guid>
+
+					<description><![CDATA[OSTIF, working with the Monero Community, the Monero development team, Monero Research Lab and Sweetwater Asset Consulting, has completed our latest security review of Monero CLSAG. Concise Linkable Spontaneous Anonymous Group signatures are a new variant of Monero&#8217;s current MLSAG (Multilayered Linkable Spontaneous Anonymous Group signature) scheme. Overall, it promises to further reduce the size [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://ostif.org">OSTIF</a>, working with the <a href="http://reddit.com/r/monero">Monero Community</a>, the Monero development team, <a href="https://web.getmonero.org/resources/research-lab/">Monero Research Lab</a> and <a href="https://sweetwater.consulting/">Sweetwater Asset Consulting</a>, has completed our latest security review of Monero CLSAG.</p>
+<div class="mceTemp"></div>
+<figure id="attachment_2202" aria-describedby="caption-attachment-2202" style="width: 400px" class="wp-caption aligncenter"><img decoding="async" class="size-full wp-image-2202" src="https://ostif.org/wp-content/uploads/2020/07/clsag3.png" alt="" width="400" height="86" srcset="https://ostif.org/wp-content/uploads/2020/07/clsag3.png 400w, https://ostif.org/wp-content/uploads/2020/07/clsag3-300x65.png 300w" sizes="(max-width: 400px) 100vw, 400px" /><figcaption id="caption-attachment-2202" class="wp-caption-text">Image by https://github.com/MrMon0cle</figcaption></figure>
+<p>Concise Linkable Spontaneous Anonymous Group signatures are a new variant of Monero&#8217;s current MLSAG (Multilayered Linkable Spontaneous Anonymous Group signature) scheme. Overall, it promises to further reduce the size of Monero signatures while maintaining all of the privacy characteristics of Monero.</p>
+<p>JP Aumasson and Antony Vennard conducted a two phase review of CLSAG. First, they reviewed the theoretical construction presented in the Monero CLSAG paper by Brandon Goodell, Sarang Noether, and Arthur Blue. The latest version is published here:  <a href="https://eprint.iacr.org/2019/654.pdf">https://eprint.iacr.org/2019/654.pdf</a> Second, they reviewed the code as it will be implemented in Monero to ensure that the implementation maintains the security properties that the paper establishes. Additionally, the CLSAG code was reviewed for general code errors that could lead to security issues.</p>
+<p>Because of this audit, the foundational design of CLSAG has improved through improvements to the formal paper, and peer review has verified that the overall security of the scheme is reasonably sound and ready for live use.</p>
+<h2><strong>Review of the CLSAG Paper</strong></h2>
+<p>Proofs in cryptography are similar to proofs in mathematics, where security properties that are assumed must have prior work that confirms that the assumption made by the researchers is true. You build new ideas on these base assumptions to create something new and novel, and previous proofs support your novel construction&#8217;s claims be it for security, privacy, anonymity, unforgeability, or other functionality that you seek.  The findings from Jean-Philippe and Antony led to many improvements to the paper for academic rigor. This includes problems like unsupported security assumptions, readability issues,  and properly defining the definitions of terms. These are largely issues with an academic proof that would not affect the strength of CLSAG, however, the paper serves as a blueprint for building a novel signature scheme, and errors in proofs can lead to unforeseen weaknesses in the design and implementation phases of the code.</p>
+<blockquote><p>&#8220;We have a good confidence that the construction proposed satisfies the intended security goals, yet a moderate confidence that the proofs are entirely valid.&#8221;</p></blockquote>
+<p><span style="color: #ff0000;"><strong>After the edits to the CLSAG paper, the auditors are more confident that CLSAG has strong, valid, security proofs.</strong></span></p>
+<p>Overall the team found that CLSAG is well constructed for its use-case in Monero. Some gaps were identified that may affect the overall security strength of the scheme, but the audit team found that the security is likely &#8220;strong enough&#8221; to thwart any attempts to break the signature scheme.</p>
+<h2><strong>Review of the CLSAG Implementation in Monero</strong></h2>
+<p>Monero CLSAG&#8217;s code was reviewed using both static and dynamic analysis, meaning JP and Antony both manually reviewed the code and used automated tools to search for additional potential problems (like <a href="https://en.wikipedia.org/wiki/Cppcheck">cppCheck</a>, <a href="https://github.com/github/codeql">CodeQL</a>, and <a href="https://clang.llvm.org/extra/clang-tidy/">clang-tidy</a>).</p>
+<p>Overall, the team found no major issues with the implementation. Suggestions were made to improve the design in a future version of CLSAG, such as using built-in features of C++ to securely erase data from memory after its use.</p>
+<blockquote><p>&#8220;Overall, we believe the code implements the CLSAG scheme as desired accurately and<br />
+provides a high level security.&#8221;</p></blockquote>
+<p>The audit team found that the code is clean, easy to read, and well designed. Additionally, the CLSAG code reuses well-tested and well-understood components in its design. Lastly, the code is also well commented for understanding error-handling. Being a C++ application, the authors recommend extending Monero&#8217;s current unit-testing and fuzzing to include CLSAG&#8217;s code to further check for general C++ problems like null pointer errors, bounds checking, memory handling, and error handling.</p>
+<p>Only two recommendations were made by the reviewers:</p>
+<h3>key struct misuse prevention</h3>
+<p>The reviewers recommend an improved technique to ensure that secure memory erasure takes place after data is used and no longer required.</p>
+<h3>Unnecessary code duplication</h3>
+<p>There are two functions in CLSAG that perform nearly-identical functions and can be combined. This is to further simplify code as a best practice and does not impact security, privacy, or performance.</p>
+<h2><strong>The CLSAG Audit Paper</strong></h2>
+<p>As always, all of OSTIF&#8217;s sponsored research is available, in full, for free. Consider supporting our work through <a href="https://ostif.org/donate-to-ostif/">donating to OSTIF</a> and encouraging your company to <a href="https://ostif.org/sponsorship/">sponsor OSTIF&#8217;s security research</a>. We would like to extend a special thank you to the Monero community for funding this project and assisting with OSTIF&#8217;s operational expenses.</p>
+<p>The full paper is available here: <a href="https://ostif.org/wp-content/uploads/2020/07/ostif-clsag-audit-final-public.pdf">https://ostif.org/wp-content/uploads/2020/07/ostif-clsag-audit-final-public.pdf</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>What OSTIF is Working on in 2020</title>
+		<link>https://ostif.org/what-ostif-is-working-on-in-2020/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 18 Apr 2020 13:05:34 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[clsag]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[riot im]]></category>
+		<category><![CDATA[triptych]]></category>
+		<category><![CDATA[updates]]></category>
+		<category><![CDATA[wintun]]></category>
+		<category><![CDATA[wireguard]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2126</guid>
+
+					<description><![CDATA[OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months! Two projects with the Linux Foundation We are working with the Linux Foundation&#8217;s Core Infrastructure Initiative on the safety and security of the Linux Kernel. We are working with Atredis [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months!</p>
+<h2>Two projects with the Linux Foundation</h2>
+<p>We are working with the <a href="https://www.linuxfoundation.org/">Linux Foundation&#8217;s</a> <a href="https://www.coreinfrastructure.org/">Core Infrastructure Initiative</a> on the safety and security of the <a href="https://www.kernel.org/">Linux Kernel</a>. We are working with Atredis Partners on evaluating the processes and policies for the Kernel&#8217;s security reporting, update, and disclosure processes to seek potential areas of improvement. This is something that the Kernel team has sought to review for years and OSTIF worked with our network of partners to bring the best people to the table for the task. We will be keeping the public notified as this project progresses. Here is an excellent talk by Konstantin Ryabitsev on how the Linux Kernel currently receives updates: <a href="https://www.youtube.com/watch?v=vohrz14S6JE">https://www.youtube.com/watch?v=vohrz14S6JE</a></p>
+<p>Additionally, we are in the early stages of reviewing the handling of software signing keys for the kernel, and how they are used for signing updates to the Kernel. We will have more information about this project in the near future.</p>
+<h2>Two Projects with the Monero Community</h2>
+<p>We are working with the Monero community on CLSAG. CLSAG promises to reduce signature sizes considerably while maintaining the same privacy level that Monero currently enjoys. Jean-Philipe Aumasson and Antony Vennard of <a href="https://teserakt.io/">Teserakt</a> will be reviewing both the theoretical paper <a href="https://eprint.iacr.org/2019/654.pdf">here</a> and the implementation <a href="https://github.com/SarangNoether/monero/tree/clsag-device">here</a> after approval by the security committee and a round of fundraising with the Monero community.</p>
+<p>Additionally, we are in the early stages of organizing and audit of Monero Triptych. <a href="https://eprint.iacr.org/eprint-bin/getfile.pl?entry=2020/018&amp;version=20200107:094009&amp;file=018.pdf">Triptych</a> promises to make transactions in Monero more efficient by increasing the efficiency of the ring signature scheme. Triptych allows Monero to significantly increase the size of rings while maintaining similar transaction sizes and verification speeds. This increase in ring size (from the current 12 to over 100) would theoretically substantially improve Monero privacy. We will be updating everyone on the status of this project as it progresses.</p>
+<h2>Three VPN Related Projects</h2>
+<p>We are working with the <a href="https://openvpn.net/">OpenVPN</a> team on a review of <a href="https://github.com/OpenVPN/openvpn">OpenVPN 2.5.0</a>, which introduces a number of new features that expand the use cases of OpenVPN. This includes and obfuscation plugin system that was developed with the <a href="https://operatorfoundation.org/">Operator Foundation</a>, whom we have also been working with to develop obfuscation plugins for OpenVPN that will be ready to go on launch.</p>
+<p>We are also exploring scoping for a security review of <a href="https://wireguard.com">WireGuard&#8217;s</a> clients. This is crucially important because while WireGuard&#8217;s core code is only 5000-6000 lines and simple to review, the supporting software libraries for the individual clients adds an order of magnitude more code that doesn&#8217;t have the same brevity and quality controls of the core code. A wide-scope review of WireGuard gives the community a fine-grained review of the current security benefits of WireGuard over alternatives.</p>
+<p>Additionally, we are exploring scoping to audit <a href="https://www.wintun.net/">WinTun</a>. WinTun is particularly important because it is the virtual driver that Windows requires for VPNs to function properly. This importance is magnified by WinTun also apparently performing better than tap-windows6 which is used by OpenVPN, and support for WinTun being added to OpenVPN. This means that WinTun will likely be the primary TAP/TUN driver for both OpenVPN and WireGuard in the future, so the security properties of WinTun are crucial.</p>
+<h2>Reaching Out to RIOT.IM</h2>
+<p>We have learned that the RIOT messenger team is seeking a security review of their project. So far we have been unsuccessful in our attempts to contact them. We will continue to try to reach out to assist the project and explore if collaboration is possible.</p>
+<h2>Seeking Additional Sources of Funding</h2>
+<p>OSTIF&#8217;s primary purpose is to bring together security resources with open source projects. As we expand on both ends of this goal, and we bring on more security teams while also having an increase in requests for support, the need for manpower grows. Two of our staff (Amir and Derek) have moved to working for OSTIF full-time.</p>
+<p>Our efforts are now focused on seeking additional funding so that we can continue to effectively support projects with our time and resources. This comes in the form of us reaching out to more organizations for support, including large corporations and governments in the form of cybersecurity grants. Sponsorships and grants will be key for OSTIF going forward, as we continue to expand and magnify the amount of good we can do.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>We are Working with the Monero Community for Multiple Audits of RandomX</title>
+		<link>https://ostif.org/we-are-working-with-the-monero-community-for-multiple-audits-of-randomx/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 23 May 2019 03:25:12 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Kudelski Security]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[fundraiser]]></category>
+		<category><![CDATA[RandomX]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1737</guid>
+
+					<description><![CDATA[The Open Source Technology Improvement Fund is working with the Monero community to fund at least two (and probably three) audits of Monero RandomX. What is RandomX? RandomX is a project that implements a dynamic proof of work algorithm. The aim of an algorithm that changes is to make it difficult to design efficient circuitry [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>The Open Source Technology Improvement Fund is working with the Monero community to fund at least two (and probably three) audits of Monero RandomX.</p>
+<h2>What is RandomX?</h2>
+<p>RandomX is a project that implements a dynamic proof of work algorithm. The aim of an algorithm that changes is to make it difficult to design efficient circuitry that can fully automate the algorithm in an ASIC. The increased complexity of the algorithm makes it so that an ASIC would lose the advantages that it has over more traditional CPU/GPU designs that can execute many types of code and do many types of mathematics.</p>
+<p>The goal of RandomX is to be a significant boost to ASIC resistance, which is seen as a hedge against centralization.</p>
+<p>Monero (and some other cryptocurrencies) are fighting to overcome significant efforts to centralize mining under ASICs, because one of the fundamental components of cryptocurrency is that access to mining needs to be egalitarian, and custom ASIC designs place the lions&#8217; share of the processing power under the control of a few centralized entities, who then gain significant control over the blockchain.</p>
+<p>The community has selected three auditors, and a fourth, <a href="https://www.trailofbits.com/">Trail of Bits</a>, is also looking at the code through an independent group <a href="https://www.arweave.org/">Arweave.org</a>.</p>
+<p>The auditors are:</p>
+<p><a href="https://www.kudelskisecurity.com/">Kudelski Security</a></p>
+<p><a href="https://www.x41-dsec.de/">X41 D-Sec</a></p>
+<p><a href="https://www.quarkslab.com/en/">QuarksLab</a></p>
+<p>You can read the actual proposals from each team here: <a href="https://github.com/hyc/RandomxAudits">https://github.com/hyc/RandomxAudits</a></p>
+<p>The fundraising has been moving quickly, if you have some XMR that you&#8217;d like to contribute to the effort <a href="https://ccs.getmonero.org/projects/14/donate">you can pitch in here</a>!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OSTIF and QuarksLab Audit of Monero Bulletproofs is Complete &#8211; Critical Bug Patched</title>
+		<link>https://ostif.org/the-ostif-and-quarkslab-audit-of-monero-bulletproofs-is-complete-critical-bug-patched/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 22 Oct 2018 12:58:21 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[Privacy]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[XMR]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1643</guid>
+
+					<description><![CDATA[Bulletproofs are a specific type of range proof based on new cryptography by Benedikt Bunz et al. Bulletproofs are a trustless proofs setup that are substantially smaller than the current Borromean style range proofs that were previously used, which reduces the size of Monero transactions by 80-90%. Monero’s latest network update, which is now live, has [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" loading="lazy" class="alignright wp-image-1835 size-medium" src="https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities-300x300.png" alt="" width="300" height="300" srcset="https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities-300x300.png 300w, https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities-150x150.png 150w, https://ostif.org/wp-content/uploads/2019/06/monero-vulnerabilities.png 428w" sizes="(max-width: 300px) 100vw, 300px" /><a href="https://crypto.stanford.edu/bulletproofs/"><span style="color: #289dcc;">Bulletproofs</span></a> are a specific type of range proof based on new cryptography by Benedikt Bunz et al. Bulletproofs are a trustless proofs setup that are substantially smaller than the current Borromean style range proofs that were previously used, which reduces the size of Monero transactions by 80-90%.</p>
+<p>Monero’s latest network update, which is now live, has enabled Bulletproofs and corrected all outstanding issues that were raised by the Kudelski and QuarksLab projects.</p>
+<p><strong>QuarksLab found:</strong><br />
+8 <span style="color: #cc284b;">Critical</span> Vulnerabilities<br />
+2 <span style="color: #cca928;">Medium</span> Vulnerabilities<br />
+20 <span style="color: #28cc57;">Low</span> or <span style="color: #28cc57;">Informational</span> Vulnerabilities / Concerns / Recommendations</p>
+<hr />
+<h4><span style="color: #cc284b;">One live-chain critical flaw identified and fixed:</span></h4>
+<p>QuarksLab found a denial of service vulnerability that could allow an attacker to <strong>arbitrarily crash Monero nodes remotely</strong>, creating a vulnerability for a large-scale denial of service campaign for the Monero network and further potentially leading to a 51% attack and forced chain split, ultimately leading to double-spends.</p>
+<p>Because this flaw impacted live code, OSTIF, QuarksLab, and the Monero team agreed to a disclosure embargo on this report until after the latest network upgrade that forced users to upgrade their nodes to patched code. The Monero XMR network is now safe from this flaw.</p>
+<hr />
+<h2>Other serious bugs that were identified and fixed:</h2>
+<ul>
+<li><span style="color: #cc284b;"><em>A lack of null value checks in the Bulletproofs proving algorithm.</em></span> The bulletproofs code relies on values being passed to it not being null, but did not proactively ensure that null values cannot be passed or checked for.</li>
+<li><span style="color: #cc284b;"><em>Dependent Generators in original java version of Bulletproofs are not secure.</em></span> The code had to be revised to improve number generation.</li>
+<li><span style="color: #cc284b;"><em>Overflow in double scalar multiplication.</em></span> The code needed to be patched to prevent the overflow of data.</li>
+<li><span style="color: #cc284b;"><em>Erroneous identity output in Bos-Coster multi-exponentiation.</em></span> The structure of the code could select the wrong input and return incorrect values.</li>
+<li><span style="color: #cc284b;"><em>Silently discarded element in Pippenger multi-exponentiation.</em></span> An optimization designed to discard large numbers of leading zeros could return the identity if a value of x^0 was entered into the function, meaning that the operation can return the identity unmodified. The optimization also had the additional issue of possibly discarding critical values for exact powers of two as inputs.</li>
+<li><span style="color: #cc284b;"><em>Invalid Verify input parameters.</em></span> There are no checks that the points provided are indeed points of Ed25519 and that they are on the main subgroup.</li>
+<li><span style="color: #cc284b;"><em>Key compromise in Schnorr signature.</em></span> In order to generate a valid Schnorr signature, the value k cannot be null or zero. If the value is null, an attacker can detect this and know the value of the key used to sign. If the value k is zero, then the value of the result is independent of the key and invalid. Checks needed to be added to the Schnorr signature to verify that the value k is not null or zero.</li>
+<li><span style="color: #cc284b;"><em>Failures in input size validation during (de)serialization.</em></span> A serialization error could allow an attacker to allocate up to 4GB of memory by initializing a value of 0 for nbp. Consequently, this can lead to memory being allocated for partially completed containers.</li>
+<li><span style="color: #cc284b;"><em>Failures in input type validation during (de)serialization.</em></span> A lack of robust checking for input type error from untrusted sources can lead to undesired behavior and error states.</li>
+<li><span style="color: #cc284b;"><em>Twenty other recommendations to improve security, robustness, practices, and performance.</em></span> The team also made a number of recommendations to code practices to improve the robustness of Monero code, to optimize performance, to improve error handling, and to reduce the attack surface of the software.</li>
+</ul>
+<hr />
+<p>This is the second of two audits that were conducted for Monero Bulletproofs. The first audit of Bulletproofs was conducted by Kudelski Security and the results <a href="https://ostif.org/the-quarkslab-and-kudelski-security-audits-of-monero-bulletproofs-are-complete/">are here</a>.</p>
+<p>If you would like to review the full QuarksLab audit the direct link is below: (please do not hotlink directly to the PDF, we would like visitors to come to the OSTIF site, it helps us gain more support for the cause, thank you!)<br />
+<a href="https://ostif.org/wp-content/uploads/2018/10/OSTIF-QuarksLab-Monero-Bulletproofs-Final2.pdf">https://ostif.org/wp-content/uploads/2018/10/OSTIF-QuarksLab-Monero-Bulletproofs-Final2.pdf</a></p>
+<p>We are working hard to make open source software safer and easier to use. Follow our activity both on our website and through <a href="https://twitter.com/OSTIFofficial">our Twitter</a>.</p>
+<hr />
+<p>The <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/">Open Source Technology Improvement Fund</a></span>, <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://getmonero.org/resources/research-lab/index.html">Monero Research Lab</a></span>, <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.quarkslab.com/en/">QuarksLab</a></span>, and the <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.reddit.com/r/monero">Monero community</a></span> have come together to sponsor in-depth research looking into Monero Bulletproofs. The audit was funded by Monero community donations, with coordination and exchange support from OSTIF. The audit was conducted by QuarksLab. We’d like to thank our OSTIF sponsors <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.privateinternetaccess.com/">Private Internet Access</a></span>, <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://www.expressvpn.com/">ExpressVPN</a></span>, and <span style="color: #289dcc;"><a style="color: #289dcc;" href="https://duckduckgo.com/">DuckDuckGo</a></span>, for making OSTIF possible and helping to make this opportunity happen.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The QuarksLab and Kudelski Security audits of Monero Bulletproofs are Complete</title>
+		<link>https://ostif.org/the-quarkslab-and-kudelski-security-audits-of-monero-bulletproofs-are-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 23 Jul 2018 18:47:51 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[Bulletproofs]]></category>
+		<category><![CDATA[Kudelski]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1452</guid>
+
+					<description><![CDATA[Kudelski Security has done a review of Monero Bulletproofs, a specific type of range proof based on new cryptography by Benedikt Bunz et al. Bulletproofs is a trustless proofs setup that is substantially smaller than the current Borromean style range proofs that are currently used, promising to make Monero transactions 10-20% of their current size. Kudelski [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" loading="lazy" class="alignright wp-image-1914 size-medium" src="https://ostif.org/wp-content/uploads/2019/06/Monero-2-300x300.png" alt="" width="300" height="300" srcset="https://ostif.org/wp-content/uploads/2019/06/Monero-2-300x300.png 300w, https://ostif.org/wp-content/uploads/2019/06/Monero-2-150x150.png 150w, https://ostif.org/wp-content/uploads/2019/06/Monero-2.png 428w" sizes="(max-width: 300px) 100vw, 300px" /><a href="https://www.kudelskisecurity.com/">Kudelski Security</a> has done a review of Monero Bulletproofs, a specific type of range proof based on new cryptography by Benedikt Bunz et al. Bulletproofs is a trustless proofs setup that is substantially smaller than the current Borromean style range proofs that are currently used, promising to make Monero transactions 10-20% of their current size.</p>
+<p>Kudelski found that the code was largely clean and that the C implementation that Monero has developed from the original Java code is suitable for use. Their findings did include 4 low severity bugs that have been patched, as well as a number of informational issues.</p>
+<hr />
+<h2>The bugs that were fixed:</h2>
+<ul>
+<li><span style="color: #cc284b;">BP-F-001: Unsafe use of environment variables</span><br />
+Patch: This function no longer uses environment variables to set this value, as <span style="color: #28cc57;">patched in commit 68f7606</span></li>
+<li><span style="color: #cc284b;">BP-F-002: Lack of input validation in prover</span><br />
+Patch: Input scalars are now checked to ensure they are within the proper range in the prove and verify routines, as <span style="color: #28cc57;">patched in 68f7606</span></li>
+<li><span style="color: #cc284b;">BP-F-003: Integer overflow in bulletproof L size computation</span><br />
+Patch: Correct boundary checks have been added to avoid the overflow, as <span style="color: #28cc57;">patched in commit 68f7606</span></li>
+<li><span style="color: #cc284b;">BP-O-008: Undefined behavior shifting signed value</span><br />
+Patch: The function has been rewritten using a ternary operator in <span style="color: #28cc57;">commit 68f7606</span></li>
+</ul>
+<p>This public disclosure of these vulnerabilities coincides with updates to the bulletproofs code which fixes all of the high priority concerns.</p>
+<p>This is the first of two audits that are sponsored by <a href="https://lab.getmonero.org/">Monero Research Lab</a>, <a href="https://www.reddit.com/r/Monero/">The Monero Community</a>, <a href="https://www.privateinternetaccess.com/">Private Internet Access</a>, and <a href="https://ostif.org/">OSTIF</a>. The second audit of Bulletproofs is being done by <a href="https://www.quarkslab.com/en/">QuarksLab</a> and the results will be released in the coming weeks.</p>
+<p>If you would like to review the full audit the direct link is below: (please do not hotlink directly to the PDF, we would like visitors to come to the OSTIF site, it helps us gain more support for the cause, thank you!)<br />
+<a href="https://ostif.org/wp-content/uploads/2018/07/KudelskiBulletproofsFinal.pdf">https://ostif.org/wp-content/uploads/2018/07/KudelskiBulletproofsFinal.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF is Working with Monero Research Lab on Bulletproofs</title>
+		<link>https://ostif.org/ostif-is-working-with-monero-research-labs-on-bulletproofs/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 02 Mar 2018 08:49:05 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[Bulletproofs]]></category>
+		<category><![CDATA[Cryptocurrency]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[XMR]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1297</guid>
+
+					<description><![CDATA[OSTIF is Working with Monero Research Lab on Bulletproofs We are happy to announce that we have been working with the Monero project to help them locate auditing resources for Bulletproofs. This code review is to evaluate the safety of the implementation of Bulletproofs into Monero, which promises to dramatically reduce transaction sizes for Monero, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1>OSTIF is Working with Monero Research Lab on Bulletproofs</h1>
+<p>We are happy to announce that we have been working with the <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://getmonero.org/">Monero</a></span> project to help them locate auditing resources for Bulletproofs. This code review is to evaluate the safety of the implementation of Bulletproofs into Monero, which promises to dramatically reduce transaction sizes for Monero, which will substantially reduce transaction fees, processing times and the size of the actual blockchain.</p>
+<p>We have been working with two companies, <a href="https://www.quarkslab.com/"><span style="color: #0000ff;">QuarksLab</span></a> in Paris and <a href="https://www.x41-dsec.de/"><span style="color: #0000ff;">X41 D-Sec</span></a> in Berlin to produce Statement of Work proposals and ensure that this review can be conducted entirely in public view and transparently. This allows everyone to view the final reports and see that the work was completed thoroughly and with significant oversight.</p>
+<p>On top of assisting <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://lab.getmonero.org/">Monero Research Lab</a></span> with locating auditors willing to work in public, OSTIF is also assisting with financial resource issues, offering to accept Monero XMR and paying out the auditors in EUR to facilitate their participation.</p>
+<p>The Monero community is in the process of selecting which teams will be conducting the review now.</p>
+<p>You can participate in the discussion:</p>
+<p>Here on Reddit: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.reddit.com/r/Monero/comments/817zt0/mrl_bulletproof_audit_ffs_request/">https://www.reddit.com/r/Monero/comments/817zt0/mrl_bulletproof_audit_ffs_request/</a></span></p>
+<p>Or here on Monero&#8217;s forums: <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://forum.getmonero.org/7/open-tasks/89993/bulletproofs-audit">https://forum.getmonero.org/7/open-tasks/89993/bulletproofs-audit</a></span></p>
+<h2>The next step for selecting auditors:</h2>
+<p>Monero will create an FFS &#8211; a post on their Forum Funding System here:<br />
+<a href="https://forum.getmonero.org/8/funding-required"><span style="color: #0000ff;">https://forum.getmonero.org/8/funding-required</span></a></p>
+<p>On the FFS, anyone can donate Monero XMR to support the project. Once funded, the project proceeds and the auditors conduct their work.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF Now Accepts Monero Donations</title>
+		<link>https://ostif.org/ostif-now-accepts-monero-donations/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 14 Sep 2017 04:49:44 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[donation]]></category>
+		<category><![CDATA[XMR]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1013</guid>
+
+					<description><![CDATA[We have set up the infrastructure to enable donations via Monero. Monero is a fully open-source and decentralized cryptocurrency that improves on the privacy shortcomings of Bitcoin through obfuscation technologies like RingCT and is currently working on an i2p based routing system to further privatize transactions, called Kovri. The Monero project has been instrumental in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have set up the infrastructure to enable donations via Monero.</p>
+<p><a href="https://getmonero.org/" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">Monero</span></a> is a fully open-source and decentralized cryptocurrency that improves on the privacy shortcomings of Bitcoin through obfuscation technologies like <a href="https://www.youtube.com/watch?v=M3AHp9KgTkQ" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">RingCT</span></a> and is currently working on an i2p based routing system to further privatize transactions, called <a href="https://github.com/monero-project/kovri" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">Kovri</span></a>.</p>
+<p>The Monero project has been instrumental in improving on privacy weaknesses in traditional cryptocurrencies, and they have had strong development progress and incident response.</p>
+<p>Our Monero donation information will appear on the <a href="https://ostif.org/donate-to-ostif/" target="_blank" rel="noopener noreferrer"><span style="color: #0000ff;">donate page</span></a> in the coming days.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>flux &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/flux/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Thu, 11 Nov 2021 17:42:36 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>flux &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Our Audit of Flux2 is Complete</title>
+		<link>https://ostif.org/our-audit-of-flux2-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2021 17:08:03 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[flux]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2594</guid>
+
+					<description><![CDATA[We have been working with the team over at the Flux project on a security review and improving their tooling. The Cloud Native Computing Foundation contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected ADA Logics to do both the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have been working with the team over at the <a href="https://github.com/fluxcd/flux2">Flux</a> project on a security review and improving their tooling. The <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected <a href="https://adalogics.com/">ADA Logics</a> to do both the fuzzing integration work and the security review.</p>
+<p>We are happy to report that our project has completed and Flux has its first CVE as a result! The bug allows an authenticated user with some specific permissions to escalate their privileges all the way to kubernetes cluster admin by injecting malicious shell scripts as Kubernetes Secrets in kustomize-controller. This issue impacts multiple large cloud vendors who have been notified to update. Flux version 1.18 and above contain the fix.</p>
+<p><a href="https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7"><strong>CVE-2021-41254</strong>:</a> [Privilege escalation to cluster admin on multi-tenant Flux]</p>
+<p>ADA Logics and the Flux team were excellent to work with! Our collaborative work has led to multiple fixes, improved overall testing with continuous fuzzing by way of OSS-Fuzz, and the comprehensive report below. The Flux team also created a<a href="https://github.com/orgs/fluxcd/projects/5"> public and easy to track dashboard showing all of the work we&#8217;ve done together</a> and is a fantastic example of good issue-tracking and remediation.</p>
+<p>A special thank you to the Cloud Native Computing Foundation for sponsoring this work and improving the security of Flux for everyone!</p>
+<p><a href="https://ostif.org/wp-content/uploads/2021/11/FluxreportFinalV1.1.pdf">Click here for the full report</a> (PDF)</p>
+<p>More information:<br />
+<a href="https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/">https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/</a><br />
+<a href="https://fluxcd.io/blog/2021-11-10-flux-security-audit/">https://fluxcd.io/blog/2021-11-10-flux-security-audit/</a><br />
+<a href="https://fluxcd.io/security/">https://fluxcd.io/security/</a><br />
+<a href="https://github.com/cncf/toc/blob/main/docs/projects.md">https://github.com/cncf/toc/blob/main/docs/projects.md</a><br />
+<a href="https://adalogics.com/blog/fluxcd-security-audit">https://adalogics.com/blog/fluxcd-security-audit</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

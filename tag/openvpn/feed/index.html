@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>openvpn &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/openvpn/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Sat, 19 Dec 2020 00:26:38 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>openvpn &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>What OSTIF is Working on in 2020</title>
+		<link>https://ostif.org/what-ostif-is-working-on-in-2020/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 18 Apr 2020 13:05:34 +0000</pubDate>
+				<category><![CDATA[Monero]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[clsag]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[riot im]]></category>
+		<category><![CDATA[triptych]]></category>
+		<category><![CDATA[updates]]></category>
+		<category><![CDATA[wintun]]></category>
+		<category><![CDATA[wireguard]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2126</guid>
+
+					<description><![CDATA[OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months! Two projects with the Linux Foundation We are working with the Linux Foundation&#8217;s Core Infrastructure Initiative on the safety and security of the Linux Kernel. We are working with Atredis [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>OSTIF is simultaneously working on multiple projects this quarter. Here is what we&#8217;ve been working on and what to expect over the next few months!</p>
+<h2>Two projects with the Linux Foundation</h2>
+<p>We are working with the <a href="https://www.linuxfoundation.org/">Linux Foundation&#8217;s</a> <a href="https://www.coreinfrastructure.org/">Core Infrastructure Initiative</a> on the safety and security of the <a href="https://www.kernel.org/">Linux Kernel</a>. We are working with Atredis Partners on evaluating the processes and policies for the Kernel&#8217;s security reporting, update, and disclosure processes to seek potential areas of improvement. This is something that the Kernel team has sought to review for years and OSTIF worked with our network of partners to bring the best people to the table for the task. We will be keeping the public notified as this project progresses. Here is an excellent talk by Konstantin Ryabitsev on how the Linux Kernel currently receives updates: <a href="https://www.youtube.com/watch?v=vohrz14S6JE">https://www.youtube.com/watch?v=vohrz14S6JE</a></p>
+<p>Additionally, we are in the early stages of reviewing the handling of software signing keys for the kernel, and how they are used for signing updates to the Kernel. We will have more information about this project in the near future.</p>
+<h2>Two Projects with the Monero Community</h2>
+<p>We are working with the Monero community on CLSAG. CLSAG promises to reduce signature sizes considerably while maintaining the same privacy level that Monero currently enjoys. Jean-Philipe Aumasson and Antony Vennard of <a href="https://teserakt.io/">Teserakt</a> will be reviewing both the theoretical paper <a href="https://eprint.iacr.org/2019/654.pdf">here</a> and the implementation <a href="https://github.com/SarangNoether/monero/tree/clsag-device">here</a> after approval by the security committee and a round of fundraising with the Monero community.</p>
+<p>Additionally, we are in the early stages of organizing and audit of Monero Triptych. <a href="https://eprint.iacr.org/eprint-bin/getfile.pl?entry=2020/018&amp;version=20200107:094009&amp;file=018.pdf">Triptych</a> promises to make transactions in Monero more efficient by increasing the efficiency of the ring signature scheme. Triptych allows Monero to significantly increase the size of rings while maintaining similar transaction sizes and verification speeds. This increase in ring size (from the current 12 to over 100) would theoretically substantially improve Monero privacy. We will be updating everyone on the status of this project as it progresses.</p>
+<h2>Three VPN Related Projects</h2>
+<p>We are working with the <a href="https://openvpn.net/">OpenVPN</a> team on a review of <a href="https://github.com/OpenVPN/openvpn">OpenVPN 2.5.0</a>, which introduces a number of new features that expand the use cases of OpenVPN. This includes and obfuscation plugin system that was developed with the <a href="https://operatorfoundation.org/">Operator Foundation</a>, whom we have also been working with to develop obfuscation plugins for OpenVPN that will be ready to go on launch.</p>
+<p>We are also exploring scoping for a security review of <a href="https://wireguard.com">WireGuard&#8217;s</a> clients. This is crucially important because while WireGuard&#8217;s core code is only 5000-6000 lines and simple to review, the supporting software libraries for the individual clients adds an order of magnitude more code that doesn&#8217;t have the same brevity and quality controls of the core code. A wide-scope review of WireGuard gives the community a fine-grained review of the current security benefits of WireGuard over alternatives.</p>
+<p>Additionally, we are exploring scoping to audit <a href="https://www.wintun.net/">WinTun</a>. WinTun is particularly important because it is the virtual driver that Windows requires for VPNs to function properly. This importance is magnified by WinTun also apparently performing better than tap-windows6 which is used by OpenVPN, and support for WinTun being added to OpenVPN. This means that WinTun will likely be the primary TAP/TUN driver for both OpenVPN and WireGuard in the future, so the security properties of WinTun are crucial.</p>
+<h2>Reaching Out to RIOT.IM</h2>
+<p>We have learned that the RIOT messenger team is seeking a security review of their project. So far we have been unsuccessful in our attempts to contact them. We will continue to try to reach out to assist the project and explore if collaboration is possible.</p>
+<h2>Seeking Additional Sources of Funding</h2>
+<p>OSTIF&#8217;s primary purpose is to bring together security resources with open source projects. As we expand on both ends of this goal, and we bring on more security teams while also having an increase in requests for support, the need for manpower grows. Two of our staff (Amir and Derek) have moved to working for OSTIF full-time.</p>
+<p>Our efforts are now focused on seeking additional funding so that we can continue to effectively support projects with our time and resources. This comes in the form of us reaching out to more organizations for support, including large corporations and governments in the form of cybersecurity grants. Sponsorships and grants will be key for OSTIF going forward, as we continue to expand and magnify the amount of good we can do.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Announcing the OSTIF Anti-Censorship Project</title>
+		<link>https://ostif.org/announcing-the-ostif-anti-censorship-project/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 17 Jul 2019 14:15:22 +0000</pubDate>
+				<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[WireGuard]]></category>
+		<category><![CDATA[meek]]></category>
+		<category><![CDATA[meekheavy]]></category>
+		<category><![CDATA[obfs4]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[plugins]]></category>
+		<category><![CDATA[shadowsocks]]></category>
+		<category><![CDATA[tor]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1988</guid>
+
+					<description><![CDATA[Censorship is an increasing problem on the internet. As the technology to manipulate what users see on the web gets cheaper, more countries, ISPs, and service providers are amping up their ability to not only monitor what their users see, but to orchestrate what those users see and experience. We define censorship as anything that [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Censorship is an increasing problem on the internet. As the technology to manipulate what users see on the web gets cheaper, more countries, ISPs, and service providers are amping up their ability to not only monitor what their users see, but to orchestrate what those users see and experience. We define censorship as anything that prevents a user from experiencing the Internet in all of its glory. This can be directly blocking content, or throttling it to speeds that are so slow that they are effectively blocked. The principles of Net-Neutrality are often talked about in political circles as something that needs to be defended, but little is said about the technological solutions that help break censorship. On the Internet, these are encrypted networks like Tor, I2P, and VPN networks. In the past, these tools could be used to bypass censorship systems. Now, deep packet inspection is used to automatically block these services dynamically using various techniques.</p>
+<p>This cat and mouse game has been going on for years. As the anti-censorship organizations deploy technology to bypass censors, the censors immediately work to find new methods to detect and block those tunnels. The pace of development of this tech has also led to a decline in usability. These tools are increasingly hard to deploy for savvy users, making it nearly impossible for average users to get access to censored information.</p>
+<h2>The OSTIF Anti-Censorship Project</h2>
+<p>Today we are announcing that we have been working with <a href="https://community.openvpn.net/openvpn">OpenVPN</a>, <a href="https://operatorfoundation.org/">The Operator Foundation</a> and <a href="https://en.greatfire.org/">Greatfire.org</a> to improve the existing working tools out there. The core aim of the project is to improve ease-of-use for installation and setup, to improve documentation, and to improve the tools themselves to reduce detection rates. This project has multiple parts, as relying on only one anti-censorship method can leave users stranded if their censor improves their methods against a particular tool.</p>
+<h3>The MeekHeavy Project</h3>
+<p>The MeekHeavy project is an evolution of the existing <a href="https://trac.torproject.org/projects/tor/wiki/doc/meek">Meek project that is headed by Tor.</a> Meek uses a technique called <a href="https://en.wikipedia.org/wiki/Domain_fronting">Domain Fronting</a> with SNI. Domain Fronting makes the servers for a network service (like a VPN or Tor) look like a generic server operating at a cloud provider. Current tools are specifically resistant to many types of automated analysis, impersonating real services and fooling many censorship systems. However, there are issues. The technology could be improved to further evade detection, and the usability needs some work, and the documentation could be dramatically improved (it is currently <a href="https://trac.torproject.org/projects/tor/wiki/doc/meek">a single article on Tor&#8217;s Trac</a>).</p>
+<p><strong>MeekHeavy will work as a standalone service</strong> as well, which will mean that <strong>MeekHeavy can work on WireGuard, Tor, I2P and any other service that wishes to implement MeekHeavy censorship resistance.</strong></p>
+<p>We aim to:</p>
+<p><strong>Implement Encrypted SNI (ESNI)</strong> using <a href="https://blog.cloudflare.com/esni/">CloudFlare&#8217;s draft version of ESNI</a> that they currently have implemented. We think that their implementation looks very much like what a <a href="https://datatracker.ietf.org/doc/draft-ietf-tls-esni/">final version of ESNI will look like</a>, with minor tweaks that we can adapt to once ESNI becomes a standard. ESNI is crucially important because it encrypts the information about the certificate that is sent between the client and server, and it restricts an interloper&#8217;s ability to blacklist specific certificates. This is re-establishes the &#8220;Mexican Standoff&#8221; approach to domain fronting. In order for a censor to be able to block a service that utilizes domain fronting, they&#8217;d have to block the entire cloud provider, which has far more collateral damage than blocking one particular service or website. Maximizing the collateral damage is a crucial step in dissuading censors from taking action against services. A block on all of Amazon Web Services, all of MS Azure, or all of CloudFlare is unthinkable.</p>
+<p><strong>Implement DNS-over-HTTPS support</strong>. <a href="https://en.wikipedia.org/wiki/DNS_over_HTTPS">DNS over HTTPS</a> removes the DNS server from the censorship equation by establishing a secure connection between the DNS server and the client. This prevent a common censorship technique called DNS Poisoning, which is a tampering method that sends invalid DNS responses to users and redirects them to censored versions of websites.</p>
+<p><strong>Remove hard-coded components (server names) that can be detected.</strong> This is to improve resistance to detection.</p>
+<p><strong>Add an easier method to switch cloud providers and improve the documentation surrounding this.</strong></p>
+<p>Additionally, we want to further improve the UX/UI of MeekHeavy, and to get our changes audited by an outside team. We will need to raise additional funds to get there, <strong>so we need as much help as possible getting people to donate!</strong></p>
+<h3>The OpenVPN Plugin Projects</h3>
+<p>OpenVPN 2.5.0 will have a plugin API that allows obfuscation transports (censorship evasion tech) to be added directly into OpenVPN. This is to support a project being headed by Google Jigsaw, but this API is open to function with tech developed by anyone in order to easily implement anti-censorship measures.</p>
+<p>We aim to:</p>
+<p><strong>Build obfs4, shadowsocks and MeekHeavy directly into an OpenVPN build.</strong> This will allow users much easier access to these tools and they will be able to implement the technology by following simple guides. This will significantly raise the bar for censors as users will have easy access to effective tools for bypassing most types of censorship.</p>
+<p>The primary goal of these plugins is to <strong>keep the number of steps to installing and using these tools to a minimum.</strong></p>
+<p>We will want to improve the UX/UI of these plugins in a custom version of OpenVPN GUI as well, and to get our custom code audited by a 3rd party.<strong> So again, we need the help of our community! Get the word out on social media, blogs, and donate donate donate!</strong></p>
+<h2>Open Source and Free to All</h2>
+<p>This project will be open source, but will also provide compiled installers that will allow easy installation for non-savvy users. We haven&#8217;t decided where the files be hosted (yet), but we will have an active GitHub once these tools near release quality code.</p>
+<h2>We need help!</h2>
+<p>This project will require significant support from the community in order to succeed. Once the tools are created, they will need ongoing maintenance to improve as well as significant security review by outside parties. Get your hosting company involved. Get your cloud provider, and your VPN involved. Get your anti-censorship and news orgs involved. If you know a way that you can assist us in this massive task, get in touch!</p>
+<p>Most importantly, talk about this project. Make sure that people know about our work and that what we do is valuable.</p>
+<p>We are active on Reddit and Twitter so if you are on those platforms keep tabs on us!</p>
+<h3>Thank Yous</h3>
+<p>A special thank you goes out to our sponsors that have helped get us to a position where we can work on important projects like this one. <a href="https://www.privateinternetaccess.com/">Private Internet Access</a>, <a href="https://web.getmonero.org/">Monero Research Lab</a>, <a href="https://nordvpn.com/">NordVPN</a>, <a href="https://mullvad.net/en/">Mullvad</a>, and <a href="https://www.expressvpn.com/">ExpressVPN</a> have all given us critical support to push this project forward. We need more support to keep doing great things and to keep moving this community in a positive direction.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF is Partnering with the Internet Bug Bounty and HackerOne for Bug Bounties!</title>
+		<link>https://ostif.org/ostif-is-partnering-with-the-internet-bug-bounty-and-hackerone-for-bug-bounties/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sun, 20 Jan 2019 23:52:12 +0000</pubDate>
+				<category><![CDATA[Bug Bounties]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[bug bounty]]></category>
+		<category><![CDATA[HackerOne]]></category>
+		<category><![CDATA[Internet Bug Bounty]]></category>
+		<category><![CDATA[OpenSSL]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[PIA]]></category>
+		<category><![CDATA[Private Internet Access]]></category>
+		<category><![CDATA[veracrypt]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1418</guid>
+
+					<description><![CDATA[OSTIF is Partnering with the Internet Bug Bounty and HackerOne for Bug Bounties! The Open Source Technology Improvement Fund will be partnering with the Internet Bug Bounty and HackerOne in a partnership that will get our supported projects listed on HackerOne with no overhead costs! HackerOne is the de-facto site for bug hunters around the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1>OSTIF is Partnering with the Internet Bug Bounty and HackerOne for Bug Bounties!</h1>
+<p>The <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://ostif.org">Open Source Technology Improvement Fund</a></span> will be partnering with the <a href="https://internetbugbounty.org/"><span style="color: #0000ff;">Internet Bug Bounty</span></a> and <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.hackerone.com/">HackerOne</a></span> in a partnership that will get our supported projects listed on HackerOne with no overhead costs!</p>
+<p><strong>HackerOne</strong> is the de-facto site for bug hunters around the world, with a community of thousands of skilled researchers at their disposal. This partnership brings an army of application security engineers and cryptographers to review our projects and submit bugs and receive bounties in an organized and effective way.</p>
+<p>Our initial supported projects will be the <a href="https://www.veracrypt.fr/en/Downloads.html"><span style="color: #0000ff;">VeraCrypt project</span></a>, the <a href="https://openvpn.net/index.php/open-source/downloads.html"><span style="color: #0000ff;">OpenVPN project</span></a>, and the <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.openssl.org/">OpenSSL project</a></span> will be added after the results of our OpenSSL 1.1.1 audit are publicly available.</p>
+<p>The bounties will initially match our own bug-bounty program, with up to $2500 for locating a bug (based on severity) and up to a $2500 bonus for submitting a fix to the project that prevents the problem from resurfacing through regression or new code introduced to the project. The fixes can include providing the tools to locate the bug (must be FOSS), providing a security patch, or improving security practices at the project. The fix must be accepted and integrated into the project to qualify. If a fix is provided and it is of low code quality, does not provide documentation or introduces other problems, the bonus may not qualify.</p>
+<p>We are excited with this new partnership and it represents months of back-and-forth negotiations to get the terms of this deal to be ironed out.</p>
+<p>I want to extend a special thank you to our primary sponsors that provided the bulk of the funding for this project that allowed it to happen. Thank you to <a href="https://www.privateinternetaccess.com/"><span style="color: #0000ff;">Private Internet Access</span></a>, <a href="https://duckduckgo.com/"><span style="color: #0000ff;">Duck Duck Go</span></a>, <a href="https://openvpn.net/"><span style="color: #0000ff;">OpenVPN Technologies</span></a>, <span style="color: #0000ff;"><a style="color: #0000ff;" href="https://www.ipredator.se/">iPredator</a></span> and <a href="https://www.expressvpn.com/"><span style="color: #0000ff;">ExpressVPN</span></a> for sponsoring our critical work to make the internet safer for all of us!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Congratulations to Guido Vranken for earning our first bug bounty!</title>
+		<link>https://ostif.org/congratulations-to-guido-vranken-for-earning-our-first-bug-bounty/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 04 Oct 2017 02:42:21 +0000</pubDate>
+				<category><![CDATA[Bug Bounties]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[bug bounty]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=1095</guid>
+
+					<description><![CDATA[Security researcher Guido Vranken has had the honor of being our first bug bounty payout totaling $5000 USD for his work on fuzzing OpenVPN 2.4.2 and finding a variety of memsafe and error handling flaws, responsibly disclosing them, and working with OSTIF and the OpenVPN security team to integrate his custom code into the OpenVPN [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Security researcher Guido Vranken has had the honor of being our first bug bounty payout totaling $5000 USD for his work on fuzzing OpenVPN 2.4.2 and finding a variety of memsafe and error handling flaws, responsibly disclosing them, and working with OSTIF and the OpenVPN security team to integrate his custom code into the OpenVPN project to eliminate this class of bugs from resurfacing in OpenVPN.</p>
+<p>This bounty was for responsibly disclosing multiple flaws that led to CVEs as well as some other minor bug fixes:</p>
+<p><a href="https://nvd.nist.gov/vuln/detail/CVE-2017-7521" target="_blank" rel="noopener noreferrer">CVE-2017-7521</a></p>
+<p><a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7508" target="_blank" rel="noopener noreferrer">CVE-2017-7508</a></p>
+<p>The combined total bounty for his bug reporting was $3500 USD. He was awarded a $1500 bonus for his work integrating his tools into the OpenVPN developer program to prevent future occurrences of this type of flaw.</p>
+<p>Thank you Guido for your fantastic work, from all of us at OSTIF.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OpenVPN 2.4.0 Audit by OSTIF and QuarksLab Results</title>
+		<link>https://ostif.org/the-openvpn-2-4-0-audit-by-ostif-and-quarkslab-results/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 11 May 2017 14:51:45 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[QuarksLab]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=870</guid>
+
+					<description><![CDATA[OpenVPN 2.4.0, the NDIS6 TAP Driver for Windows, the Windows GUI, and Linux versions were evaluated. This release included a number of new features including control channel encryption. QuarksLab found: 1 Critical/High Vulnerability CVE-2017-7478 1 Medium Vulnerability CVE-2017-7479 5 Low or Informational Vulnerabilities / Concerns This public disclosure of these vulnerabilities coincides with the release of OpenVPN 2.4.2 which fixes all of the high priority [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><img decoding="async" loading="lazy" class="wp-image-1836 size-medium alignright" src="https://ostif.org/wp-content/uploads/2019/06/openssl-vulnerabilities-300x300.png" alt="" width="300" height="300" srcset="https://ostif.org/wp-content/uploads/2019/06/openssl-vulnerabilities-300x300.png 300w, https://ostif.org/wp-content/uploads/2019/06/openssl-vulnerabilities-150x150.png 150w, https://ostif.org/wp-content/uploads/2019/06/openssl-vulnerabilities.png 428w" sizes="(max-width: 300px) 100vw, 300px" />OpenVPN 2.4.0, the NDIS6 TAP Driver for Windows, the Windows GUI, and Linux versions were evaluated. This release included a number of new features including control channel encryption.</p>
+<p>QuarksLab found:<br />
+1 <span style="color: #cc284b;">Critical/High</span> Vulnerability <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7478">CVE-2017-7478</a><br />
+1 <span style="color: #cca928;">Medium</span> Vulnerability <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-7479">CVE-2017-7479</a><br />
+5 <span style="color: #28cc57;">Low</span> or <span style="color: #28cc57;">Informational</span> Vulnerabilities / Concerns</p>
+<p>This public disclosure of these vulnerabilities coincides with the release of OpenVPN 2.4.2 which fixes all of the high priority concerns.</p>
+<hr />
+<h2><strong>The Fixes:</strong></h2>
+<p>Because of this audit, the OpenVPN development team has issued a number of fixes in OpenVPN 2.4.2.</p>
+<p><strong>The fixes include:</strong></p>
+<ul>
+<li><span style="color: #cc284b;"><em>Correction of a pre-authentication Denial of Service attack</em>.</span> An attacker can crash any OpenVPN client or server without any credentials or keys.</li>
+<li><span style="color: #cc284b;"><em>Correction of an authenticated user Denial of Service attack</em>.</span> An attacker can crash an OpenVPN client or server using an AEAD mode cipher by sending crafted data to exhaust the packet counter. Requires authentication.</li>
+<li><span style="color: #cc284b;"><em>Correction of issues in mbedtls (PolarSSL) X509 certificate handling.</em></span> Verify return values of mbedtls_x509_dn_gets and mbedtls_x509_serial_gets correctly.</li>
+<li><span style="color: #cc284b;"><em>Correction of usernames and passwords not being properly erased.</em></span> for the new bootloader. (keystrokes not erased after authentication)</li>
+<li><em><span style="color: #cc284b;">Correction of null pointer dereferences.</span> </em><em>Because this issue is low-severity and not exploitable, this fix is reserved for a future release.</em></li>
+<li><span style="color: #cc284b;"><em>Correction of service handling for OpenVPN GUI.</em></span> The OpenVPN GUI did not properly terminate the service when closed.</li>
+<li><span style="color: #cc284b;"><em>Improvements to documentation of the OpenVPN protocol.</em></span> Improving transparency of functionality for developers working with the OpenVPN protocol.</li>
+<li><span style="color: #cc284b;"><em>Updates to user documentation for other vulnerabilities that can be closed by user practices</em>.</span> Such as selecting more secure options, and deprecating antiquated options that are unsafe.</li>
+</ul>
+<p><strong>Furthermore the following was affirmed:<br />
+</strong></p>
+<ul>
+<li>When using OpenSSL, OpenVPN uses the<strong> RAND_bytes </strong>function for entropy exclusively. It appears to utilize it correctly with proper error handling.</li>
+<li>When using mbedTLS, OpenVPN uses the <strong>mbedtls_ctr_drbg_random</strong> function for entropy exclusively. It appears to utilize it correctly with proper error handling.</li>
+<li>When generating “non critical” random values, OpenVPN uses a custom algorithm that is <strong>non-standard but cryptographically sound</strong>.</li>
+<li>OpenVPN contains some legacy code related to end-of-life versions of OpenSSL that are no longer supported.</li>
+</ul>
+<hr />
+<p>The full audit report can be accessed below, <strong>please do not direct link to the audit report, as we would like visitors to see our synopsis and donation links before viewing the full audit</strong>. Thank you.</p>
+<p><span style="color: #289dcc;"><a style="color: #289dcc;" href="https://ostif.org/wp-content/uploads/2017/05/OpenVPN1.2final.pdf">https://ostif.org/wp-content/uploads/2017/05/OpenVPN1.2final.pdf</a></span></p>
+<p>There was also another security review performed by Dr Matthew Green at Cryptography Engineering paid for by Private Internet Access. You can access this security evaluation here:</p>
+<p><span style="color: #289dcc;"><a style="color: #289dcc;" href="https://privateinternetaccess.com/blog/2017/05/openvpn-2-4-evaluation-summary-and-report/">https://privateinternetaccess.com/blog/2017/05/openvpn-2-4-evaluation-summary-and-report/</a></span></p>
+<p>Cryptography Engineering focused on the cryptography aspects of OpenVPN, and gave a list of recommended changes to improve the general cryptographic strength of OpenVPN.</p>
+<ul>
+<li><span style="color: #28cc57;">Correction of authentication token handling in TLS auth while in an error state.</span> This has a commit in the 2.4 branch and will be fixed in a future release. It is low-impact.</li>
+<li><span style="color: #28cc57;">Potential loss of privacy with TLS auth or TLS crypt IV collision.</span> The OpenVPN team is updating documentation and disagrees with the wording of a “total loss of privacy”. These functions protect already encrypted data with a second layer of encryption.</li>
+<li><span style="color: #28cc57;">Removal of the –no-IV option.</span> The OpenVPN team has slated this option for deprecation and will be eliminated entirely in OpenVPN 2.5 and later.</li>
+<li><span style="color: #28cc57;">Removal of the –no-replay option.</span> The OpenVPN team has stated that this feature is for debugging only, and should not be used outside of that context.</li>
+<li><span style="color: #28cc57;">Removal of the –reneg-bytes option.</span> The OpenVPN team has stated that this will break configurations of OpenVPN that use One Time Pads, and needs to be left in for compatibility.</li>
+<li><span style="color: #28cc57;">Increase the strength of default encryption options.</span> OpenVPN 2.4 and greater has stronger defaults in that cipher negotiation is used and defaults to AES-256-GCM, while also allowing stronger future ciphers to be supported provided that both the client and server support it.</li>
+<li><span style="color: #28cc57;">Warn about insecure modes of operation.</span> OpenVPN will now issue a serious warning when –cipher none or –auth none is used.</li>
+<li><span style="color: #28cc57;">Remove system() from sample authentication plugin.</span> There is a commit for this fix ready for a future release, likely for 2.4.3 or 2.4.4.</li>
+<li><span style="color: #28cc57;">Removal of –script-security 3.</span> The OpenVPN team disagrees with the severity of the safety risks in the recommendation. The command will remain as-is, possibly with a documentation change.</li>
+<li><span style="color: #28cc57;">Removal of –tls-verify due to non-specific vulnerability.</span> The OpenVPN team failed to find any issues with the current implementation.</li>
+<li><span style="color: #28cc57;">Warn users about compression use.</span> As of 2.4.3 and higher, users will be warned about the risks of combining compression with streamed data.</li>
+</ul>
+<hr />
+<h4>OpenVPN is much safer after these audits, and the fixes applied to the OpenVPN mean that the world is safer when using this software. We have verified that the OpenVPN software is generally well-written with strong adherence to security practices.</h4>
+<p>Please <a href="https://ostif.org/donate-to-ostif/"><span style="color: #289dcc;">donate to OSTIF</span></a> if you want us to continue this valuable work. We plan to continue this project indefinitely, as long as the community continues to support us. Every donation and every person you tell about OSTIF makes the Internet stronger, and safer.</p>
+<p>I’d also like to extend a special thank you to Fred, Jean-Baptiste, Gabriel and Jordan at QuarksLab for conducting this audit, to Samuli and OpenVPN Technologies for their enthusiastic participation and the OpenVPN communities’ continued development of this crucial open-source software, and to <a href="https://ostif.org/ostif-is-beginning-a-fundraiser-for-openvpn-lets-get-it-audited/"><span style="color: #289dcc;">the coalition of 33 companies</span></a> and all of our individual donors for the funding to make this audit possible. We have all made the digital world a little bit safer for all of us.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Audit of OpenVPN is Complete</title>
+		<link>https://ostif.org/the-audit-of-openvpn-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sun, 02 Apr 2017 04:59:05 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[update]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=861</guid>
+
+					<description><![CDATA[The Audit of OpenVPN is Complete We have confirmed with QuarksLab that the security review of OpenVPN 2.4.0 is complete, and that they are now documenting the results. The process will then proceed as follows: QuarksLab will securely give these results to the OpenVPN security team on April 7th. The OpenVPN team will review the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><a href="https://ostif.org/?p=861&amp;preview=true">The Audit of OpenVPN is Complete</a></h1>
+<p>We have confirmed with QuarksLab that the security review of OpenVPN 2.4.0 is complete, and that they are now documenting the results.</p>
+<h2>The process will then proceed as follows:</h2>
+<p>QuarksLab will securely give these results to the OpenVPN security team on April 7th.</p>
+<p>The OpenVPN team will review the results and create fixes, resulting in OpenVPN version 2.4.2 (2.4.1 was released during the security review process with minor fixes).</p>
+<p>At the same time the OpenVPN team releases OpenVPN 2.4.2, OSTIF and QuarksLab will publish the results publicly on our sites respectively for the world to review!</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OpenVPN Audit Begins February 15th 2017</title>
+		<link>https://ostif.org/the-openvpn-audit-begins-february-15th-2017/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 25 Jan 2017 01:36:58 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=794</guid>
+
+					<description><![CDATA[The OpenVPN Audit Begins February 15th 2017 The OpenVPN audit is going to be carried out as planned by QuarksLab&#8217;s Gabriel Campana and Jean-Baptiste Bedrune on February 15th 2017. There will be 90 man-days of work completed throughout this audit and it will take approximately 45 days to complete. During this time period, we will work [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><a href="https://ostif.org/?p=794&amp;preview=true">The OpenVPN Audit Begins February 15th 2017</a></h1>
+<p>The OpenVPN audit is going to be carried out as planned by QuarksLab&#8217;s Gabriel Campana and Jean-Baptiste Bedrune on February 15th 2017. There will be 90 man-days of work completed throughout this audit and it will take approximately 45 days to complete.</p>
+<p>During this time period, we will work with the OpenVPN team to address issues as they are found on the fly. Once we are confident that the issues have been addressed, we will release the full results of the audit to the public. We expect to have final results released to the public by April 7th 2017.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OpenVPN Fundraiser Has Hit It&#8217;s Goal &#8211; Work On The Audit Begins</title>
+		<link>https://ostif.org/the-openvpn-fundraiser-has-hit-its-goal-work-on-the-audit-begins/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 19 Dec 2016 03:42:53 +0000</pubDate>
+				<category><![CDATA[Bug Bounties]]></category>
+		<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[goal]]></category>
+		<category><![CDATA[met]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=710</guid>
+
+					<description><![CDATA[The OpenVPN Fundraiser Has Hit It&#8217;s Goal &#8211; Work On The Audit Begins We are delighted to announce that the Open Source Technology Improvement Fund has surpassed it&#8217;s target goal of $71,000 USD with two weeks of fundraising to spare! We are continuing to seek donations until fundraising officially ends on January 1st. Our community: [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><a href="https://ostif.org/?p=710">The OpenVPN Fundraiser Has Hit It&#8217;s Goal &#8211; Work On The Audit Begins</a></h1>
+<p>We are delighted to announce that the Open Source Technology Improvement Fund has surpassed it&#8217;s target goal of<strong> $71,000 USD</strong> with two weeks of fundraising to spare! We are continuing to seek donations until fundraising officially ends on January 1st.</p>
+<h2>Our community: A coalition for positive change and a stronger OpenVPN.</h2>
+<p>This accomplishment is due to an overwhelmingly strong response from the community, where we have built a coalition of 33 companies and many individuals who have donated and helped spread the word about our cause.</p>
+<p>We want to give a special thank you to our largest supporters <a href="https://www.privateinternetaccess.com/">Private Internet Access</a> and <a href="https://www.ipredator.se/">iPredator</a>, whose generous contributions make up more than half of the total money raised! Their help is instrumental in making this audit happen and moving the effort forward. We also want to thank ThatOnePrivacyGuy from <a href="https://thatoneprivacysite.net/">ThatOnePrivacySite</a> for helping us create incentives for VPN providers to contribute to the cause through a special recognition category for VPNs that contribute back to the privacy community. And a special thank you to the Reddit community for helping us spread the word around the world about our cause.</p>
+<h2>Why does fundraising continue? Where does money raised beyond the goal go?</h2>
+<p>The overflow funds are being reserved for the bug bounty program that will begin after the OpenSSL audit finishes in mid 2017. This will be a program where researchers can submit new security bugs to the developers of the projects that have already been audited by OSTIF for up to $5000 in rewards. When this program begins, it will cover VeraCrypt, OpenVPN, and OpenSSL and OSTIF will need a $50,000 pool to set aside for award payouts that will need to be periodically replenished by donations overages from other projects. The bug-bounty program is the crucial next-step in improving our supported apps. It draws in the attention of reverse-engineers, white hats, and academics to do additional research into the functionality of the apps and find irregularities that can lead to security vulnerabilities. After a professional audit, bringing the eyes of the crypto world to the project is what will keep these apps as strong as they can possibly be.</p>
+<h2>What is the next step in the OpenVPN audit process?</h2>
+<p>Now that we have the funds, we will contact QuarksLab and reserve a team of two senior researchers to conduct the audit. We have decided internally that because we already have a world-renowned cryptographer auditing the core crypto of OpenVPN (Dr Matthew Green), our team of researchers will focus on software vulnerabilities and exploit analysis. We think that these combinations of skills will lead to the best possible analysis of OpenVPN as a whole.</p>
+<p>We have a tentative agreement for the head of our QuarksLab team to be Gabriel Campana. Those in security circles might remember his recent impressive <a href="http://blog.quarkslab.com/xen-exploitation-part-3-xsa-182-qubes-escape.html">Qubes OS + Xen Paravirtualization escape exploit</a>. This elegant exploit chain allowed an attacker to take full control of a Xen based server that was running Qubes OS, one of the most security focused Linux distros today. In the demonstration, a simple script allowed the user to escape the Qubes instance and take full control of any other instance in the machine, regardless of permissions. We can also see some of his excellent <a href="https://conference.hitb.org/hitbsecconf2012kul/materials/D1T3%20-%20F%20Raynal%20&amp;%20G%20Campana%20-%20An%20Attack%20Path%20to%20Jailbreaking%20Your%20Home%20Router.pdf">audit work on set-top boxes here</a>.</p>
+<h1>Thank You All For Supporting OSTIF</h1>
+<p>This is an enormous accomplishment for OSTIF and the privacy community. Thank you to each and every person who contributed to the project by donating and spreading the word. We are going to continue to do great things and make a real difference in the safety of the digital world that we all share.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>More OpenVPN Updates!</title>
+		<link>https://ostif.org/more-openvpn-updates/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Sat, 10 Dec 2016 08:00:15 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[fundraiser]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=699</guid>
+
+					<description><![CDATA[Progress! Goals! Collaboration! We are reporting in with more progress updates on our fundraising, more specifics on our goals, and some positive news about collaboration. Fundraising: We have secured substantially more funding over the last few days, increasing our total cash raised to $41000. This places us at about 60% of our $71000 goal! We [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1>Progress! Goals! Collaboration!</h1>
+<p>We are reporting in with more progress updates on our<strong> fundraising</strong>, more specifics on our<strong> goals</strong>, and some positive news about<strong> collaboration</strong>.</p>
+<p><strong>Fundraising:<br />
+</strong>We have secured substantially more funding over the last few days, increasing our total cash raised to $41000. This places us at about 60% of our $71000 goal! We have had widespread support for the effort and now have a coalition of 21 companies and many individual donors from around the world.</p>
+<p>We have completed our first round of contact with every VPN company in the world, and are now moving on to web hosting companies, internet security companies, and other businesses who are likely interested in a stronger OpenVPN.</p>
+<p>The community has done a great job of getting the word out, and we need to keep it up! Be loud! If you&#8217;ve donated, give us a shoutout on Twitter ( @ostifofficial ) or tell your friends! Getting the word out is the greatest challenge we face, and you can help! If your VPN hasn&#8217;t donated yet, let them know that you want them to support the effort and get involved!</p>
+<p><strong>Goals:<br />
+</strong>We have finalized an agreement with QuarksLab on a price, duration, and depth of the audit. Our goal of $71000 is now cemented and we will be getting 45 man-days (about 650 man-hours) of auditing work done by a team of two senior researchers.</p>
+<p><strong>Collaboration:<br />
+</strong>As we had mentioned in our earlier postings, we were surprised to find out that a large VPN had decided to fund their own independent effort in full, and they had secured a top researcher to also evaluate the same version of OpenVPN that we were building this enormous effort to audit. We were concerned because the VPN company was not communicating with us, and we had heard through 3rd parties that they had no intention of collaborating with us. This worried us about our audit being seen as redundant or wasteful, even though experts in the field would agree that more review is always better.</p>
+<p>We were hoping for a situation where the two audits could work together to make the greatest impact for OpenVPN, by auditing complementary areas of code or sharing results with one another to avoid redundancies and wasted effort by researchers.</p>
+<p>We have be in contact with Dr. Green and we have had a positive conversation about collaboration. It looks like we will be able to turn these two separate audits into an even greater and more thorough review than either project would be able to do alone.</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OpenVPN Audit Updates &#8211; News &#8211; And More!</title>
+		<link>https://ostif.org/openvpn-audit-updates-news-and-more/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Fri, 09 Dec 2016 03:10:47 +0000</pubDate>
+				<category><![CDATA[Encryption]]></category>
+		<category><![CDATA[Fundraiser]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[OpenVPN]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[fundraiser]]></category>
+		<category><![CDATA[openvpn]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=668</guid>
+
+					<description><![CDATA[Fundraising Is Going Well, Progress Is Fast! We have had a lot of early success with our OpenVPN fundraiser, and the community response to the project has been tremendous with privacy advocates, VPN review sites, and VPN providers coming together to raise over $34,000 USD over the last two weeks. We think we are on [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1>Fundraising Is Going Well, Progress Is Fast!</h1>
+<p>We have had a lot of early success with our OpenVPN fundraiser, and the community response to the project has been tremendous with privacy advocates, VPN review sites, and VPN providers coming together to raise over $34,000 USD over the last two weeks. We think we are on track to meet our fundraising goals and get the audit process under way by January 1st 2017 as planned.</p>
+<p>One of the common questions that we had on Reddit was about fundraising goals for how much we want to raise in order to meet our goals. Our response was vague because we were working on a large deal behind the scenes with a major IT company to secure some or even the majority of the funding through them alone. We were afraid of setting our goals too low and having the deal fall through, or setting the goal high and then lowering it when the deal went through. Either situation could be seen as misleading, and as a transparent organization we have attempted to stay as clear as possible to the public, while avoiding any possibilities for us to be seen in a bad light.</p>
+<p>We regret to say that this deal with the major IT company has in fact fallen through. While this means that we have more fundraising to do, we can also be significantly more clear about how much money we need, who will be doing the audit, and how close we are to our goals.</p>
+<p>The audit will be carried out by QuarksLab in Paris. Their exemplary job on a shoestring budget for the <a href="https://ostif.org/wp-content/uploads/2016/10/VeraCrypt-Audit-Final-for-Public-Release.pdf">VeraCrypt audit</a> has encouraged us to move forward with them on future projects. Fred, Jean-Baptiste, and Marion did fantastic work for us and we are looking forward to seeing what they can do on a full audit.</p>
+<p>Our required budget for this project is estimated to be $71000 USD. This is due to the complexities of OpenVPN across many platforms, and the large number of dependencies. <strong>This places the current state of our fundraising at about 50% of our goal with just two weeks of fundraising under our belts!</strong> The support from the community has been strong and diverse, with donors from all over the world.</p>
+<h1>Healthy Competition: A VPN Provider Has Decided To Do It Alone.</h1>
+<p><strong>What happened:</strong></p>
+<p>Two days ago, we learned about another effort to get OpenVPN 2.4 audited. We are thrilled to know that there are VPN companies that are willing to contribute significantly to the OpenVPN project. Unfortunately, this decision appears to have been made after OSTIF reached out to them for support multiple times, and the news came after two weeks of public fundraising had already been completed and a coalition of twenty VPN providers and dozens of other businesses had already been built.</p>
+<p>They have made it clear that they have no intention to support the community effort, nor will their audit project collaborate with ours for the greater good.</p>
+<p><strong>What OSTIF management thinks about this effort: </strong></p>
+<p>We do not know the circumstances that led up to their decision. We have reached out to them directly and through multiple parties to collaborate on this effort. The only response we have received was through a 3rd party, and that they do not intend to collaborate. We are confused as to their intentions with this effort, but the evidence leads us to believe that this is an effort to derail the community audit, and possibly take all of the credit for themselves for marketing purposes.</p>
+<p>There is also very little information about their effort, its scope, and who is doing the audit beyond one person.</p>
+<p>This effort appears to have been significantly rushed, with the OpenVPN staff learning of this new effort three days prior to this writing. We had been collaborating with OpenVPN Technologies and the community on this effort for over six months, and carefully planning the fundraising and timing for the project.</p>
+<p>We also took significant steps to try to select auditors who are not from nations in the Five-Eyes Intelligence Alliance because the OpenVPN 2.x has major contributions from Fox-IT, whose parent company is NCC Group, which has close ties with the government of the United Kingdom. We wanted to avoid any situation where it could be viewed by the world that a five-eyes company was auditing an app with significant contributions from groups that are tied to that same company.</p>
+<p>We strive for impartiality and transparency at all steps of the process.</p>
+<p><strong>What OSTIF intends to do moving forward:</strong></p>
+<p>The position of OSTIF, after having meetings with our managers and our board of trustees, is that we are going to continue fundraising with the community, and we will execute the audit as planned. If the other audit group changes their minds, and wishes to collaborate on the project for the greater good of the community, we are open to it at any time.</p>
+<p>We will complete a thorough and full audit on a tight timetable and continue with our goals to complete audits of our supported applications and move them on to the next stages of support. Our goals are to create stronger security and privacy tools for all, even when faced with resistance from moneyed interests.</p>
+<p>These audits will only make OpenVPN <em><strong>safer</strong></em>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

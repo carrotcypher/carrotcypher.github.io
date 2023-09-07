@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>security &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/security/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Wed, 06 Sep 2023 16:27:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>security &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dampening Vulnerabilities in Dapr: Security Audit of Dapr</title>
+		<link>https://ostif.org/dapr-audit/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Wed, 06 Sep 2023 10:00:39 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[Dapr]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[threat model]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=3001</guid>
+
+					<description><![CDATA[In May and June of 2023, OSTIF and ADA Logics worked with the open source project Dapr on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">In May and June of 2023, OSTIF and </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400"> worked with the open source project </span><a href="https://dapr.io/"><span style="font-weight: 400">Dapr</span></a><span style="font-weight: 400"> on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks with building blocks running best practices. Existing under the umbrella of the </span><a href="https://www.cncf.io/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400">, Dapr is an incubating project. </span></p>
+<p><span style="font-weight: 400">The ADA Logics team used a variety of tools and techniques to perform the security audit. Goals for the audit of the code assets in scope were to formalize a threat model, perform a manual code audit, do an evaluation of Dapr&#8217;s fuzzing suite, and carry out a SLSA review. These goals covered a range of the project’s needs and security concerns. </span></p>
+<p><span style="font-weight: 400">The threat model visualization and documentation acted as an aid and guide for the audit and can be used for future audits and by Dapr internally. It was feasible and important for both a high-level overview and more specific models to be created about the flow of Dapr, as they became walk-throughs that informed the identification of five possible threat actors and the four trust zones of the application. </span></p>
+<p><span style="font-weight: 400">Dapr’s fuzzing suite received an additional five fuzzers written by ADA Logics’ team. The fuzzers were added to the project’s OSS-Fuzz integration, making them run continuously since their introduction to the code. This way, the new fuzzers can run for longer, explore more, and test the latest master branch.</span></p>
+<p><span style="font-weight: 400">During the process of manual code review, seven security issues were found. They were classified as four moderate, two low, and one informational issue respectively. Four of said issues were umbrella issues of a specific class that can affect multiple components in the same building block in a similar way. One of the issues was a high-severity vulnerability in a 3rd-party dependency to Dapr that was issued CVE-2023-37475, however, it did not affect Dapr in a high-severity way and was scored as moderate from the perspective of Daprs threat model.</span></p>
+<p><span style="font-weight: 400">OSTIF would like to thank the team at ADA Logics, specifically Adam and David Korczynski, for their work, dedication, and final report on this audit. Our further gratitude to the Dapr community and maintainers, notably Yaron Schneider, Alessandro Segala, and Artur Souza, for their collaboration, contributions, and efforts on this audit and their project. Finally, recognition goes to the CNCF for their funding and support of open source security work. </span></p>
+<p><span style="font-weight: 400">Read the audit report <a href="https://ostif.org/wp-content/uploads/2023/09/Dapr-audit-2023.pdf">HERE</a></span></p>
+<p><span style="font-weight: 400">Read ADA Logic’s blog </span><a href="https://adalogics.com/blog/dapr-security-audit-2023"><span style="font-weight: 400">HERE</span></a></p>
+<p>Read Dapr&#8217;s blog <a href="https://blog.dapr.io/posts/2023/09/05/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+<p>Read CNCF&#8217;s blog <a href="https://www.cncf.io/blog/2023/09/06/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF collaborates with the Envoy Team to further improve security posture.</title>
+		<link>https://ostif.org/envoy-security-audit/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Wed, 16 Aug 2023 08:30:03 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[Envoy]]></category>
+		<category><![CDATA[fuzzing]]></category>
+		<category><![CDATA[Google]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[x41 D-Sec]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2986</guid>
+
+					<description><![CDATA[Envoy, the open source edge and service proxy designed for cloud-native applications, worked with OSTIF and X41 D-Sec to help improve the project’s security posture. The multi-phased engagement, sponsored by Google, focused first on the triaging and closing of bugs, then upon further improving the core fuzzers that continually monitor for security issues using OSS-Fuzz [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.envoyproxy.io/"><span style="font-weight: 400">Envoy</span></a><span style="font-weight: 400">, the open source edge and service proxy designed for cloud-native applications, worked with OSTIF and </span><a href="https://x41-dsec.de/"><span style="font-weight: 400">X41 D-Sec</span></a><span style="font-weight: 400"> to help improve the project’s security posture. The multi-phased engagement, sponsored by Google, focused first on the triaging and closing of bugs, then upon further improving the core fuzzers that continually monitor for security issues using OSS-Fuzz infrastructure at </span><a href="https://github.com/google/oss-fuzz."><span style="font-weight: 400">https://github.com/google/oss-fuzz</span><span style="font-weight: 400">.</span></a><span style="font-weight: 400"> This engagement is part of a series of security efforts to improve the security and reliability of Envoy. Earlier efforts include the </span><a href="https://cure53.de/pentest-report_envoy.pdf"><span style="font-weight: 400">2018 Audit of Envoy</span></a><span style="font-weight: 400"> by </span><a href="https://cure53.de/"><span style="font-weight: 400">Cure53</span></a><span style="font-weight: 400"> and the </span><a href="https://adalogics.com/"><span style="font-weight: 400">Ada Logics</span></a> <a href="https://blog.envoyproxy.io/a-stroll-down-fuzzer-optimisation-lane-and-why-instrumentation-policies-matter-f0012ec260b3"><span style="font-weight: 400">fuzzing infrastructure</span></a><span style="font-weight: 400"> work</span><span style="font-weight: 400"> in 2021. </span></p>
+<p><span style="font-weight: 400">Phase I of the engagement was designed to help the Envoy Team reduce the number of open bugs identified, reduce noise in the existing fuzzers (so the Envoy team spends less time triaging non-issues), and improve fuzzing coverage where possible. OSTIF sourced four senior security experts from X41 D-sec to complete the engagement. </span></p>
+<p><span style="font-weight: 400">The result of Phase I was the fixing of 68 security bugs. Furthermore, two critical vulnerabilities were found and proactively fixed. At the beginning of the Phase I engagement, there were 76 Total Fuzz Issues. As fixes and improvements were implemented, new fuzz issues were identified for analysis, allowing for further iteration and fine-tuning. </span></p>
+<p><a href="https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.40.25-AM.png"><img decoding="async" loading="lazy" class="aligncenter size-large wp-image-2992" src="https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.40.25-AM-1024x593.png" alt="" width="1024" height="593" srcset="https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.40.25-AM-1024x593.png 1024w, https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.40.25-AM-300x174.png 300w, https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.40.25-AM-768x445.png 768w, https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.40.25-AM.png 1072w" sizes="(max-width: 1024px) 100vw, 1024px" /></a></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400"> <strong>Figure 1: Total Fuzz Issues vs Fixed at end of Phase I </strong></span><strong>(Sept, 2022)</strong></p>
+<p><span style="font-weight: 400">Phase II was focused on improving the number of executions/second and high signal to noise ratio produced by the fuzzers. Additionally to triaging remaining open high priority fuzzers from Phase I, there was an effort to close another 10 health check related fuzz issues. In order to cover more code faster, while remaining highly efficient and controlling output, X41 was able to analyze bugs from the first phase to determine how the fuzzers were running tests and where they were losing speed and validity. Of Envoy’s original 67 fuzzers, 19 were considered high priority due </span><span style="font-weight: 400">to testing code paths that are exposed to potential attack vectors; by dataplane traffic in the form of QoDs and bugs that can impact reliability and security of Envoy</span><span style="font-weight: 400">. Because Envoy is also offered as a service, fuzz testing and hardening the configuration interface is crucial.  When fuzzers work on data and configurations simultaneously, there can be a tendency for them to move away from configurations that need deeper testing. This results in less code coverage. Envoy’s code base uses debug assertions, which further slowed down the testing process and often returned noise. To combat and remediate these multiple consequences, X41’s team developed a plan. First, create a way to generate valid configuration files by introspecting the configuration description already augmented by expressions supplying context, and then develop a two-step fuzzing process with the configuration files generated then used for fuzzing.</span></p>
+<p><span style="font-weight: 400">The team of Markus Vervier, Eric Sesterhenn, Dr. Andre Vehreschild and Dr. Robert Femmer had to develop a way to address the set of points they identified as limiting the fuzzers functionality. They aimed to improve the critical fuzzers that run on HTTP decoders and stream management, specifically HTTP/1.1, HTTP/2, and the HTTP/3 codec interfaces. </span></p>
+<p><span style="font-weight: 400">Dr. Vehreschild and Dr. Femmer not only developed four new fuzzers, but improved the overall security testing environment of Envoy instrumentally. The created fuzzers targeted HTTP decoders for high throughput focused on primary attack surfaces of Http1 (Balsa and http_parser), Http2 (nghttp2 and oghttp2), and Http3 Quic. To address the issues around configuration files, the team experimented with running configurations repeatedly to explore the data plane deeper before generating another configuration. Configurations found could increase fuzzing speed by a factor of 4 to 20 times. Further work resulted in removing debug assertions and reducing the binary size of fuzzers by a factor of 1.5. By developing ways to create valid and long-running configurations across the configuration and data planes, the performance of fuzzers was increased by a factor of 40. </span></p>
+<p><span style="font-weight: 400">The graph below strongly suggests that, since </span>March 2022<span style="font-weight: 400"> when Phase I of the engagement began, there has been a downward trend in generation of new fuzz issues due to this collective effort. </span></p>
+<p><a href="https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.38.08-AM.png"><img decoding="async" loading="lazy" class="aligncenter wp-image-2991 size-full" src="https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.38.08-AM.png" alt="" width="906" height="535" srcset="https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.38.08-AM.png 906w, https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.38.08-AM-300x177.png 300w, https://ostif.org/wp-content/uploads/2023/08/Screen-Shot-2023-08-14-at-9.38.08-AM-768x454.png 768w" sizes="(max-width: 906px) 100vw, 906px" /></a></p>
+<p><strong>Figure 2: New Fuzz Issues since beginning of engagement (March 2022 &#8211; June, 2023)</strong></p>
+<p><span style="font-weight: 400">This work took months to complete and was an open discussion-based project that allowed for all members to collaborate, help each other, and discuss the possibilities and testing done. </span></p>
+<p><span style="font-weight: 400">We sincerely thank Kirtimaan Rajshiva, Adi Peleg, Yan Avlasov, Harvey Tuch, Joshua Marantz, and the entire Envoy Platform Team for funding and guiding this effort along with Markus Vervier, Eric Sesterhenn, Dr. Andre Vehreschild, Dr. Robert Femmer, and Sofie Seuren of X41 D-Sec for their diligent work and insight. </span></p>
+<p><span style="font-weight: 400">OSTIF is grateful for the opportunity to collaborate and improve security posture for the betterment of FOSS. We would also like to recognize Google, without whose funding this project would not have been possible.</span></p>
+<p><span style="font-weight: 400">Read the audit report </span><a href="https://ostif.org/wp-content/uploads/2023/08/X41-OSTIF-Envoy-FuzzingFINAL.pdf"><span style="font-weight: 400">here</span></a><span style="font-weight: 400">. </span></p>
+<p><span style="font-weight: 400">For more information about the work done, see X41’s blog </span><a href="https://x41-dsec.de/news/2023/08/16/envoy-fuzzing"><span style="font-weight: 400">here.</span></a><span style="font-weight: 400"> </span></p>
+<p><span style="font-weight: 400">For further information on Envoy, see </span><a href="https://www.envoyproxy.io/"><span style="font-weight: 400">here</span></a><span style="font-weight: 400">.</span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF completes Security Audit of Crossplane- improved across the board!</title>
+		<link>https://ostif.org/crossplane-audit-complete/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Thu, 27 Jul 2023 16:04:27 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[Crossplane]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2979</guid>
+
+					<description><![CDATA[Crossplane underwent a successful third party security audit by ADA Logics with the support of Open Source Technology Improvement Fund (OSTIF). Used by firms such as JP Morgan, Time Warner, and MIT Lincoln Lab, the project is considered Incubating at CNCF. Over the first half of 2023, the multi-cloud control plane for Kubernetes API was [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.crossplane.io/"><span style="font-weight: 400">Crossplane</span></a><span style="font-weight: 400"> underwent a successful third party security audit by </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400"> with the support of Open Source Technology Improvement Fund (OSTIF). Used by firms such as JP Morgan, Time Warner, and MIT Lincoln Lab, the project is considered Incubating at </span><a href="https://www.cncf.io/projects/crossplane/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400">. Over the first half of 2023, the multi-cloud control plane for Kubernetes API was examined, reviewed, and tested before its v 1.13 release with fixes from this audit. With the ultimate goal of graduation in mind, the audit team had its work cut out for them. </span></p>
+<p><span style="font-weight: 400">A holistic, comprehensive audit of Core Crossplane and Crossplane Runtime repositories was performed by manual code auditing, a fuzzing suite review, the creation of a threat model, and a </span><a href="https://slsa.dev/"><span style="font-weight: 400">SLSA</span></a><span style="font-weight: 400"> grade. As the threat model was built, the audit team was able to determine attack surfaces and pinch points to focus upon which directed the manual code review. For example, supply chain security issues that Crossplane experiences as an image and package manager exposes the project to the potential for threat actors to introduce supply chain attacks. </span></p>
+<p><span style="font-weight: 400">The fuzzing being performed in Crossplane (by thirteen fuzzers ADA Logics </span><a href="https://github.com/crossplane/crossplane/blob/master/security/ADA-fuzzing-audit-22.pdf"><span style="font-weight: 400">previously created</span></a><span style="font-weight: 400"> for the project!) is critical to the ongoing, continuous monitoring of the security, health, and environment of the code. An additional four fuzzers were added during this audit with an additional fuzzer improved by way of increased code coverage. </span></p>
+<p><span style="font-weight: 400">Of the sixteen issues identified during the audit, fifteen were resolved by the Crossplane. This includes two CVEs that were found during the audit. First, a high severity finding that could allow image tampering was issued as CVE-2023-38495, and second, a low severity Denial-of-Service finding labeled CVE-2023-37900. In summation, 7 low, 8 medium, and 1 high finding were reported. The singular unfixed issue is located in the alpha features of Crossplane. </span></p>
+<p><span style="font-weight: 400">We are so grateful to the Crossplane team for their contributions, fixes, and investment in this audit’s execution. Further thanks to ADA Logics for their report and hard work on this project with us. It’s always a pleasure to collaborate with you. Finally, we would like to express our gratitude to CNCF for their financial support of this audit and ongoing open source security work. </span></p>
+<p><span style="font-weight: 400">Read the Final Report </span><a href="https://ostif.org/wp-content/uploads/2023/07/ADA-security-audit-23.pdf"><span style="font-weight: 400">here</span></a>.</p>
+<p><span>Read ADA Logic’s blog at </span><a href="https://adalogics.com/blog/crossplane-security-audit-2023"><span>https://adalogics.com/blog/crossplane-security-audit-2023</span></a></p>
+<p><span style="font-weight: 400">Read Crossplane’s blog at </span><a href="https://blog.crossplane.io/security-audit-2023"><span style="font-weight: 400">https://blog.crossplane.io/security-audit-2023</span></a></p>
+<p>Read CNCF&#8217;s blog <a href="https://www.cncf.io/blog/2023/07/27/crossplane-completes-security-audit-hardening-and-growing-enterprise-confidence/">here</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF&#8217;s Audit of Equinox P2 is Complete!</title>
+		<link>https://ostif.org/2023-15/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Wed, 12 Jul 2023 09:00:19 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Include Security]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Transparency]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[open source]]></category>
+		<category><![CDATA[OpenSSF]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2957</guid>
+
+					<description><![CDATA[The Eclipse Foundation’s Equinox P2 was audited by Include Security in November 2022. Equinox P2 is a provisioning platform, started by IBM in 2001. The Eclipse Foundation was founded three years later to act as an open, non-for-profit leader of the Eclipse Project community.  OSTIF was contacted by the Foundation, with funding from OpenSSF project [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.eclipse.org/org/foundation/"><span style="font-weight: 400">The Eclipse Foundation</span></a><span style="font-weight: 400">’s </span><a href="https://www.eclipse.org/equinox/p2/"><span style="font-weight: 400">Equinox P2</span></a><span style="font-weight: 400"> was audited by </span><a href="https://includesecurity.com/"><span style="font-weight: 400">Include Security</span></a><span style="font-weight: 400"> in November 2022. Equinox P2 is a provisioning platform, started by IBM in 2001. The Eclipse Foundation was founded three years later to act as an open, non-for-profit leader of the Eclipse Project community. </span></p>
+<p><span style="font-weight: 400">OSTIF was contacted by the Foundation, with </span><a href="https://openssf.org/blog/2022/06/20/openssf-funds-python-and-eclipse-foundations-and-acquires-sos-dev-through-alpha-omega-project/"><span style="font-weight: 400">funding from OpenSSF project Alpha-Omega</span></a><span style="font-weight: 400">, to perform a security audit and provide recommendations for security hardening. With Include Security, the audit resulted in a developed threat model, code review, and analysis of SAST and fuzzing.</span></p>
+<p><span style="font-weight: 400">The Include Security team followed a static code analysis with white-box code review methodology throughout the engagement. The result was one critical, three medium, and five low-risk findings. For the threat model, the focal point was on feasibly applicable threat actors to PGP-based signature verification. Everything else was considered out of the scope of the audit. In a methodical practice, Include created a threat model of the Target of Evaluation after a four step system. </span></p>
+<p><span style="font-weight: 400">Over the 22 person days spent on the audit, Include Security also worked on SAST tooling and fuzzing for continuous monitoring. In the report, Include Security offers three security tools and recommendations of how fuzzing and SAST tooling could be reworked to best run on P2’s code. This would be mainly by adding rules to scanners to eliminate noise and false positives.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">OSTIF would like to extend our gratitude to the Equinox P2 team and the Eclipse Foundation for their participation and partnership in this security audit, particularly Mikael Barbero and Marta Rybczynska. Thank you as well to those at Include Security, for their hard work and final report on this project. Finally, we would like to acknowledge and thank OpenSSF </span><a href="https://openssf.org/community/alpha-omega/"><span style="font-weight: 400">Project Alpha-Omega</span></a><span style="font-weight: 400"> for their financial support of this critical security work. </span></p>
+<p><span style="font-weight: 400">Read Include Security’s Audit of Equinox P2 </span><a href="https://5413615.fs1.hubspotusercontent-na1.net/hubfs/5413615/OSTIF_-_Equinox_p2_Report.pdf" target="_blank" rel="noopener">here!</a></p>
+<p>Read the Eclipse Foundation&#8217;s statement <a href="https://blogs.eclipse.org/post/mika%C3%ABl-barbero/eclipse-foundation-publishes-results-equinox-p2-security-audit">here!</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our audit of Vitess is complete!</title>
+		<link>https://ostif.org/our-audit-of-vitess-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 05 Jun 2023 16:00:43 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[adalogics]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[vitess]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2923</guid>
+
+					<description><![CDATA[Security is Vital for Vitess! The Open Source Technology Improvement Fund, in collaboration with Ada Logics, is proud to announce the results of a successful security audit for Vitess. Born at Youtube in 2010 to help scale up database interactions, Vitess eventually moved under the umbrella of Cloud Native Computing Foundation, graduating at CNCF in [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Security is Vital for Vitess!</span></p>
+<p><span style="font-weight: 400;">The Open Source Technology Improvement Fund, in collaboration with </span><a href="https://adalogics.com/"><span style="font-weight: 400;">Ada Logics</span></a><span style="font-weight: 400;">, is proud to announce the results of a successful</span> <span style="font-weight: 400;">security audit for </span><a href="https://vitess.io/"><span style="font-weight: 400;">Vitess</span></a><i><span style="font-weight: 400;">.</span></i><span style="font-weight: 400;"> Born at Youtube in 2010 to help scale up database interactions, Vitess eventually moved under the umbrella of </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation,</span></a><span style="font-weight: 400;"> graduating at CNCF in 2019. Used in over 50 projects, Vitess’s functions of scaling, workflow, and shard management are critical for growing applications that see thousands, sometimes millions, of users daily. </span></p>
+<p><span style="font-weight: 400;">VTAdmin is a new aspect of Vitess, and as such the whole of the component was considered during this audit as an artifact for security review. During this audit Ada Logics ran with a five point list of goals, including manual code review, a threat model, improving Vitess’s fuzzing suite, and a </span><a href="http://slsa.dev/"><span style="font-weight: 400;">SLSA</span></a><span style="font-weight: 400;"> grade.</span> <span style="font-weight: 400;">Of the moderate vulnerabilities that were reported, two CVEs had the potential to allow malicious users to block other users from using the full capabilities of VTAdmin or Vitess. For example, stopping others from creating shards. Two of the fuzzers created by Ada Logics for Vitess were directly inspired by these two CVEs, and were immediately implemented. </span></p>
+<p><span style="font-weight: 400;">Described further in the report are details of VTAdmin’s attack surface, SLSA compliance, and all 12 vulnerabilities disclosed during the process of the audit. </span></p>
+<p><span style="font-weight: 400;">OSTIF extends its deep gratitude to Deepthi Sigireddi and the entire Vitess Maintainer team as well as David Korczyzski and Adam Korczynski of Ada Logics.  Further thanks to CNCF for their gracious funding of this audit and continued work in open source security.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400;">See Ada Logics’s blog: <a href="https://adalogics.com/blog/vitess-security-audit-2023">https://adalogics.com/blog/vitess-security-audit-2023</a></span></p>
+<p><span style="font-weight: 400;">See Vitess’s blog: <a href="https://vitess.io/blog/2023-06-05-vitess-security-audit">https://vitess.io/blog/2023-06-05-vitess-security-audit</a></span></p>
+<p>See the Cloud Native Computing Foundation&#8217;s blog: <a href="https://www.cncf.io/blog/2023/06/05/vitess-security-audit-results/">https://www.cncf.io/blog/2023/06/05/vitess-security-audit-results/</a></p>
+<p><span style="font-weight: 400;">Vitess Security Audit Full Report: <a href="https://ostif.org/wp-content/uploads/2023/06/OSTIF-Adalogics-Vitess-Security-Audit-2023.pdf">https://ostif.org/wp-content/uploads/2023/06/OSTIF-Adalogics-Vitess-Security-Audit-2023.pdf</a></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Audit of Git is Complete!</title>
+		<link>https://ostif.org/the-audit-of-git-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Tue, 17 Jan 2023 18:10:53 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[chainguard]]></category>
+		<category><![CDATA[git]]></category>
+		<category><![CDATA[github]]></category>
+		<category><![CDATA[gitlab]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[x41]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2782</guid>
+
+					<description><![CDATA[Results of Git Security Audit Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for git. Git is the world&#8217;s most widely used version control system, and it underpins not only open source, but the vast majority of public and private software development today. To [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h2>Results of Git Security Audit</h2>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for <a href="https://git-scm.com/">git</a>. Git is the world&#8217;s most widely used version control system, and it underpins not only open source, but the vast majority of public and private software development today. To say that git is infrastructure is an understatement, it reaches nearly every corner of software development and touches nearly every product that has software in one way or another.</span></p>
+<p><span style="font-weight: 400;">For this reason, git is one of OSTIFs top priorities to help with security resources and has built a large coalition of companies to work on multiple facets of the git project. The security audit conducted by Markus Vervier and Eric Sesterhenn from <a href="https://x41-dsec.de/">X41</a> and Joern Schneeweisz from <a href="https://about.gitlab.com/">GitLab</a> is only a part of the total efforts coordinated by OSTIF. <a href="https://github.com/">Github&#8217;s</a> <a href="https://codeql.github.com/">CodeQL team</a> (thank you Turbo!) is helping the git developers build a custom ruleset for CodeQL to help give the developers more meaningful results and cull false positives so that the tool is more usable than the previous static analysis tools (that the core git team had stopped using due to multiple difficulties). Additionally, Adolfo Veytia and John Speed Meyers from <a href="https://www.chainguard.dev/">Chainguard</a> along with Dennis Appelt from GitLab are working on how the Windows version of git is distributed to make recommendations and changes to improve the supply chain security of git. We will be releasing the results of those efforts as each of these projects is completed. This coalition of efforts is unified through our shared interests in git and the critical role that it plays in the open source world.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from the <a href="https://blog.google/technology/safety-security/shared-success-in-building-a-safer-open-source-community/">Google Open Source Security Team (GOSST)</a> and the help of the <a href="https://openssf.org/">OpenSSF</a> to help make this critical project more secure.</span></p>
+<p><span style="font-weight: 400;">For this portion of the research a total of 35 issues were discovered, including 2 critical severity findings and a high severity finding. Additionally, because of this research, a number of potentially catastrophic security bugs were discovered and resolved internally by the git security team. (A special thank you to Patrick Steinhardt for all of their work on the formatting issues related to CVE-2022-41903).<br />
+</span></p>
+<p><span style="font-weight: 400;">The serious bug fixes are in the latest release of Git (released today).</span></p>
+<p><span style="font-weight: 400;"> The most notable issues were:</span></p>
+<p><span style="font-weight: 400;"><strong>CRITICAL</strong> &#8211; CVE-2022-41903 &#8211; <a href="https://github.com/git/git/security/advisories/GHSA-475x-2q3q-hvwq">Out-of-Bounds Memory Write in Log Formatting</a> (this had multiple collateral issues that were fixed by the git security team that were critical in nature)</span></p>
+<p><span style="font-weight: 400;"><strong>CRITICAL</strong> &#8211; CVE-2022-23251 &#8211; Truncated Allocation Leading to Out of Bounds Write Via Large Number of Attributes</span></p>
+<p><span style="font-weight: 400;"><strong>HIGH</strong> &#8211; Out-of-Bounds Read Via Padding Placeholders</span></p>
+<p><span style="font-weight: 400;">The git team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the initial meetings and security review. We&#8217;d like to thank everyone at git who helped us with this audit, with security tooling questions, and with understanding the git build process.</span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links:</span></p>
+<p><span style="font-weight: 400;">Git Security Assessment Full Report &#8211; <a href="https://ostif.org/wp-content/uploads/2023/01/X41-OSTIF-Gitlab-Git-Security-Audit-20230117-public.pdf">https://ostif.org/wp-content/uploads/2023/01/X41-OSTIF-Gitlab-Git-Security-Audit-20230117-public.pdf</a><br />
+More information from X41&#8217;s blog post here: <a href="https://www.x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/">https://www.x41-dsec.de/security/research/news/2023/01/17/git-security-audit-ostif/</a><br />
+</span><span style="font-weight: 400;">Information on the latest git patch: <a href="https://www.openwall.com/lists/oss-security/2023/01/17/4">https://www.openwall.com/lists/oss-security/2023/01/17/4</a><br />
+OSTIF is planning many security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from <a href="https://x41-dsec.de/">X41</a> and <a href="https://about.gitlab.com/">GitLab</a> that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the OSTIF website. <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">We also have all of our published work on our Github</a>. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem.</span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OSTIF Audit of Curl with Trail of Bits is Complete</title>
+		<link>https://ostif.org/the-ostif-audit-of-curl-with-trail-of-bits-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 21 Dec 2022 18:02:31 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[bug]]></category>
+		<category><![CDATA[curl]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2767</guid>
+
+					<description><![CDATA[Results of curl Security Audit  By: Amir Montazery, OSTIF Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for curl. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><span style="font-weight: 400;">Results of curl Security Audit </span></h1>
+<p><span style="font-weight: 400;">By: Amir Montazery, OSTIF</span></p>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (</span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF</span></a><span style="font-weight: 400;">) is thrilled to announce the results of a security audit and threat model for </span><a href="https://curl.se/"><span style="font-weight: 400;">curl</span></a><span style="font-weight: 400;">. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, television sets, routers, printers, audio equipment, mobile phones, tablets, media players and is the Internet transfer engine for thousands of software applications in over ten billion installations. It’s even </span><a href="https://daniel.haxx.se/blog/2021/04/19/mars-2020-helicopter-contributor/"><span style="font-weight: 400;">deployed on Mars</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The security review of curl was facilitated by OSTIF and sponsored by the Open Source Security Foundation (</span><a href="https://openssf.org/"><span style="font-weight: 400;">OpenSSF</span></a><span style="font-weight: 400;">) in an effort to improve the security of this critical project in the open source ecosystem. The engagement involved a team of four consultants conducting code review for approximately six engineer-weeks of effort. A total of 12 issues were addressed, including 2 High Severity findings. The technical work of the review was led by </span><a href="https://github.com/trailofbits/publications#security-reviews"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The bug fixes were validated and patched as part of the </span><a href="https://curl.se/dev/release-procedure.html"><span style="font-weight: 400;">curl release schedule</span></a><span style="font-weight: 400;">. The planned release for December 21, 2022, included all of the fixes and improvements made to curl as a result of this engagement. A detailed synopsis of the security improvements to curl can be found in the reports under </span><i><span style="font-weight: 400;">Summary of Findings </span></i><span style="font-weight: 400;">and </span><i><span style="font-weight: 400;">Fix Review Results</span></i><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Another significant accomplishment from this engagement was a component-focused threat model for curl and libcurl. Published as a separate report, the effort involved a team of two engineers focused on the identification of security control flaws that could result in a compromise. This focused effort uncovered one design-level issue that could lead to vulnerabilities along with multiple security improvements. Threat model reports like this one can be used by developer and maintainer communities to better understand components, trust zones, and threat actors and gain a deeper understanding of how to use a project like curl. </span></p>
+<p><span style="font-weight: 400;">The curl team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the review and threat modeling exercise. Curl is a good example of a critical open source project. It has been in development for over 20 years thanks largely in part to </span><a href="https://www.haxx.se/"><span style="font-weight: 400;">Haxx</span></a><span style="font-weight: 400;">, a group of open source developers and hackers in Sweden.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from OpenSSF to help make this critical project more secure. </span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links: </span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Security Assessment Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf">https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf</a></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Threat Model Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf">https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf</a></span></li>
+</ul>
+<p><span style="font-weight: 400;">We thank David A. Wheeler, Brian Behlendorf, and Bob Callaway for helping to facilitate this work, and OpenSSF for funding this audit. OSTIF is planning more security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Special thanks to Daniel Stenberg and Dan Fandrich of the curl project for actively participating in the security engagement.</span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from Trail of Bits that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the </span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF website</span></a><span style="font-weight: 400;">. We also have all of our published work on our <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">Github</a>. The OpenSSF supports work like these security audits to make open source software more secure. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem. </span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OSTIF Audit of Backstage with X41 D-Sec is Complete!</title>
+		<link>https://ostif.org/the-ostif-audit-of-backstage-with-x41-d-sec-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Tue, 30 Aug 2022 13:59:23 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[backstage]]></category>
+		<category><![CDATA[cloud native computing foundation]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2727</guid>
+
+					<description><![CDATA[We’re excited to report the results for the security audit of Backstage. Backstage is a software catalog and development platform that enables teams to quickly ship high-quality code. The security review was facilitated by Open Source Technology Improvement Fund backed by the Cloud Native Computing Foundation and carried out by X41 D-Sec. The goal of [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">We’re excited to report the results for the security audit of <a href="https://github.com/backstage/backstage">Backstage</a></span><span style="font-weight: 400;">. <a href="https://backstage.io/">Backstage</a> is a software catalog and development platform that enables teams to quickly ship high-quality code. The security review was facilitated by <a href="https://ostif.org/">Open Source Technology Improvement Fund</a> backed by the <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> and carried out by <a href="https://x41-dsec.de/">X41 D-Sec</a></span><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The goal of security audits is to find vulnerabilities so they can be fixed before attackers exploit them, as well as to identify opportunities to harden a project’s implementation and processes to counter vulnerabilities in the future. The Backstage team demonstrated a strong commitment to improving security posture by requesting independent review and actively participating in the audit process. </span><span style="font-weight: 400;"><br />
+</span></p>
+<p><span style="font-weight: 400;">The results of the security audit are 12 security findings (2 Critical, 2 High, 5 Medium, 3 Low) as well as 15 other security hardening recommendations. </span></p>
+<p><span style="font-weight: 400;">The serious issues identified through this engagement have been fixed and validated by the x41 team. See below for the full report. </span></p>
+<p><span style="font-weight: 400;">A big thank you to the Cloud Native Computing Foundation </span><span style="font-weight: 400;">for supporting the work and</span><span style="font-weight: 400;"> funding the audit. Furthermore, thank you to the X41 team for executing the audit and working with us to make and validate fixes. </span></p>
+<p><span style="font-weight: 400;">Also special thanks to Helen Greul, Patrik Oldsberg, Himanshu Mishra Francesco Corti, Lee Mills, Markus Vervier, Eric Sesterhenn for their roles in the engagement. </span></p>
+<p><span style="font-weight: 400;">Proactive security audits go a long way in detecting and fixing vulnerabilities. Everyone around the world depends on OSS, and we would love to do more security audits! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>References:</strong></p>
+<p><span style="font-weight: 400;">Link to full report: <a href="https://ostif.org/wp-content/uploads/2022/08/X41-Backstage-Audit-2022-for-Publication.pdf">https://ostif.org/wp-content/uploads/2022/08/X41-Backstage-Audit-2022-for-Publication.pdf</a></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of KubeEdge is Complete. Multiple Security Issues Found and Fixed.</title>
+		<link>https://ostif.org/our-audit-of-kubeedge-is-complete-multiple-security-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 11 Jul 2022 14:05:07 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[kubeedge]]></category>
+		<category><![CDATA[OSTIF]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2659</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund (ostif.org) is thrilled to report the results of a security audit of KubeEdge. KubeEdge is an edge computing framework built on top of Kubernetes and extends native containerized application orchestration and management to hosts at the edge. The result of this engagement is the finding and fixing of multiple medium [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>Open Source Technology Improvement Fund (<a href="https://ostif.org">ostif.org</a>) is thrilled to report the results of a security audit of <a href="https://kubeedge.io">KubeEdge</a>. KubeEdge is an edge computing framework built on top of <a href="https://kubernetes.io/">Kubernetes</a> and extends native containerized application orchestration and management to hosts at the edge.</p>
+<p>The result of this engagement is the finding and fixing of multiple medium severity issues, threat modeling, and integration to <a href="https://github.com/google/oss-fuzz">OSS Fuzz</a>. 10 fuzzers in total were written, and these fuzzers were set up to run in the CI for pull requests. Several issues were found by the fuzzers, including 2 of the 8 CVEs.</p>
+<p>The KubeEdge team demonstrated a strong commitment to security and was fast to reproduce crashes and respond with patches. This type of engagement and collaboration from project maintainers helps the security audit process be more effective and impactful. We thank Kevin Wang, Fisher Xu, Vincent Lin and everyone who helped with this engagement.</p>
+<p>Thank you to the <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. Special thanks to David Korczynski and Adam Korczynski of <a href="https://adalogics.com/">Ada Logics</a> for conducting the audit.</p>
+<p>Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact amir@ostif.org.</p>
+<p><strong>References:</strong></p>
+<p>FULL AUDIT REPORT: <a href="https://ostif.org/wp-content/uploads/2022/07/OSTIF-2022-Q3-KubeEdge-audit.pdf">https://ostif.org/wp-content/uploads/2022/07/OSTIF-2022-Q3-KubeEdge-audit.pdf</a></p>
+<p>The Ada Logics Blog: <a href="https://adalogics.com/blog/kubeedge-security-engagement">https://adalogics.com/blog/kubeedge-security-engagement</a></p>
+<p>The Cloud Native Computing Foundation Blog: <a href="https://www.cncf.io/blog/2022/07/11/ostifs-audit-of-kubeedge-is-complete-multiple-security-issues-found-and-fixed/">https://www.cncf.io/blog/2022/07/11/ostifs-audit-of-kubeedge-is-complete-multiple-security-issues-found-and-fixed/https://www.cncf.io/blog/</a></p>
+<p>KubeEdge Blog: <a href="https://kubeedge.io/en/blog/security-threat-model/">https://kubeedge.io/en/blog/security-threat-model/</a></p>
+<p>KubeEdge security advisories: <a href="https://github.com/kubeedge/kubeedge/security/advisories">https://github.com/kubeedge/kubeedge/security/advisories</a></p>
+<p>Information about all of our projects can be found on our Github page: <a href="https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md">https://github.com/ostif-org/OSTIF/blob/main/Completed-Engagements.md</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Flux2 is Complete</title>
+		<link>https://ostif.org/our-audit-of-flux2-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2021 17:08:03 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[flux]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2594</guid>
+
+					<description><![CDATA[We have been working with the team over at the Flux project on a security review and improving their tooling. The Cloud Native Computing Foundation contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected ADA Logics to do both the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have been working with the team over at the <a href="https://github.com/fluxcd/flux2">Flux</a> project on a security review and improving their tooling. The <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected <a href="https://adalogics.com/">ADA Logics</a> to do both the fuzzing integration work and the security review.</p>
+<p>We are happy to report that our project has completed and Flux has its first CVE as a result! The bug allows an authenticated user with some specific permissions to escalate their privileges all the way to kubernetes cluster admin by injecting malicious shell scripts as Kubernetes Secrets in kustomize-controller. This issue impacts multiple large cloud vendors who have been notified to update. Flux version 1.18 and above contain the fix.</p>
+<p><a href="https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7"><strong>CVE-2021-41254</strong>:</a> [Privilege escalation to cluster admin on multi-tenant Flux]</p>
+<p>ADA Logics and the Flux team were excellent to work with! Our collaborative work has led to multiple fixes, improved overall testing with continuous fuzzing by way of OSS-Fuzz, and the comprehensive report below. The Flux team also created a<a href="https://github.com/orgs/fluxcd/projects/5"> public and easy to track dashboard showing all of the work we&#8217;ve done together</a> and is a fantastic example of good issue-tracking and remediation.</p>
+<p>A special thank you to the Cloud Native Computing Foundation for sponsoring this work and improving the security of Flux for everyone!</p>
+<p><a href="https://ostif.org/wp-content/uploads/2021/11/FluxreportFinalV1.1.pdf">Click here for the full report</a> (PDF)</p>
+<p>More information:<br />
+<a href="https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/">https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/</a><br />
+<a href="https://fluxcd.io/blog/2021-11-10-flux-security-audit/">https://fluxcd.io/blog/2021-11-10-flux-security-audit/</a><br />
+<a href="https://fluxcd.io/security/">https://fluxcd.io/security/</a><br />
+<a href="https://github.com/cncf/toc/blob/main/docs/projects.md">https://github.com/cncf/toc/blob/main/docs/projects.md</a><br />
+<a href="https://adalogics.com/blog/fluxcd-security-audit">https://adalogics.com/blog/fluxcd-security-audit</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

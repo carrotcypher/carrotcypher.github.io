@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>threat model &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/threat-model/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Wed, 06 Sep 2023 16:27:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>threat model &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dampening Vulnerabilities in Dapr: Security Audit of Dapr</title>
+		<link>https://ostif.org/dapr-audit/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Wed, 06 Sep 2023 10:00:39 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[Dapr]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[threat model]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=3001</guid>
+
+					<description><![CDATA[In May and June of 2023, OSTIF and ADA Logics worked with the open source project Dapr on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">In May and June of 2023, OSTIF and </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400"> worked with the open source project </span><a href="https://dapr.io/"><span style="font-weight: 400">Dapr</span></a><span style="font-weight: 400"> on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks with building blocks running best practices. Existing under the umbrella of the </span><a href="https://www.cncf.io/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400">, Dapr is an incubating project. </span></p>
+<p><span style="font-weight: 400">The ADA Logics team used a variety of tools and techniques to perform the security audit. Goals for the audit of the code assets in scope were to formalize a threat model, perform a manual code audit, do an evaluation of Dapr&#8217;s fuzzing suite, and carry out a SLSA review. These goals covered a range of the project’s needs and security concerns. </span></p>
+<p><span style="font-weight: 400">The threat model visualization and documentation acted as an aid and guide for the audit and can be used for future audits and by Dapr internally. It was feasible and important for both a high-level overview and more specific models to be created about the flow of Dapr, as they became walk-throughs that informed the identification of five possible threat actors and the four trust zones of the application. </span></p>
+<p><span style="font-weight: 400">Dapr’s fuzzing suite received an additional five fuzzers written by ADA Logics’ team. The fuzzers were added to the project’s OSS-Fuzz integration, making them run continuously since their introduction to the code. This way, the new fuzzers can run for longer, explore more, and test the latest master branch.</span></p>
+<p><span style="font-weight: 400">During the process of manual code review, seven security issues were found. They were classified as four moderate, two low, and one informational issue respectively. Four of said issues were umbrella issues of a specific class that can affect multiple components in the same building block in a similar way. One of the issues was a high-severity vulnerability in a 3rd-party dependency to Dapr that was issued CVE-2023-37475, however, it did not affect Dapr in a high-severity way and was scored as moderate from the perspective of Daprs threat model.</span></p>
+<p><span style="font-weight: 400">OSTIF would like to thank the team at ADA Logics, specifically Adam and David Korczynski, for their work, dedication, and final report on this audit. Our further gratitude to the Dapr community and maintainers, notably Yaron Schneider, Alessandro Segala, and Artur Souza, for their collaboration, contributions, and efforts on this audit and their project. Finally, recognition goes to the CNCF for their funding and support of open source security work. </span></p>
+<p><span style="font-weight: 400">Read the audit report <a href="https://ostif.org/wp-content/uploads/2023/09/Dapr-audit-2023.pdf">HERE</a></span></p>
+<p><span style="font-weight: 400">Read ADA Logic’s blog </span><a href="https://adalogics.com/blog/dapr-security-audit-2023"><span style="font-weight: 400">HERE</span></a></p>
+<p>Read Dapr&#8217;s blog <a href="https://blog.dapr.io/posts/2023/09/05/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+<p>Read CNCF&#8217;s blog <a href="https://www.cncf.io/blog/2023/09/06/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

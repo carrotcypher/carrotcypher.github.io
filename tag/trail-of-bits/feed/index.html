@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Trail of Bits &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/trail-of-bits/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Thu, 02 Feb 2023 16:19:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>Trail of Bits &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Our Audit of Kubernetes Event Driven Autoscaling (KEDA) is Complete!</title>
+		<link>https://ostif.org/our-audit-of-kubernetes-event-driven-autoscaling-keda-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 02 Feb 2023 18:00:52 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[keda]]></category>
+		<category><![CDATA[kubernetes event driven autoscaling]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2826</guid>
+
+					<description><![CDATA[Results of the KEDA Security Engagement KEDA, or the Kubernetes-based Event Driven Autoscaling project, was reviewed by Trail of Bits at the end of 2022. KEDA joins a growing list of CNCF Projects audited to improve security posture and help reach graduated status thanks to strategic partner OSTIF. A combination of threat modeling, manual code [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 600;">Results of the KEDA Security Engagement</span></p>
+<p><a href="https://keda.sh/"><span style="font-weight: 400;">KEDA</span></a><span style="font-weight: 400;">, or the Kubernetes-based Event Driven Autoscaling project, was reviewed by </span><a href="https://github.com/trailofbits/publications"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;"> at the end of 2022. KEDA joins a </span><a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/"><span style="font-weight: 400;">growing list </span></a><span style="font-weight: 400;">of CNCF Projects audited to improve security posture and help reach </span><a href="https://www.cncf.io/projects/"><span style="font-weight: 400;">graduated status</span></a><span style="font-weight: 400;"> thanks to strategic partner OSTIF. A combination of threat modeling, manual code review and automated testing tools were used for this engagement. </span></p>
+<p><span style="font-weight: 400;">The audit uncovered one significant flaw in </span><i><span style="font-weight: 400;">Redis Scalers</span></i><span style="font-weight: 400;"> that could impact system confidentiality, integrity, and availability. The issue had to do with Cryptography and circumventing TLS, allowing for potential MitM attacks. An overview of the findings and security improvements can be found below:</span></p>
+<p><span style="font-weight: 500;">Remediation Updates Based on Audit Findings</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/kedacore/keda/pull/3966"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3966</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/kedacore/keda/pull/3989"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3989</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Addressed via </span><a href="https://github.com/kedacore/keda/pull/4091"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4091</span></a><span style="font-weight: 400;">. This Prometheus server has been deprecated and will be removed entirely in 2 releases according to the project’s </span><a href="https://github.com/kedacore/governance/blob/main/DEPRECATIONS.md"><span style="font-weight: 400;">deprecation policy</span></a><span style="font-weight: 400;"> in favor of operator&#8217;s Prometheus server (from operator-sdk).</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> </span><a href="https://github.com/kedacore/keda/pull/3985"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3985</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> </span><a href="https://github.com/kedacore/keda/pull/4007"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4007</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;"> </span><a href="https://github.com/kedacore/keda/pull/4006"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4006</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Remediated by first adding CodeQL with `security-and-quality` queries enabled and also fixing the reported issues: (1) </span><a href="https://github.com/kedacore/keda/pull/4133"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4133</span></a> <span style="font-weight: 400;">and (2) </span><a href="https://github.com/kedacore/keda/pull/4142"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/4142</span></a><span style="font-weight: 400;">.</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Remediated due to fixes implemented for Audit Finding #3.</span></li>
+</ol>
+<p><span style="font-weight: 500;">Tooling Updates and Security Posture Improvements</span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Introduced </span><a href="https://github.com/kedacore/keda/issues/3961"><span style="font-weight: 400;">semgrep as tool</span></a><span style="font-weight: 400;"> (with GitHub integration) with all golang rules enabled + </span><a href="https://github.com/dgryski/semgrep-go"><span style="font-weight: 400;">https://github.com/dgryski/semgrep-go</span></a><span style="font-weight: 400;"> rules, and also 2 custom rules, one for detecting the connection string (as proposed by audit team) and another one for detecting wrong error wrappings (to play around the tool and check how it works). A majority of the rules are in comment mode to detect them in PRs and suggest changes, and in parallel have been fixing all the alerts detected, as seen in </span><a href="https://github.com/kedacore/keda/pull/3998"><span style="font-weight: 400;">https://github.com/kedacore/keda/pull/3998</span></a></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Another important security improvement is the cert management. TLS certificates have been introduced for for all KEDA communications (between the k8s API server and the metrics server, between the k8s API server and webhooks and between KEDA operator and KEDA metrics server) and for authenticate KEDA metrics server in KEDA operator gRCP server (the server exposes a TLS endpoint and requires TLS client authentication).</span></li>
+</ol>
+<p><span style="font-weight: 400;">“With KEDA, we strive to provide a secure application autoscaling solution by using an extensive suite of security tools and offer our end-users various ways to authenticate to their dependencies and meet corporate requirements. Thanks to the audit we were able to patch some minor vulnerabilities and increase our existing security toolchain to prevent new vulnerabilities from being introduced.”</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Tom Kerkhove &#8211; KEDA Maintainer, Senior Software Engineer at Microsoft </span></li>
+</ul>
+<p><span style="font-weight: 400;">&#8220;We greatly appreciate OSTIF and Trail of Bits for their thorough security audit of KEDA and for the excellent cooperation we received. The KEDA community is constantly striving to make the project better and more secure for our users, the insights provided in the audit will help us achieve that.&#8221;</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Zbynek Roubalik &#8211; KEDA Maintainer, Principal Software Engineer at Red Hat</span></li>
+</ul>
+<p><strong>Thank You</strong></p>
+<p><span style="font-weight: 400;">We thank Jorge Turrado, Tom Kerkhove, Zbynek Roubalik, and all the KEDA maintainers for their help and collaboration on this engagement. </span></p>
+<p><span style="font-weight: 400;">Special thanks to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> for sponsoring the audit and entrusting OSTIF to get the work done. We are truly grateful for the opportunity to help make critical cloud computing infrastructure more secure and sustainable.</span></p>
+<p>The full research article by Trail of Bits is here: <a href="https://ostif.org/wp-content/uploads/2023/02/2023-01-keda-securityreview.pdf">https://ostif.org/wp-content/uploads/2023/02/2023-01-keda-securityreview.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The OSTIF Audit of Curl with Trail of Bits is Complete</title>
+		<link>https://ostif.org/the-ostif-audit-of-curl-with-trail-of-bits-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 21 Dec 2022 18:02:31 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[bug]]></category>
+		<category><![CDATA[curl]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2767</guid>
+
+					<description><![CDATA[Results of curl Security Audit  By: Amir Montazery, OSTIF Open Source Technology Improvement Fund (OSTIF) is thrilled to announce the results of a security audit and threat model for curl. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, [&#8230;]]]></description>
+										<content:encoded><![CDATA[<h1><span style="font-weight: 400;">Results of curl Security Audit </span></h1>
+<p><span style="font-weight: 400;">By: Amir Montazery, OSTIF</span></p>
+<p><span style="font-weight: 400;">Open Source Technology Improvement Fund (</span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF</span></a><span style="font-weight: 400;">) is thrilled to announce the results of a security audit and threat model for </span><a href="https://curl.se/"><span style="font-weight: 400;">curl</span></a><span style="font-weight: 400;">. In development since 1998, curl is a command line tool and library for transferring data with URLs. Curl is used in just about everything: cars, television sets, routers, printers, audio equipment, mobile phones, tablets, media players and is the Internet transfer engine for thousands of software applications in over ten billion installations. It’s even </span><a href="https://daniel.haxx.se/blog/2021/04/19/mars-2020-helicopter-contributor/"><span style="font-weight: 400;">deployed on Mars</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The security review of curl was facilitated by OSTIF and sponsored by the Open Source Security Foundation (</span><a href="https://openssf.org/"><span style="font-weight: 400;">OpenSSF</span></a><span style="font-weight: 400;">) in an effort to improve the security of this critical project in the open source ecosystem. The engagement involved a team of four consultants conducting code review for approximately six engineer-weeks of effort. A total of 12 issues were addressed, including 2 High Severity findings. The technical work of the review was led by </span><a href="https://github.com/trailofbits/publications#security-reviews"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">The bug fixes were validated and patched as part of the </span><a href="https://curl.se/dev/release-procedure.html"><span style="font-weight: 400;">curl release schedule</span></a><span style="font-weight: 400;">. The planned release for December 21, 2022, included all of the fixes and improvements made to curl as a result of this engagement. A detailed synopsis of the security improvements to curl can be found in the reports under </span><i><span style="font-weight: 400;">Summary of Findings </span></i><span style="font-weight: 400;">and </span><i><span style="font-weight: 400;">Fix Review Results</span></i><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">Another significant accomplishment from this engagement was a component-focused threat model for curl and libcurl. Published as a separate report, the effort involved a team of two engineers focused on the identification of security control flaws that could result in a compromise. This focused effort uncovered one design-level issue that could lead to vulnerabilities along with multiple security improvements. Threat model reports like this one can be used by developer and maintainer communities to better understand components, trust zones, and threat actors and gain a deeper understanding of how to use a project like curl. </span></p>
+<p><span style="font-weight: 400;">The curl team demonstrated a strong commitment to improving security posture by actively participating in the audit process and collaborating with the audit team during the review and threat modeling exercise. Curl is a good example of a critical open source project. It has been in development for over 20 years thanks largely in part to </span><a href="https://www.haxx.se/"><span style="font-weight: 400;">Haxx</span></a><span style="font-weight: 400;">, a group of open source developers and hackers in Sweden.</span></p>
+<p><span style="font-weight: 400;">OSTIF is extremely grateful for the funding and support from OpenSSF to help make this critical project more secure. </span></p>
+<p><span style="font-weight: 400;">The results can be viewed in full detail at the following links: </span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Security Assessment Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf">https://ostif.org/wp-content/uploads/2022/12/Assurance-Report-cURL-Code-Review-Testing-Analysis-Fix-Review-2022-2.pdf</a></span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Curl Threat Model Full Report &#8211; Link: <a href="https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf">https://ostif.org/wp-content/uploads/2022/12/cURL-Threat-Model-Report-Fix-Review-2022.pdf</a></span></li>
+</ul>
+<p><span style="font-weight: 400;">We thank David A. Wheeler, Brian Behlendorf, and Bob Callaway for helping to facilitate this work, and OpenSSF for funding this audit. OSTIF is planning more security efforts in 2023, and funding audits like these can be a useful tool for securing projects in open source. </span></p>
+<p><span style="font-weight: 400;">Special thanks to Daniel Stenberg and Dan Fandrich of the curl project for actively participating in the security engagement.</span></p>
+<p><span style="font-weight: 400;">Thank you to everyone from Trail of Bits that did excellent work on this audit!</span></p>
+<p><span style="font-weight: 400;">For more information on this type of security work being done, visit the </span><a href="https://ostif.org/"><span style="font-weight: 400;">OSTIF website</span></a><span style="font-weight: 400;">. We also have all of our published work on our <a href="https://github.com/Amir-Montazery/OSTIF/blob/main/Completed-Engagements.md">Github</a>. The OpenSSF supports work like these security audits to make open source software more secure. Proactive security audits go a long way in detecting and fixing vulnerabilities before attackers can exploit them. Everyone around the world depends on open source software (OSS), and security audits play an important role in securing the open source ecosystem. </span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Results of the CloudEvents Security Assessment</title>
+		<link>https://ostif.org/results-of-the-cloudevents-security-assessment/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 28 Nov 2022 18:37:47 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cloudevents]]></category>
+		<category><![CDATA[linux foundation]]></category>
+		<category><![CDATA[results]]></category>
+		<category><![CDATA[security review]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2759</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund, Inc is happy to announce the results of the CloudEvents Security Assessment. CloudEvents is a specification for describing event data in a common way that simplifies event declaration and delivery across services, platforms, and beyond. CloudEvents has a robust network of contributors and active development as part of the Cloud [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund, Inc is happy to announce the results of the CloudEvents Security Assessment. CloudEvents is a </span><a href="https://cloudevents.io/"><span style="font-weight: 400;">specification</span></a><span style="font-weight: 400;"> for describing event data in a common way that simplifies event declaration and delivery across services, platforms, and beyond. CloudEvents has a robust </span><a href="https://github.com/cloudevents/spec/blob/main/docs/contributors.md"><span style="font-weight: 400;">network of contributors</span></a><span style="font-weight: 400;"> and active development as part of the Cloud Native Computing Foundation. </span></p>
+<p><span style="font-weight: 400;">The Security Assessment took place in September 2022, in which a team of two experts conducted a security review, with four person-weeks of effort. A combination of testing was performed, including dynamic and static analysis of the SDKs and manual review of the specification.</span></p>
+<p><span style="font-weight: 400;">The goal of security audits is to find vulnerabilities so they can be fixed before attackers exploit them, as well as to identify opportunities to harden a project’s implementation and processes to counter vulnerabilities in the future. The CloudEvents Assessment did not uncover any significant flaws or defects that could impact system confidentiality, integrity, or availability. </span></p>
+<p><span style="font-weight: 400;">The notable findings in the review were that some of the SDKs were using outdated dependencies that needed critical security updates, leaving some of them with multiple outdated and vulnerable dependencies. This is a common problem in software, and highlights the importance of better dependency management.  The </span><a href="https://deps.dev/"><span style="font-weight: 400;">deps.dev</span></a><span style="font-weight: 400;"> tool provides insight on project dependencies. Furthermore, the CloudEvents Assessment highlighted the need for adding fuzzing tests to SDKs and potentially adding various SDKs to the </span><a href="https://github.com/google/oss-fuzz"><span style="font-weight: 400;">OSS-fuzz</span></a><span style="font-weight: 400;"> project. </span></p>
+<p><span style="font-weight: 400;">Third-party Security Audits are an important tool for improving a project’s security posture. CloudEvents joins a </span><a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/"><span style="font-weight: 400;">long list of projects</span></a><span style="font-weight: 400;"> that have undergone audits in 2022. </span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> for funding the audit and entrusting OSTIF to manage it. A big thank you to Doug Davis for collaborating with the audit team. Lastly, thank you to </span><a href="https://github.com/trailofbits/publications#security-reviews"><span style="font-weight: 400;">Trail of Bits</span></a><span style="font-weight: 400;"> for performing the work. </span></p>
+<p><span style="font-weight: 400;">For full details on this engagement, see the full report here: <a href="https://ostif.org/wp-content/uploads/2022/11/CloudEvents.pdf">https://ostif.org/wp-content/uploads/2022/11/CloudEvents.pdf</a></span></p>
+<p>Trail of Bits also publishes all of their public work to their Github here: <a href="https://github.com/trailofbits/publications/tree/master/reviews">https://github.com/trailofbits/publications/tree/master/reviews</a></p>
+<p>The direct link to the full report is also hosted on the Trail of Bits Github here: <a href="https://github.com/trailofbits/publications/blob/master/reviews/CloudEvents.pdf">https://github.com/trailofbits/publications/blob/master/reviews/CloudEvents.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>A Review of the Linux Kernel&#8217;s Release Signing and Key Management Policies</title>
+		<link>https://ostif.org/a-review-of-the-linux-kernels-release-signing-and-key-management-policies/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Wed, 23 Jun 2021 15:54:09 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Linux Kernel]]></category>
+		<category><![CDATA[Trail of Bits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[linux kernel]]></category>
+		<category><![CDATA[review]]></category>
+		<category><![CDATA[Signing Key]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2541</guid>
+
+					<description><![CDATA[The Linux Foundation sought a review of the kernel teams’ processes for release signing and for the policies and procedures for the handling of the signing keys. Working with OSTIF, Trail of Bits was selected to lead the project and a two person-week review was conducted. Unlike most OSTIF projects, this review did not cover [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.linuxfoundation.org/">The Linux Foundation</a> sought a review of the kernel teams’ processes for release signing and for the policies and procedures for the handling of the signing keys. Working with <a href="https://ostif.org">OSTIF</a>, <a href="https://www.trailofbits.com/">Trail of Bits</a> was selected to lead the project and a two person-week review was conducted.</p>
+<p>Unlike most OSTIF projects, this review did not cover code but was a policy and process overview to identify potential pain points in the key handling and key signing processes for one of the most critical pieces of infrastructure in the world. As such, there are no CVEs nor CIDs addressing vulnerabilities.</p>
+<p>Special thank-you&#8217;s go out to Greg Kroah-Hartman and Konstantin Ryabitsev for participating in the interviews that helped the reviewers clarify the documentation and setting aside time to discuss the researchers’ findings. Thank you to David A. Wheeler and Mike Dolan at the Linux Foundation for helping to facilitate the project. Thank you to Jim Miller, Mike Martel, Opal Wright, and Cara Pearson for their work in this review and for writing this assessment. And finally, a special thank you to Dan Guido at Trail of Bits for working with us to improve critical open source infrastructure.</p>
+<h1><strong>Results</strong></h1>
+<p>This review resulted in seven recommendations that can help improve the robustness of the security and use of the signing keys for the Linux Kernel. Additionally, Trail of Bits suggested that more comprehensive and up to date documentation on the current procedures and policies are needed to help organizations around the world to best understand the current stratagem.</p>
+<h1>Use of smart cards for GPG and SSH not enforced for key individuals</h1>
+<p>Individuals with commit rights on key Linux kernel repositories are not required to store private key material used for GPG or SSH on a separate smart card device, such as a Nitrokey or Yubikey.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, require individuals with access to significant repositories or systems to use a smart card device to store sensitive key material. If that is not a viable option, consider using an alternative mechanism, such as a TPM, to protect sensitive cryptographic material.</p>
+<h1><strong>Recommended smartcard does not require touch activation</strong></h1>
+<p>The Linux Foundation recommends that kernel developers use smart cards, specifically Nitrokeys, to secure their private key material. Linux Foundation-issued Nitrokeys do not require users to perform any physical actions when using smart card functions. Other devices can be configured to require the user to touch the device before the smart card operations occur. As a result, the Nitrokey is protected only by a passphrase while inserted into a workstation.</p>
+<p>While touch activation does not prevent all classes of attacks, such as ones that replace binaries on disk (e.g., for GPG and SSH) or leverage session hijacking, it prevents entire classes of less sophisticated attacks and improves the security posture of a given end-user.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Consider mandating the use of smart card devices that require physical touch to validate each smart card operation. If that is not practical, add guidance recommending that a smart card be physically connected to a workstation only when it is required to complete an operation, which would help prevent an attacker from using an attached smart card device without its user’s knowledge.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members said that because the Yubikey with touch activation is not open source, it is not possible to use for critical infrastructure security. However, they would consider updating their policies to recommend that the current Nitrokeys be physically removed from the administrator’s computer when they are not in use. In the longer term we hope for more options for open source software in touch activated devices.</p>
+<h1><strong>Lack of documented key management policies and procedures</strong></h1>
+<p>There is no centralized, authoritative documentation laying out policies and procedures for key revocation, generation, or rotation or other key management tasks. Without such documentation, users and administrators are more likely to make serious errors when engaging in routine and emergent key management tasks.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, work with administrators and developers to document current procedures and policies and compile that information into a single set of documents that can be updated as necessary.</p>
+<p>Long term, periodically review policies and procedures, assessing their applicability and appropriateness. Update the documentation as policies and procedures change.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members have affirmed that improved documentation is needed to reduce the chance of errors and improve incident response.</p>
+<h1><strong>Lack of public-key authentication resources</strong></h1>
+<p>To verify the content of kernel updates, each commit in the git tree produces a signed tag, and each release is accompanied by a signature over the release’s tarball. Public keys for Linux developers, as well as the associated key signatures forming the web of trust, are managed from a single location. Compromise of the git.kernel.org server would allow an attacker to provide users with a web of public keys not controlled by kernel developers, enabling them to post malicious kernel “releases” that would validate against the attacker’s public keys.</p>
+<p><em><strong>Bootstrapping trust for public-key systems is a hard problem, and is certainly not unique to the Linux kernel. Any software that relies on digital signatures for verification must first &#8220;bootstrap&#8221; trust by ensuring that users have the correct public key. It creates a circular problem that is difficult to solve in the general case.</strong></em></p>
+<p>The Linux Foundation is uniquely equipped to alleviate this problem. Because of Linux&#8217;s community and commercial support, kernel developers have many ways to distribute PGP key fingerprints for important developers. Key fingerprints can be included in conference presentations, periodically published on news sites such as lwn.net, included in email signatures, or published on websites maintained by Linux Foundation partners like Red Hat or IBM. Key fingerprints hosted on the kernel.org infrastructure could then be validated against multiple public sources, reducing the likelihood of a malicious key being trusted.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, identify effective ways to widely advertise developers’ key fingerprints. These could include adding key fingerprints to email signatures, periodically posting them in mailing lists, or referencing them in conference presentations. Long term, continue advertising keys through multiple channels, and work with partners to provide accessible sources of public-key corroboration.</p>
+<p><strong>Response</strong></p>
+<p>The Linux Foundation Kernel Team members have expressed interest in both the short and long term recommendations.</p>
+<h1><strong>Use of older public-key algorithms and standards within web of trust</strong></h1>
+<p>PGP keys used by kernel developers vary significantly in terms of algorithm and key size. RSA is the most commonly used algorithm, followed by DSA and elliptic curve algorithms. Work estimates for attacking algorithms based on integer factorization and integer discrete logarithms vary widely, and the algorithms are frequently subject to subtle new failure modes. Trail of Bits generally recommends moving away from RSA where possible in favor of elliptic curve algorithms.</p>
+<p>Since these keys are used to verify code that is eventually incorporated into the kernel, modern primitives should be used. Using a single modern algorithm and key size will help reduce the attack surface for sophisticated attackers.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, choose a single algorithm and key size for new keys incorporated into the kernel web of trust and the PGP key repository. The current kernel developer guidance suggests using ECDSA or Ed25519 keys. Requiring all new keys to conform to this guidance would be an effective step toward standardization.</p>
+<p>Long term, work with developers to gradually replace older RSA and traditional DSA keys with new policy-compliant keys and integrate them into the kernel web of trust. Establish a “sunset date” by which all keys should be switched over.</p>
+<h1><strong>Lack of external integrity validation mechanisms</strong></h1>
+<p>Kernel releases involve a series of steps such as merging changes in Git repositories, pushing tags, and generating a tarball for release. Currently, verification of the steps’ integrity largely depends on the wider community to notice incorrect or malicious behavior. Although this can be effective, additional integrity checks would greatly increase the robustness of the system and help reduce the implicit trust placed in the infrastructure.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, consider releasing tooling that can compare release tarball content with the content of the tagged Git release, as well as tooling that can ensure that all commits to key repositories hosted on kernel.org are signed with an expected identity. Also consider running a verifier on kernel.org systems.</p>
+<p>Long term, consider advocating for interested independent parties to run these verification tools to bolster the integrity verification mechanisms of the wider Linux kernel community.</p>
+<h1><strong>Lack of SSH key rotation</strong></h1>
+<p>Currently, SSH keys used to access kernel.org infrastructure are static. Because SSH keys can often be leveraged to access additional systems, they are frequently targeted by attackers. Under the current setup, recovery of a single developer’s SSH key could allow indefinite access to kernel.org resources.</p>
+<p>A key rotation schedule would mitigate the impact of an SSH key compromise on the kernel.org system. Moreover, with a system in place for rotating SSH keys, the Linux Foundation could respond to an attack that compromises these keys more quickly.</p>
+<p><strong>Recommended mitigation</strong></p>
+<p>Short term, develop an appropriate key rotation schedule to limit the impact of a compromised SSH key.</p>
+<p>Long term, ensure that key rotation policy is followed and that administrators are practiced in key rotation procedures. This will limit the threat posed by compromised keys and ensure that administrators are capable of quickly rotating keys when a compromise is discovered.</p>
+<h1>A link to the full paper &#8220;Linux Kernel Release Signing &#8211; Security Assessment&#8221; by Trail of Bits below (PDF warning).</h1>
+<p><a href="https://ostif.org/wp-content/uploads/2021/06/Linux-Kernel-Release-Signing-OSTIF-and-Trail-of-Bits.pdf">Linux Kernel Release Signing OSTIF and Trail of Bits</a></p>
+<p>Trail of Bits has also posted the research to Github here: <a href="https://github.com/trailofbits/publications/blob/master/reviews/LinuxKernelReleaseSigning.pdf">https://github.com/trailofbits/publications/blob/master/reviews/LinuxKernelReleaseSigning.pdf</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

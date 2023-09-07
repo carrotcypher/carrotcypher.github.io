@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>ADA Logics &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/ada-logics/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Wed, 06 Sep 2023 16:27:00 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>ADA Logics &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Dampening Vulnerabilities in Dapr: Security Audit of Dapr</title>
+		<link>https://ostif.org/dapr-audit/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Wed, 06 Sep 2023 10:00:39 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[Dapr]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[threat model]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=3001</guid>
+
+					<description><![CDATA[In May and June of 2023, OSTIF and ADA Logics worked with the open source project Dapr on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">In May and June of 2023, OSTIF and </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400"> worked with the open source project </span><a href="https://dapr.io/"><span style="font-weight: 400">Dapr</span></a><span style="font-weight: 400"> on a holistic security audit. The Distributed Application Runtime (or Dapr) is a project for building distributed applications across cloud and edge. It is an easy, portable, and serverless way to build sustainable microservices across languages and frameworks with building blocks running best practices. Existing under the umbrella of the </span><a href="https://www.cncf.io/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400">, Dapr is an incubating project. </span></p>
+<p><span style="font-weight: 400">The ADA Logics team used a variety of tools and techniques to perform the security audit. Goals for the audit of the code assets in scope were to formalize a threat model, perform a manual code audit, do an evaluation of Dapr&#8217;s fuzzing suite, and carry out a SLSA review. These goals covered a range of the project’s needs and security concerns. </span></p>
+<p><span style="font-weight: 400">The threat model visualization and documentation acted as an aid and guide for the audit and can be used for future audits and by Dapr internally. It was feasible and important for both a high-level overview and more specific models to be created about the flow of Dapr, as they became walk-throughs that informed the identification of five possible threat actors and the four trust zones of the application. </span></p>
+<p><span style="font-weight: 400">Dapr’s fuzzing suite received an additional five fuzzers written by ADA Logics’ team. The fuzzers were added to the project’s OSS-Fuzz integration, making them run continuously since their introduction to the code. This way, the new fuzzers can run for longer, explore more, and test the latest master branch.</span></p>
+<p><span style="font-weight: 400">During the process of manual code review, seven security issues were found. They were classified as four moderate, two low, and one informational issue respectively. Four of said issues were umbrella issues of a specific class that can affect multiple components in the same building block in a similar way. One of the issues was a high-severity vulnerability in a 3rd-party dependency to Dapr that was issued CVE-2023-37475, however, it did not affect Dapr in a high-severity way and was scored as moderate from the perspective of Daprs threat model.</span></p>
+<p><span style="font-weight: 400">OSTIF would like to thank the team at ADA Logics, specifically Adam and David Korczynski, for their work, dedication, and final report on this audit. Our further gratitude to the Dapr community and maintainers, notably Yaron Schneider, Alessandro Segala, and Artur Souza, for their collaboration, contributions, and efforts on this audit and their project. Finally, recognition goes to the CNCF for their funding and support of open source security work. </span></p>
+<p><span style="font-weight: 400">Read the audit report <a href="https://ostif.org/wp-content/uploads/2023/09/Dapr-audit-2023.pdf">HERE</a></span></p>
+<p><span style="font-weight: 400">Read ADA Logic’s blog </span><a href="https://adalogics.com/blog/dapr-security-audit-2023"><span style="font-weight: 400">HERE</span></a></p>
+<p>Read Dapr&#8217;s blog <a href="https://blog.dapr.io/posts/2023/09/05/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+<p>Read CNCF&#8217;s blog <a href="https://www.cncf.io/blog/2023/09/06/dapr-completes-2023-security-audit-increasing-enterprise-confidence/">HERE</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF completes Security Audit of Crossplane- improved across the board!</title>
+		<link>https://ostif.org/crossplane-audit-complete/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Thu, 27 Jul 2023 16:04:27 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[Crossplane]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2979</guid>
+
+					<description><![CDATA[Crossplane underwent a successful third party security audit by ADA Logics with the support of Open Source Technology Improvement Fund (OSTIF). Used by firms such as JP Morgan, Time Warner, and MIT Lincoln Lab, the project is considered Incubating at CNCF. Over the first half of 2023, the multi-cloud control plane for Kubernetes API was [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><a href="https://www.crossplane.io/"><span style="font-weight: 400">Crossplane</span></a><span style="font-weight: 400"> underwent a successful third party security audit by </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400"> with the support of Open Source Technology Improvement Fund (OSTIF). Used by firms such as JP Morgan, Time Warner, and MIT Lincoln Lab, the project is considered Incubating at </span><a href="https://www.cncf.io/projects/crossplane/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400">. Over the first half of 2023, the multi-cloud control plane for Kubernetes API was examined, reviewed, and tested before its v 1.13 release with fixes from this audit. With the ultimate goal of graduation in mind, the audit team had its work cut out for them. </span></p>
+<p><span style="font-weight: 400">A holistic, comprehensive audit of Core Crossplane and Crossplane Runtime repositories was performed by manual code auditing, a fuzzing suite review, the creation of a threat model, and a </span><a href="https://slsa.dev/"><span style="font-weight: 400">SLSA</span></a><span style="font-weight: 400"> grade. As the threat model was built, the audit team was able to determine attack surfaces and pinch points to focus upon which directed the manual code review. For example, supply chain security issues that Crossplane experiences as an image and package manager exposes the project to the potential for threat actors to introduce supply chain attacks. </span></p>
+<p><span style="font-weight: 400">The fuzzing being performed in Crossplane (by thirteen fuzzers ADA Logics </span><a href="https://github.com/crossplane/crossplane/blob/master/security/ADA-fuzzing-audit-22.pdf"><span style="font-weight: 400">previously created</span></a><span style="font-weight: 400"> for the project!) is critical to the ongoing, continuous monitoring of the security, health, and environment of the code. An additional four fuzzers were added during this audit with an additional fuzzer improved by way of increased code coverage. </span></p>
+<p><span style="font-weight: 400">Of the sixteen issues identified during the audit, fifteen were resolved by the Crossplane. This includes two CVEs that were found during the audit. First, a high severity finding that could allow image tampering was issued as CVE-2023-38495, and second, a low severity Denial-of-Service finding labeled CVE-2023-37900. In summation, 7 low, 8 medium, and 1 high finding were reported. The singular unfixed issue is located in the alpha features of Crossplane. </span></p>
+<p><span style="font-weight: 400">We are so grateful to the Crossplane team for their contributions, fixes, and investment in this audit’s execution. Further thanks to ADA Logics for their report and hard work on this project with us. It’s always a pleasure to collaborate with you. Finally, we would like to express our gratitude to CNCF for their financial support of this audit and ongoing open source security work. </span></p>
+<p><span style="font-weight: 400">Read the Final Report </span><a href="https://ostif.org/wp-content/uploads/2023/07/ADA-security-audit-23.pdf"><span style="font-weight: 400">here</span></a>.</p>
+<p><span>Read ADA Logic’s blog at </span><a href="https://adalogics.com/blog/crossplane-security-audit-2023"><span>https://adalogics.com/blog/crossplane-security-audit-2023</span></a></p>
+<p><span style="font-weight: 400">Read Crossplane’s blog at </span><a href="https://blog.crossplane.io/security-audit-2023"><span style="font-weight: 400">https://blog.crossplane.io/security-audit-2023</span></a></p>
+<p>Read CNCF&#8217;s blog <a href="https://www.cncf.io/blog/2023/07/27/crossplane-completes-security-audit-hardening-and-growing-enterprise-confidence/">here</a>.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>OSTIF’s Security Audit of Notation-duly Noted!</title>
+		<link>https://ostif.org/2023-14/</link>
+		
+		<dc:creator><![CDATA[Helen Woeste]]></dc:creator>
+		<pubDate>Tue, 11 Jul 2023 03:00:19 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[Notation]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2952</guid>
+
+					<description><![CDATA[During the Spring of 2023, OSTIF, ADA Logics, and The Notary Project collaborated on a security audit of the new Notation libraries. Notation is a CLI project to add signatures as standard items in the registry ecosystem and to build a set of simple tooling for signing and verifying signatures.  Seven issues were found by [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400">During the Spring of 2023, OSTIF, </span><a href="https://adalogics.com/"><span style="font-weight: 400">ADA Logics</span></a><span style="font-weight: 400">, and </span><a href="https://notaryproject.dev/"><span style="font-weight: 400">The Notary Project</span></a><span style="font-weight: 400"> collaborated on a security audit of the new Notation libraries. </span><a href="https://github.com/notaryproject/notation"><span style="font-weight: 400">Notation</span></a><span style="font-weight: 400"> is a CLI project to add signatures as standard items in the registry ecosystem and to build a set of simple tooling for signing and verifying signatures. </span></p>
+<p><span style="font-weight: 400">Seven issues were found by the audit team and remediated by the Notary Project team. A single high vulnerability identified during the engagement allowed unverified descriptors to be fetched from a remote registry. This was classified as </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33959"><span style="font-weight: 400">CVE-2023-33959</span></a><span style="font-weight: 400">. Such an action could allow a malicious actor to sign or verify an artifact that could fool a user into using a malicious artifact. A solution was devised by using the library to validate descriptors as being provided by the user. Three issues (two medium and one low) were related to signature processing, using endless data attacks to cause resource exhaustion that could lead to denial of service. See </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33957"><span style="font-weight: 400">CVE-2023-33957</span></a><span style="font-weight: 400"> and </span><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-33958"><span style="font-weight: 400">CVE-2023-33958</span></a><span style="font-weight: 400"> for more details. The fix for these scenarios was uncomplicated, and can even be modified by users should it be necessary for their use of the library. </span></p>
+<p><span style="font-weight: 400">The CVEs linked above were issued for three of the seven findings, and the other four received documentation to track them or CLI command flag name changes. These resolutions are in place in subsequent releases including RC-7 and 1.0.0 of Notary. </span></p>
+<p><span style="font-weight: 400">The Notary Project team was eager and reactive to solving reported issues, and as a result their development and release processes were tested and improved. Thank you particularly to Feynman Zhou, Junjie Gao, Pritesh Bandi, Patrick Zheng, Samir Kakkar, Shiwei Zhang, Toddy Mladenov, Vani Rao, and Yi Zha for their involvement in this audit. ADA Logics created and imparted wonderful work with this audit and report, and we are thankful to them for their part. Finally, OSTIF would like to offer our gratitude to </span><a href="https://www.cncf.io/"><span style="font-weight: 400">CNCF</span></a><span style="font-weight: 400"> for their financial support of work like this and other efforts that improve open source security. </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">You can read more details about the work done here at ADA Logics’ blog </span><a href="https://adalogics.com/blog/notation-security-audit-2023"><span style="font-weight: 400">https://adalogics.com/blog/notation-security-audit-2023</span></a></p>
+<p><a href="https://github.com/notaryproject/notaryproject/blob/main/security/reports/audit/ADA-notation-security-audit-23.pdf"><span style="font-weight: 400">For full details on the audit and methodology followed, see the full report here</span></a></p>
+<p><span style="font-weight: 400">For further information on Notation, see this link </span><a href="https://github.com/notaryproject/notation"><span style="font-weight: 400">https://github.com/notaryproject/notation</span></a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Cilium is Complete!</title>
+		<link>https://ostif.org/our-audit-of-cilium-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 13 Feb 2023 17:32:34 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cilium]]></category>
+		<category><![CDATA[cloud native computing foundation]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[isovalent]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2838</guid>
+
+					<description><![CDATA[Results of the Cilium Security Engagement About Cilium Cilium is an open source software for providing, securing and observing network connectivity between container workloads, powered by eBPF sandboxing in the linux kernel. It provides cloud-native network security and observability while maintaining strong security properties itself. Similar tools without eBPF have to run at high privileges [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 600;">Results of the Cilium Security Engagement</span></p>
+<p><span style="font-weight: 600;">About Cilium</span></p>
+<p><a href="https://cilium.io/"><span style="font-weight: 400;">Cilium</span></a><span style="font-weight: 400;"> is an open source software for providing, securing and observing network connectivity between container workloads, powered by </span><a href="https://ebpf.io/what-is-ebpf"><span style="font-weight: 400;">eBPF sandboxing</span></a><span style="font-weight: 400;"> in the linux kernel. It provides cloud-native network security and observability while maintaining strong security properties itself. Similar tools without eBPF have to run at high privileges and can increase security risks, giving Cilium a unique advantage.</span></p>
+<p><span style="font-weight: 400;">Cilium joins a </span><a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/"><span style="font-weight: 400;">growing list </span></a><span style="font-weight: 400;">of Cloud Native Computing Foundation Projects (CNCF) audited to improve security posture and help reach </span><a href="https://www.cncf.io/projects/"><span style="font-weight: 400;">graduated status</span></a><span style="font-weight: 400;"> thanks to strategic partner OSTIF. A combination of threat modeling, manual code review and automated testing tools were used for this engagement. </span></p>
+<p><span style="font-weight: 400;">The audit went exceptionally well, with only a handful of medium severity and low/informational issues discovered. The most notable issue was a mutex lock discovered in the Envoy component. A full list of the issues discovered in Cilium can be found in the report at the bottom of this page.</span></p>
+<p><strong>Tooling Updates and Security Posture Improvements</strong></p>
+<p><span style="font-weight: 400;">Throughout the engagement the ADA Logics team created fuzzers for both the project and its critical dependencies. A total of 13 fuzzers were written, including 10 for Cilium’s critical functions and policy handling, and an additional 3 fuzzers for the widely used netlink dependency. At the time of this writing, the three fuzzers for netlink have not been integrated into ossfuzz for continuous fuzzing.</span></p>
+<p><span style="font-weight: 400;">Additionally, a lightweight threat model was developed for Cilium that helps contributors and consumers of Cilium understand from a security perspective how Cilium works, and informs users on the attack surface of Cilium, and more importantly, helps contributors to understand how changes to code as the project grows and matures can affect the security of Cilium.</span></p>
+<p><span style="font-weight: 400;">The ADA Logics team also recommended that a document covering how to use Cilium securely should be created to help users understand and manage their configuration of Cilium. The Cilium team </span><a href="https://github.com/cilium/cilium/pull/23599"><span style="font-weight: 400;">is working on creating that document now</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>Supply Chain Security Evaluation</strong></p>
+<p><span style="font-weight: 400;">Cilium meets most of the requirements for SLSA level 3 (and 4), but does not generate a provenance document with its builds. It does however generate a Software Bill of Materials with each release, and the Cilium team </span><a href="https://github.com/cilium/cilium/issues/22740"><span style="font-weight: 400;">has started to actively track SLSA compliance here</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>Thank You</strong></p>
+<p><span style="font-weight: 400;">We thank the Cilium maintainers from </span><a href="https://isovalent.com/"><span style="font-weight: 400;">Isovalent</span></a><span style="font-weight: 400;"> and the audit team at </span><a href="https://adalogics.com/"><span style="font-weight: 400;">ADA Logics</span></a><span style="font-weight: 400;"> for their help and collaboration on this engagement. </span></p>
+<p><span style="font-weight: 400;">Special thanks to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> for sponsoring the audit and entrusting OSTIF to get the work done. We are truly grateful for the opportunity to help make critical cloud computing infrastructure more secure and sustainable. </span></p>
+<p><span style="font-weight: 400;"><strong>The full audit report can be found here: </strong><a href="https://ostif.org/wp-content/uploads/2023/02/OSTIF-ADA-Logics-Cilium-Security-Audit.pdf">https://ostif.org/wp-content/uploads/2023/02/OSTIF-ADA-Logics-Cilium-Security-Audit.pdf</a></span></p>
+<p><strong>More information:<br />
+</strong><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">ADA Logics also did a report about their experience here: <a href="https://adalogics.com/blog/cilium-security-audit">https://adalogics.com/blog/cilium-security-audit</a><br />
+</span><span style="font-weight: 400;">The Cloud Native Computing Foundation also posted a blog post here:<a href="https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/"> https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/</a></span></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>The Audit of Istio is Complete!</title>
+		<link>https://ostif.org/the-audit-of-istio-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 30 Jan 2023 18:05:23 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Open Source]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[istio]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2804</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is happy to announce the results of the Istio Security Audit. Used by key cloud providers and technology organizations, Istio is an open service mesh platform to connect, manage, and secure microservices. The Security Audit was carried out by the team at ADA Logics. A total of fifteen fixes were [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is happy to announce the results of the Istio Security Audit. Used by key cloud providers and technology organizations, </span><a href="https://github.com/istio/istio"><span style="font-weight: 400;">Istio</span></a><span style="font-weight: 400;"> is an open service mesh platform to connect, manage, and secure microservices. The Security Audit was carried out by the team at </span><a href="https://adalogics.com/"><span style="font-weight: 400;">ADA Logics</span></a><span style="font-weight: 400;">. A total of fifteen fixes were implemented as a result of this engagement, including fixes for two upstream issues in golang itself. </span></p>
+<p><span style="font-weight: 400;">The security review included building six new fuzzers for sensitive functions in Istio, manual review of the Istio codebase, and recommendations for improving the supply chain security of Istio using the SLSA model.</span></p>
+<p><span style="font-weight: 400;">The notable findings in this review include multiple vectors for resource exhaustion, arbitrary file writes, TOCTOU issues, and recommendations to move away from a deprecated protobuf library.</span></p>
+<p><span style="font-weight: 400;">This project resulted in 13 direct code changes, 6 improved tests, and efforts to complete a move from /gogo/protobuf (which is no longer maintained) to /golang/protobuf. Additionally, Istio added Depguard to the project in order to detect any future use of deprecated or unsafe dependencies.</span></p>
+<p><span style="font-weight: 400;">Additionally as a result of this audit, a problem was discovered in golang h2c that was both a resource exhaustion and request smuggling vector that could affect many projects downstream, resulting in </span><a href="https://www.cve.org/CVERecord?id=CVE-2022-41721"><span style="font-weight: 400;">https://www.cve.org/CVERecord?id=CVE-2022-41721</span></a><span style="font-weight: 400;">. This is fixed in the latest version of golang.</span></p>
+<p>The full report can be found here: <a href="https://ostif.org/wp-content/uploads/2023/01/Istio-audit-report-v1.0.pdf">https://ostif.org/wp-content/uploads/2023/01/Istio-audit-report-v1.0.pdf</a><br />
+More information on the Ada Logics blog post here: <a href="https://adalogics.com/blog/istio-security-audit">https://adalogics.com/blog/istio-security-audit</a><br />
+The Istio team has made a blog post here: <a href="https://istio.io/latest/blog/2023/ada-logics-security-assessment/">https://istio.io/latest/blog/2023/ada-logics-security-assessment/</a><br />
+The Cloud Native Computing Foundation announcement is here: <a href="https://www.cncf.io/blog/2023/01/30/istio-publishes-results-of-2022-security-audit/">https://www.cncf.io/blog/2023/01/30/istio-publishes-results-of-2022-security-audit/</a></p>
+<p>We thank Francis Zhou, Justin Pettit, and Anand Jayaraman for collaborating on this effort along with David Korczynski and Adam Korczynski of ADA Logics.</p>
+<p>Special thanks to <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> (CNCF) for funding this work and entrusting OSTIF to facilitate and manage the audit. Istio joins a growing list of CNCF projects that have entrusted OSTIF to proactively review projects and improve security posture of open source software.</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Argo is Complete. Critical and High Severity Security Issues Found and Fixed.</title>
+		<link>https://ostif.org/our-audit-of-argo-is-complete-critical-and-high-severity-security-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 18 Jul 2022 15:02:40 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[News]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[argo]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[xss]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2676</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is happy to report the results of yet another security audit, this time of the Argo project. The Argo project is a collection of tools for getting work done with Kubernetes. The main components of Argo audited are:  Argo Workflows &#8211; Container-native Workflow Engine Argo CD &#8211; Declarative GitOps Continuous [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is happy to report the results of yet another security audit, this time of the </span><a href="https://github.com/argoproj/argoproj"><span style="font-weight: 400;">Argo</span></a><span style="font-weight: 400;"> project. </span><span style="font-weight: 400;">The Argo project is a collection of tools for getting work done with Kubernetes. The main components of Argo audited are: </span></p>
+<ol>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-workflows"><span style="font-weight: 400;">Argo Workflows</span></a><span style="font-weight: 400;"> &#8211; Container-native Workflow Engine</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-cd"><span style="font-weight: 400;">Argo CD</span></a><span style="font-weight: 400;"> &#8211; Declarative GitOps Continuous Delivery</span></li>
+<li style="font-weight: 400;" aria-level="1"><a href="https://github.com/argoproj/argo-events"><span style="font-weight: 400;">Argo Events</span></a><span style="font-weight: 400;"> &#8211; Event-based Dependency Manager</span></li>
+</ol>
+<p><span style="font-weight: 400;">The research findings resulted in 26 security issues including 1 critical and 4 high severity bugs that were fixed. The most significant finding is an XSS injection in ArgoCD </span><a href="https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6x78-8vrj"><span style="font-weight: 400;">https://github.com/argoproj/argo-cd/security/advisories/GHSA-h4w9-6&#215;78-8vrj</span></a><span style="font-weight: 400;"> that allows an attacker to execute javascript code in the UI, which could allow an attacker to take admin control of the kubernetes cluster.</span></p>
+<p><span style="font-weight: 400;">Additionally, the Ada Logics team built 7 new fuzzers to integrate into the ossfuzz testing suite for Argo that focus on security relevant functions. The Argo team and community demonstrated a strong commitment to improving the project’s security posture. See the full report and Argo team’s synopsis below for detailed information.</span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. </span></p>
+<p><span style="font-weight: 400;">Special thanks to David Korczynski and Adam Korczynski of </span><a href="https://adalogics.com/"><span style="font-weight: 400;">Ada Logics</span></a><span style="font-weight: 400;"> for auditing the software and to the Argo team </span><span style="font-weight: 400;">Alex Collins, Derek Wang, Hari Rongali, Henrik Blixt, Jann Fischer, Michael Crenshaw and Jesse Suen </span><span style="font-weight: 400;">for their committed support. Strong collaboration between the review team and project maintainers helps the audit process be more impactful, especially with the help of the community. </span></p>
+<p><span style="font-weight: 400;">Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>References: </strong></p>
+<p><span style="font-weight: 400;">Argo Full Audit Report: <a href="https://ostif.org/wp-content/uploads/2022/07/ostif_argo_security_audit_2022.pdf">https://ostif.org/wp-content/uploads/2022/07/ostif_argo_security_audit_2022.pdf</a></span></p>
+<p>Ada Logics Blog: <a href="https://adalogics.com/blog/argo-security-audit">https://adalogics.com/blog/argo-security-audit</a></p>
+<p>Argo Blog:</p>
+<p>Cloud Native Computing Fund Announcement:</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of CRI-O is Complete &#8211; High Severity Issues Found and Fixed</title>
+		<link>https://ostif.org/our-audit-of-cri-o-is-complete-high-severity-issues-found-and-fixed/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 06 Jun 2022 19:00:24 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Chainguard]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[chainguard]]></category>
+		<category><![CDATA[cloud native computing foundation]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[containerd]]></category>
+		<category><![CDATA[cri-o]]></category>
+		<category><![CDATA[crio]]></category>
+		<category><![CDATA[cve]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2617</guid>
+
+					<description><![CDATA[Open Source Technology Improvement Fund is thrilled to report the results of a security audit of CRI-O. CRI-O is an open source software (OSS) project that is an implementation of the Kubernetes Container Runtime Interface. It can run any OCI-compatible container, providing an enormous number of applications and environments.  The primary security finding of the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">Open Source Technology Improvement Fund is thrilled to report the results of a security audit of </span><a href="https://github.com/cri-o/cri-o"><span style="font-weight: 400;">CRI-O</span></a><span style="font-weight: 400;">. </span><span style="font-weight: 400;">CRI-O</span><span style="font-weight: 400;"> is an open source software (OSS) project </span><span style="font-weight: 400;">that</span><span style="font-weight: 400;"> is an implementation of the Kubernetes Container Runtime Interface.</span><span style="font-weight: 400;"> It can run any OCI-compatible container, providing an enormous number of applications and environments. </span></p>
+<p><span style="font-weight: 400;">The primary security finding of the work is a single high-severity issue. A few minor issues were found as well, however, the Audit Team’s view from completing this engagement is that CRI-O is a well-written project that has a high level of security assurance.</span></p>
+<p><span style="font-weight: 400;">The high severity finding is a denial of service attack on a given cluster by way of resource exhaustion of nodes. The attack is performed by way of pod creation, which means any user that can create a pod can cause denial of service on the given node that is used for pod creation. The CVE for the this vulnerability is </span><span style="font-weight: 400;">CVE-2022-1708 and Github advisory can be found here: </span><a href="https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j"><span style="font-weight: 400;">https://github.com/cri-o/cri-o/security/advisories/GHSA-fcm2-6c3h-pg6j</span></a></p>
+<p><span style="font-weight: 400;">Interestingly, the denial of service attack also occurred in other container runtime interface implementations, most notably Containerd. Specifically, the exact same attack that exhausts memory in CRI-O can be used to exhaust memory of Containerd. The CVE for this issue in containerd is CVE-2022-31030 and the Github security advisory can be found here: </span><a href="https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf"><span style="font-weight: 400;">https://github.com/containerd/containerd/security/advisories/GHSA-5ffw-gxpp-mxpf</span></a><span style="font-weight: 400;"> </span></p>
+<p><span style="font-weight: 400;">Furthermore, an extensive fuzzing suite targeting the CRI-O infrastructure was integrated as a result of this engagement, providing long-lasting improvements to the security posture of the project.</span></p>
+<p><span style="font-weight: 400;">Lastly, we commissioned </span><a href="https://www.chainguard.dev/"><span style="font-weight: 400;">Chainguard</span></a><span style="font-weight: 400;"> to perform a dedicated Supply Chain Security Assessment of CRI-O as part of the security audit. The assessment was designed to analyze CRI-O practices and recommend steps and strategies to increase </span><a href="https://slsa.dev/"><span style="font-weight: 400;">SLSA compliance</span></a><span style="font-weight: 400;">. The full assessment can be found in the report. </span></p>
+<p><span style="font-weight: 400;">Thank you to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> (CNCF) for funding this audit and entrusting Open Source Technology Improvement Fund to facilitate it. </span></p>
+<p><span style="font-weight: 400;">Special thanks to David Korczynski and Adam Korczynski of </span><a href="https://adalogics.com/"><span style="font-weight: 400;">Ada Logics</span></a><span style="font-weight: 400;"> for auditing the software, Dan Lorenc and Adolfo García Veytia of Chainguard, and to the CRI-O team’s Peter Hunt and Mrunal Patel for their support. </span></p>
+<p><span style="font-weight: 400;">Everyone around the world depends on OSS. We’d love to do more security audits to proactively find and fix vulnerabilities! If you’re interested in financially supporting this work, contact </span><a href="mailto:amir@ostif.org"><span style="font-weight: 400;">amir@ostif.org</span></a><span style="font-weight: 400;">.</span></p>
+<p><span style="font-weight: 400;">References: </span></p>
+<p>FULL AUDIT REPORT (PDF)</p>
+<p><a href="https://ostif.org/wp-content/uploads/2022/06/CRI-O-audit-by-ada-logics-chainguard-ostif.pdf">https://ostif.org/wp-content/uploads/2022/06/CRI-O-audit-by-ada-logics-chainguard-ostif.pdf</a></p>
+<p>Announcement by Ada Logics</p>
+<p><a href="https://adalogics.com/blog/cri-o-security-engagement">https://adalogics.com/blog/cri-o-security-engagement</a></p>
+<p><span style="font-weight: 400;">Announcements by the Cloud Native Computing Foundation</span></p>
+<p><a href="https://www.cncf.io/blog/2022/06/06/ostifs-audit-of-cri-o-is-complete-high-severity-issues-found-and-fixed/">https://www.cncf.io/blog/2022/06/06/ostifs-audit-of-cri-o-is-complete-high-severity-issues-found-and-fixed/</a></p>
+<p><a href="https://www.cncf.io/blog/2022/06/06/ada-logics-cri-o-holistic-security-audit-engagement/">https://www.cncf.io/blog/2022/06/06/ada-logics-cri-o-holistic-security-audit-engagement/</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+		<item>
+		<title>Our Audit of Flux2 is Complete</title>
+		<link>https://ostif.org/our-audit-of-flux2-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Thu, 11 Nov 2021 17:08:03 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cloud]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[cve]]></category>
+		<category><![CDATA[flux]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2594</guid>
+
+					<description><![CDATA[We have been working with the team over at the Flux project on a security review and improving their tooling. The Cloud Native Computing Foundation contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected ADA Logics to do both the [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p>We have been working with the team over at the <a href="https://github.com/fluxcd/flux2">Flux</a> project on a security review and improving their tooling. The <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> contacted us a few months ago and wanted to facilitate both improving the testing infrastructure and to manually review Flux&#8217;s source code. We selected <a href="https://adalogics.com/">ADA Logics</a> to do both the fuzzing integration work and the security review.</p>
+<p>We are happy to report that our project has completed and Flux has its first CVE as a result! The bug allows an authenticated user with some specific permissions to escalate their privileges all the way to kubernetes cluster admin by injecting malicious shell scripts as Kubernetes Secrets in kustomize-controller. This issue impacts multiple large cloud vendors who have been notified to update. Flux version 1.18 and above contain the fix.</p>
+<p><a href="https://github.com/fluxcd/kustomize-controller/security/advisories/GHSA-35rf-v2jv-gfg7"><strong>CVE-2021-41254</strong>:</a> [Privilege escalation to cluster admin on multi-tenant Flux]</p>
+<p>ADA Logics and the Flux team were excellent to work with! Our collaborative work has led to multiple fixes, improved overall testing with continuous fuzzing by way of OSS-Fuzz, and the comprehensive report below. The Flux team also created a<a href="https://github.com/orgs/fluxcd/projects/5"> public and easy to track dashboard showing all of the work we&#8217;ve done together</a> and is a fantastic example of good issue-tracking and remediation.</p>
+<p>A special thank you to the Cloud Native Computing Foundation for sponsoring this work and improving the security of Flux for everyone!</p>
+<p><a href="https://ostif.org/wp-content/uploads/2021/11/FluxreportFinalV1.1.pdf">Click here for the full report</a> (PDF)</p>
+<p>More information:<br />
+<a href="https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/">https://www.cncf.io/blog/2021/11/11/flux-security-audit-has-concluded/</a><br />
+<a href="https://fluxcd.io/blog/2021-11-10-flux-security-audit/">https://fluxcd.io/blog/2021-11-10-flux-security-audit/</a><br />
+<a href="https://fluxcd.io/security/">https://fluxcd.io/security/</a><br />
+<a href="https://github.com/cncf/toc/blob/main/docs/projects.md">https://github.com/cncf/toc/blob/main/docs/projects.md</a><br />
+<a href="https://adalogics.com/blog/fluxcd-security-audit">https://adalogics.com/blog/fluxcd-security-audit</a></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

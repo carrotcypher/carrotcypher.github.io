@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>libcap &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/libcap/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Mon, 15 May 2023 21:20:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>libcap &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Our Audit of Libcap is complete!</title>
+		<link>https://ostif.org/our-audit-of-libcap-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 15 May 2023 14:51:10 +0000</pubDate>
+				<category><![CDATA[Audits]]></category>
+		<category><![CDATA[AWS]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[X41-Dsec]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[libcap]]></category>
+		<category><![CDATA[x41 D-Sec]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2898</guid>
+
+					<description><![CDATA[It’s our privilege to announce that OSTIF’s sixth security audit of 2023 is with libcap! This was only possible with the fantastic work of X41 D-Sec and generous support of AWS.  Libcap is a library for getting and setting POSIX.1e draft 15 capabilities. The 26 year old project is maintained by Andrew G Morgan, a [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 400;">It’s our privilege to announce that OSTIF’s sixth security audit of 2023 is with l</span><a href="https://git.kernel.org/pub/scm/libs/libcap/libcap.git/about/"><span style="font-weight: 400;">ibcap</span></a><span style="font-weight: 400;">! This was only possible with the fantastic work of </span><a href="https://x41-dsec.de/"><span style="font-weight: 400;">X41 D-Sec</span></a><span style="font-weight: 400;"> and generous support of </span><a href="https://aws.amazon.com/"><span style="font-weight: 400;">AWS</span></a><span style="font-weight: 400;">. </span></p>
+<p><span style="font-weight: 400;">Libcap is a library for getting and setting POSIX.1e draft 15 capabilities. The 26 year old project is maintained by Andrew G Morgan, a dedicated FOSS community member who was a joy to work with.</span></p>
+<p><span style="font-weight: 400;">Identified in the process of this audit were 2 vulnerabilities, one medium (CVE-2023-2603) </span><span style="font-weight: 400;">and one low (CVE-2023-2602) severity, which guided the customization of multiple fuzz test harnesses for the project. X41 found that the libcap library necessitated the use of AFL++ fuzzing due to the memory corruption vulnerabilities commonly found in C. This was performed in coordination with ASAN (address space sanitizers). The found low severity vulnerability was in fact memory leak related, and the medium had to do with integer overflow on 32bit systems with a specific byte size. These were both addressed before publication of this blog. </span></p>
+<blockquote><p><span style="font-weight: 400;">“I would very much like to thank the OSTIF and X41 D-Sec for organizing and completing a thorough and timely audit of the libcap project code. The written audit report is well structured, clear and insightful and I&#8217;m happy that libcap-2.69 has addressed the issues it has uncovered.”  -Andrew G. Morgan</span></p></blockquote>
+<p><span style="font-weight: 400;">OSTIF would like to thank X41 D-sec for their hard work and perpetual dedication to FOSS security. Their <a href="https://x41-dsec.de/news/2023/05/15/libcap-source-code-audit/">blog can be found here</a> with further details of this project. We extend our gratitude to Amazon Web Services for their sponsorship of this audit and by extension, important security work being performed in open source. </span></p>
+<p><span style="font-weight: 400;">The full audit report can be found here: <a href="https://ostif.org/wp-content/uploads/2023/05/X41-libcap-Code-Review-2023-OSTIF-Final-Report.pdf">https://ostif.org/wp-content/uploads/2023/05/X41-libcap-Code-Review-2023-OSTIF-Final-Report.pdf</a></span></p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>

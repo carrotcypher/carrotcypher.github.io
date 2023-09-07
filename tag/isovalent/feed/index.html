@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>isovalent &#8211; OSTIF.org</title>
+	<atom:link href="https://ostif.org/tag/isovalent/feed/" rel="self" type="application/rss+xml" />
+	<link>https://ostif.org</link>
+	<description>Securing Open Source for the World</description>
+	<lastBuildDate>Mon, 13 Feb 2023 21:58:47 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	
+
+<image>
+	<url>https://ostif.org/wp-content/uploads/2021/01/ostiflogo-blue.png</url>
+	<title>isovalent &#8211; OSTIF.org</title>
+	<link>https://ostif.org</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Our Audit of Cilium is Complete!</title>
+		<link>https://ostif.org/our-audit-of-cilium-is-complete/</link>
+		
+		<dc:creator><![CDATA[ostifadmin]]></dc:creator>
+		<pubDate>Mon, 13 Feb 2023 17:32:34 +0000</pubDate>
+				<category><![CDATA[ADA Logics]]></category>
+		<category><![CDATA[Audits]]></category>
+		<category><![CDATA[Audit]]></category>
+		<category><![CDATA[cilium]]></category>
+		<category><![CDATA[cloud native computing foundation]]></category>
+		<category><![CDATA[cncf]]></category>
+		<category><![CDATA[isovalent]]></category>
+		<guid isPermaLink="false">https://ostif.org/?p=2838</guid>
+
+					<description><![CDATA[Results of the Cilium Security Engagement About Cilium Cilium is an open source software for providing, securing and observing network connectivity between container workloads, powered by eBPF sandboxing in the linux kernel. It provides cloud-native network security and observability while maintaining strong security properties itself. Similar tools without eBPF have to run at high privileges [&#8230;]]]></description>
+										<content:encoded><![CDATA[<p><span style="font-weight: 600;">Results of the Cilium Security Engagement</span></p>
+<p><span style="font-weight: 600;">About Cilium</span></p>
+<p><a href="https://cilium.io/"><span style="font-weight: 400;">Cilium</span></a><span style="font-weight: 400;"> is an open source software for providing, securing and observing network connectivity between container workloads, powered by </span><a href="https://ebpf.io/what-is-ebpf"><span style="font-weight: 400;">eBPF sandboxing</span></a><span style="font-weight: 400;"> in the linux kernel. It provides cloud-native network security and observability while maintaining strong security properties itself. Similar tools without eBPF have to run at high privileges and can increase security risks, giving Cilium a unique advantage.</span></p>
+<p><span style="font-weight: 400;">Cilium joins a </span><a href="https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/"><span style="font-weight: 400;">growing list </span></a><span style="font-weight: 400;">of Cloud Native Computing Foundation Projects (CNCF) audited to improve security posture and help reach </span><a href="https://www.cncf.io/projects/"><span style="font-weight: 400;">graduated status</span></a><span style="font-weight: 400;"> thanks to strategic partner OSTIF. A combination of threat modeling, manual code review and automated testing tools were used for this engagement. </span></p>
+<p><span style="font-weight: 400;">The audit went exceptionally well, with only a handful of medium severity and low/informational issues discovered. The most notable issue was a mutex lock discovered in the Envoy component. A full list of the issues discovered in Cilium can be found in the report at the bottom of this page.</span></p>
+<p><strong>Tooling Updates and Security Posture Improvements</strong></p>
+<p><span style="font-weight: 400;">Throughout the engagement the ADA Logics team created fuzzers for both the project and its critical dependencies. A total of 13 fuzzers were written, including 10 for Cilium’s critical functions and policy handling, and an additional 3 fuzzers for the widely used netlink dependency. At the time of this writing, the three fuzzers for netlink have not been integrated into ossfuzz for continuous fuzzing.</span></p>
+<p><span style="font-weight: 400;">Additionally, a lightweight threat model was developed for Cilium that helps contributors and consumers of Cilium understand from a security perspective how Cilium works, and informs users on the attack surface of Cilium, and more importantly, helps contributors to understand how changes to code as the project grows and matures can affect the security of Cilium.</span></p>
+<p><span style="font-weight: 400;">The ADA Logics team also recommended that a document covering how to use Cilium securely should be created to help users understand and manage their configuration of Cilium. The Cilium team </span><a href="https://github.com/cilium/cilium/pull/23599"><span style="font-weight: 400;">is working on creating that document now</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>Supply Chain Security Evaluation</strong></p>
+<p><span style="font-weight: 400;">Cilium meets most of the requirements for SLSA level 3 (and 4), but does not generate a provenance document with its builds. It does however generate a Software Bill of Materials with each release, and the Cilium team </span><a href="https://github.com/cilium/cilium/issues/22740"><span style="font-weight: 400;">has started to actively track SLSA compliance here</span></a><span style="font-weight: 400;">.</span></p>
+<p><strong>Thank You</strong></p>
+<p><span style="font-weight: 400;">We thank the Cilium maintainers from </span><a href="https://isovalent.com/"><span style="font-weight: 400;">Isovalent</span></a><span style="font-weight: 400;"> and the audit team at </span><a href="https://adalogics.com/"><span style="font-weight: 400;">ADA Logics</span></a><span style="font-weight: 400;"> for their help and collaboration on this engagement. </span></p>
+<p><span style="font-weight: 400;">Special thanks to </span><a href="https://www.cncf.io/"><span style="font-weight: 400;">Cloud Native Computing Foundation</span></a><span style="font-weight: 400;"> for sponsoring the audit and entrusting OSTIF to get the work done. We are truly grateful for the opportunity to help make critical cloud computing infrastructure more secure and sustainable. </span></p>
+<p><span style="font-weight: 400;"><strong>The full audit report can be found here: </strong><a href="https://ostif.org/wp-content/uploads/2023/02/OSTIF-ADA-Logics-Cilium-Security-Audit.pdf">https://ostif.org/wp-content/uploads/2023/02/OSTIF-ADA-Logics-Cilium-Security-Audit.pdf</a></span></p>
+<p><strong>More information:<br />
+</strong><span style="font-weight: 400;"><br />
+</span><span style="font-weight: 400;">ADA Logics also did a report about their experience here: <a href="https://adalogics.com/blog/cilium-security-audit">https://adalogics.com/blog/cilium-security-audit</a><br />
+</span><span style="font-weight: 400;">The Cloud Native Computing Foundation also posted a blog post here:<a href="https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/"> https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/</a></span></p>
+<p>&nbsp;</p>
+]]></content:encoded>
+					
+		
+		
+			</item>
+	</channel>
+</rss>
